@@ -19,6 +19,7 @@ public class PriceHistoryMapper {
             priceHistory.setVolumeEth(jsonPriceHistory.getVolumeEth().get(i));
             priceHistory.setVolumeUsd(jsonPriceHistory.getVolumeUsd().get(i));
             priceHistory.setSalesCount(jsonPriceHistory.getSalesCount().get(i));
+            priceHistoryList.add(priceHistory);
         }
 
         return priceHistoryList;

@@ -1,5 +1,6 @@
 package org.group10.fileio.impl;
 
+import com.google.common.reflect.TypeParameter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -18,10 +19,9 @@ public class JsonFileReadAndWrite<T> implements FileReadAndWrite<T> {
     private String filePath;
 
     @Override
-    public List<T> readFromFile() {
+    public List<T> readFromFile(Type type) {
         try (FileReader fileReader = new FileReader(filePath)) {
-            Type listType = new TypeToken<List<T>>(){}.getType();
-            return new Gson().fromJson(fileReader, listType);
+            return new Gson().fromJson(fileReader, type);
         } catch (IOException e) {
             e.printStackTrace();
             return null;

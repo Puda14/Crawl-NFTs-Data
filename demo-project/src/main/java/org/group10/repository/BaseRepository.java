@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface BaseRepository<T,ID> {
     List<T> findAll();
-     void saveAll(Iterable<T> entities);
+     List<T> saveAll(List<T> entities);
 
 }

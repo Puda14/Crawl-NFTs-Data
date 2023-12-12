@@ -12,6 +12,7 @@ import org.group10.utils.PriceHistoryMapper;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.group10.env.FileProperty.nftFilePath;
 import static org.group10.env.NftSlugList.slugList;
 
 public class CrawlService {
@@ -26,14 +27,12 @@ public class CrawlService {
             NFT nft = new NFT();
             NFTDetail nftDetail = apiCrawler.getApiData(detailApi, NFTDetail.class);
             nft.setNftDetail(nftDetail);
-            System.out.println(nft.getNftDetail());
             JsonPriceHistory jsonObject = apiCrawler.getApiData(apiUrl, JsonPriceHistory.class);
             PriceHistoryMapper priceHistoryMapper = new PriceHistoryMapper();
             nft.setPriceHistoryList(priceHistoryMapper.mapper(jsonObject));
-            System.out.println(nft.getPriceHistoryList());
             nftList.add(nft);
         }
-        FileReadAndWrite<NFT> fileReadAndWrite = new JsonFileReadAndWrite<>("nft-list.json");
+        FileReadAndWrite<NFT> fileReadAndWrite = new JsonFileReadAndWrite<>(nftFilePath);
         fileReadAndWrite.writeToFile(nftList);
     }
 

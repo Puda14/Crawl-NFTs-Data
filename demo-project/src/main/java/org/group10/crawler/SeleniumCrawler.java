@@ -1,5 +1,7 @@
 package org.group10.crawler;
 
+import org.openqa.selenium.WebElement;
+
 public interface SeleniumCrawler {
-    <T> T getWebsiteData();
+    void getWebsiteData(WebElement article);
 }

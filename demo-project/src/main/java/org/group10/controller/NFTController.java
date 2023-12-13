@@ -1,17 +1,17 @@
 package org.group10.controller;
 
 import org.group10.model.nft.NFT;
-import org.group10.service.NFTService;
+import org.group10.service.impl.NFTServiceImpl;
 
 import java.util.List;
 
 public class NFTController {
-    NFTService nftService = new NFTService();
+    NFTServiceImpl nftServiceImpl = new NFTServiceImpl();
     public List<NFT> getAll(){
-        return nftService.getAllNft();
+        return nftServiceImpl.getAllNft();
     }
 
     public NFT getByName(String name){
-        return nftService.getNftByName(name);
+        return nftServiceImpl.getNftByName(name);
     }
 }

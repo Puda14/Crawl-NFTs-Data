@@ -1,4 +1,4 @@
 package org.group10.service;
 
-public class AnalystService {
+public interface AnalystService {
 }

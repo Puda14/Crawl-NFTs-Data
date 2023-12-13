@@ -1,20 +1,19 @@
 package org.group10;
 
 import org.group10.model.nft.NFT;
-import org.group10.repository.NftRepository;
-import org.group10.service.CrawlService;
-import org.group10.service.NFTService;
+import org.group10.service.impl.CrawlServiceImpl;
+import org.group10.service.impl.NFTServiceImpl;
 
 
 //for testing
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        NFTService nftService = new NFTService();
-        CrawlService crawlService = new CrawlService();
+        NFTServiceImpl nftServiceImpl = new NFTServiceImpl();
+        CrawlServiceImpl crawlServiceImpl = new CrawlServiceImpl();
 //        crawlService.nftCrawl();
-        System.out.println(nftService.getAllNft().size());
-        NFT nft = nftService.getNftByName("Azuki");
+        System.out.println(nftServiceImpl.getAllNft().size());
+        NFT nft = nftServiceImpl.getNftByName("Azuki");
         if(nft != null) System.out.println(nft);
 
     }

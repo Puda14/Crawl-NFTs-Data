@@ -55,7 +55,7 @@ public class TwitterCrawler implements SeleniumCrawler {
         }
     }
 
-    private static void login(WebDriver driver, String username, String password) {
+    public static void login(WebDriver driver, String username, String password) {
         WebElement emailField = driver.findElement(By.xpath("//input[@name='text']"));
         emailField.sendKeys(username);
         driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
@@ -66,20 +66,10 @@ public class TwitterCrawler implements SeleniumCrawler {
         driver.findElement(By.xpath("//span[contains(text(),'Log in')]")).click();
     }
 
-    private static void search(WebDriver driver, String keyword) {
+    public void search(WebDriver driver, String keyword) {
         WebElement searchBox = driver.findElement(By.xpath("//input[@aria-label=\"Search query\"]"));
         searchBox.sendKeys(keyword);
         searchBox.sendKeys(Keys.ENTER);
-    }
-
-    private static boolean isAd(WebElement article, String keyword) {
-//        //tweet text have no keyword -> ad
-//        //is ad by filter through tweet text
-        WebElement tweet = article.findElement(By.xpath(".//div[@data-testid='tweetText']"));
-        String text = tweet.getText();
-        if (text.toLowerCase().contains(keyword.toLowerCase()))
-            return false;
-        return true;
     }
 
     private static boolean isAd(WebElement article){
@@ -127,9 +117,7 @@ public class TwitterCrawler implements SeleniumCrawler {
 //        get tweet
         WebElement tweetTextWeb = article.findElement(By.xpath(".//div[@data-testid='tweetText']"));
         String tweetText = (tweetTextWeb.getText().replaceAll("\n", " "));
-//        get user tag
-//        WebElement userNameWebElement = article.findElement(By.xpath(USER_NAME_XPATH));
-//        String userName = (userNameWebElement.getText().replaceAll("\n", " "));
+
 //        get time
         WebElement timeWebElement = article.findElement(By.xpath(TIME_XPATH));
         String time = (timeWebElement.getAttribute("datetime").replaceAll("\n", " "));

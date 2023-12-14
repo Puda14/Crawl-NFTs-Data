@@ -12,7 +12,7 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 
-public class FirstApiCrawler implements APICrawler {
+public class NftApiCrawler implements APICrawler {
     public <T> T getApiData(String apiUrl, Type classType){
         URL url;
         try {
@@ -20,7 +20,6 @@ public class FirstApiCrawler implements APICrawler {
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
-
 
         HttpURLConnection con = null;
         try {

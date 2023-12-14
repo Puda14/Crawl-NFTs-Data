@@ -1,7 +1,7 @@
 package org.group10.service.impl;
 
 import org.group10.crawler.APICrawler;
-import org.group10.crawler.impl.FirstApiCrawler;
+import org.group10.crawler.impl.NftApiCrawler;
 import org.group10.dto.JsonPriceHistory;
 import org.group10.dto.NFTDetail;
 import org.group10.fileio.FileReadAndWrite;
@@ -19,8 +19,8 @@ import static org.group10.env.NftSlugList.slugList;
 public class CrawlServiceImpl implements CrawlService {
 
     @Override
-    public void nftCrawl(){
-        APICrawler apiCrawler = new FirstApiCrawler();
+    public void nftCrawlByListOfNft(){
+        APICrawler apiCrawler = new NftApiCrawler();
         List<NFT> nftList = new ArrayList<>();
         for(String slug : slugList) {
             String apiUrl = "https://api-bff.nftpricefloor.com/projects/"+ slug + "/charts/all";

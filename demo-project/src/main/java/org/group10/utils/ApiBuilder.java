@@ -6,9 +6,9 @@ public class ApiBuilder {
     private String parameter;
 
     public static String buildApiUrl(String domainUrl, String endpoint, String... parameters){
-        String url = null;
+        String url = domainUrl + "\\" + endpoint + "\\";
         for (String param:parameters) {
-            url = domainUrl + "\\" + endpoint + "\\" + param;
+            url += param;
         }
         return url;
     }

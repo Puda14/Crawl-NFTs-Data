@@ -1,4 +1,4 @@
-package org.group10.utils;
+package org.group10.crawler.selenium;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

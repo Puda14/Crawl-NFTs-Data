@@ -2,8 +2,8 @@ package org.group10.service.impl;
 
 import org.group10.crawler.APICrawler;
 import org.group10.crawler.impl.NftApiCrawler;
-import org.group10.dto.JsonPriceHistory;
-import org.group10.dto.NFTDetail;
+import org.group10.dto.nftpricefloorapi.JsonPriceHistory;
+import org.group10.dto.nftpricefloorapi.NFTDetail;
 import org.group10.fileio.FileReadAndWrite;
 import org.group10.fileio.impl.JsonFileReadAndWrite;
 import org.group10.model.nft.NFT;

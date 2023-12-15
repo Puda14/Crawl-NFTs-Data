@@ -1,4 +1,4 @@
-package org.group10.dto;
+package org.group10.dto.nftpricefloorapi;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

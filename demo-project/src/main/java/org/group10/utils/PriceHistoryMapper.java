@@ -1,6 +1,6 @@
 package org.group10.utils;
 
-import org.group10.dto.JsonPriceHistory;
+import org.group10.dto.nftpricefloorapi.JsonPriceHistory;
 import org.group10.model.nft.PriceHistory;
 
 import java.util.ArrayList;

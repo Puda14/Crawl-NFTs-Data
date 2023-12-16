@@ -3,7 +3,6 @@ package org.group10.model.nft;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.group10.dto.nftpricefloorapi.NFTDetail;
 
 import java.util.List;
 
@@ -11,6 +10,6 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 public class NFT {
-    private NFTDetail nftDetail;
+    private Detail detail;
     private List<PriceHistory> priceHistoryList;
 }

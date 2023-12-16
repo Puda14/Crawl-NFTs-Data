@@ -4,11 +4,13 @@ import org.group10.crawler.APICrawler;
 import org.group10.crawler.impl.NftApiCrawler;
 import org.group10.dto.nftpricefloorapi.JsonPriceHistory;
 import org.group10.dto.nftpricefloorapi.NFTDetail;
-import org.group10.fileio.FileReadAndWrite;
-import org.group10.fileio.impl.JsonFileReadAndWrite;
+import org.group10.utils.fileio.FileReadAndWrite;
+import org.group10.utils.fileio.impl.JsonFileReadAndWrite;
+import org.group10.model.nft.Detail;
 import org.group10.model.nft.NFT;
 import org.group10.service.CrawlService;
-import org.group10.utils.PriceHistoryMapper;
+import org.group10.utils.mapper.NftDetailMapper;
+import org.group10.utils.mapper.PriceHistoryMapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,10 +29,11 @@ public class CrawlServiceImpl implements CrawlService {
             String detailApi = "https://api-bff.nftpricefloor.com/projects/" + slug;
             NFT nft = new NFT();
             NFTDetail nftDetail = apiCrawler.getApiData(detailApi, NFTDetail.class);
-            nft.setNftDetail(nftDetail);
+            NftDetailMapper mapper = new NftDetailMapper();
+            Detail detail = mapper.map(nftDetail);
+            nft.setDetail(detail);
             JsonPriceHistory jsonObject = apiCrawler.getApiData(apiUrl, JsonPriceHistory.class);
-            PriceHistoryMapper priceHistoryMapper = new PriceHistoryMapper();
-            nft.setPriceHistoryList(priceHistoryMapper.mapper(jsonObject));
+            nft.setPriceHistoryList(PriceHistoryMapper.map(jsonObject));
             nftList.add(nft);
         }
         FileReadAndWrite<NFT> fileReadAndWrite = new JsonFileReadAndWrite<>(nftFilePath);

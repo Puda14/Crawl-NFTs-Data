@@ -2,19 +2,48 @@ package org.group10.crawler.property;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
-public class TwitterProperty  extends BaseProperty{
-    private  String tweetProp = "//article[@data-testid='tweet']";
-    private  String userNameProp = ".//div[@data-testid='User-Name']/div";
-    private  String retweetProp = ".//div[@data-testid='retweet']";
-    private  String likeProp = ".//div[@data-testid='like']";
-    private  String replyProp = ".//div[@data-testid='reply']";
-    private  String accountUrlProp = ".//span[contains(text(),'@')]";
-    private  int MAX_SCROLL_ATTEMPTS = 3;
-    private String username;
-    private String password;
+public class TwitterProperty {
+
+    private String loginUrl;
+    private String logoutUrl;
+    private String usernameInputField;
+    private String passwordInputField;
+    private String nextButton;
+    private String loginButton;
+    private String logoutButton;
+    private String reloadButton;
+
+
+    public TwitterProperty() {
+        loadProperties();
+    }
+
+    private void loadProperties() {
+        Properties properties = new Properties();
+        try (FileInputStream input = new FileInputStream("D:\\code java\\Crawl-NFTs-Data\\demo-project\\src\\main\\resources\\twitter.properties")) {
+            properties.load(input);
+
+            loginUrl = properties.getProperty("loginUrl");
+            logoutUrl = properties.getProperty("logoutUrl");
+            usernameInputField = properties.getProperty("usernameInputField");
+            passwordInputField = properties.getProperty("passwordInputField");
+            nextButton = properties.getProperty("nextButton");
+            loginButton = properties.getProperty("loginButton");
+            logoutButton = properties.getProperty("logoutButton");
+            reloadButton = properties.getProperty("reloadButton");
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+
 }

@@ -1,9 +1,11 @@
 package org.group10.service.impl;
 
 import org.group10.crawler.APICrawler;
-import org.group10.crawler.impl.NftApiCrawler;
+import org.group10.crawler.impl.NoAuthApiCrawler;
+import org.group10.crawler.impl.TwitterCrawler;
 import org.group10.dto.nftpricefloorapi.JsonPriceHistory;
 import org.group10.dto.nftpricefloorapi.NFTDetail;
+import org.group10.model.post.Tweet;
 import org.group10.utils.fileio.FileReadAndWrite;
 import org.group10.utils.fileio.impl.JsonFileReadAndWrite;
 import org.group10.model.nft.Detail;
@@ -22,7 +24,7 @@ public class CrawlServiceImpl implements CrawlService {
 
     @Override
     public void nftCrawlByListOfNft(){
-        APICrawler apiCrawler = new NftApiCrawler();
+        APICrawler apiCrawler = new NoAuthApiCrawler();
         List<NFT> nftList = new ArrayList<>();
         for(String slug : slugList) {
             String apiUrl = "https://api-bff.nftpricefloor.com/projects/"+ slug + "/charts/all";
@@ -40,7 +42,9 @@ public class CrawlServiceImpl implements CrawlService {
         fileReadAndWrite.writeToFile(nftList);
     }
 
-    public void postCrawl(){
-
+    public List<Tweet>  postCrawl(){
+        TwitterCrawler twitterCrawler = new TwitterCrawler();
+        List<Tweet> tweets = (List<Tweet>) twitterCrawler.getWebsiteData("boredapeyc","2021-08-01","2021-08-03");
+        return tweets;
     }
 }

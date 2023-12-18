@@ -12,7 +12,7 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 
-public class NftApiCrawler implements APICrawler {
+public class NoAuthApiCrawler implements APICrawler {
     public <T> T getApiData(String apiUrl, Type classType){
         URL url;
         try {

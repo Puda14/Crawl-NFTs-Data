@@ -11,10 +11,11 @@ public class Main {
         System.out.println("Hello world!");
         NFTServiceImpl nftServiceImpl = new NFTServiceImpl();
         CrawlServiceImpl crawlServiceImpl = new CrawlServiceImpl();
-        crawlServiceImpl.nftCrawlByListOfNft();
-        System.out.println(nftServiceImpl.getAllNft().size());
-        NFT nft = nftServiceImpl.getNftByName("Azuki");
-        if(nft != null) System.out.println(nft);
+        System.out.println(crawlServiceImpl.postCrawl());
+//        crawlServiceImpl.nftCrawlByListOfNft();
+//        System.out.println(nftServiceImpl.getAllNft().size());
+//        NFT nft = nftServiceImpl.getNftByName("Azuki");
+//        if(nft != null) System.out.println(nft);
 
     }
 }

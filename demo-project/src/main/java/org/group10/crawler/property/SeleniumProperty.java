@@ -20,7 +20,7 @@ public class SeleniumProperty {
 
     private void loadProperties() {
         Properties properties = new Properties();
-        try (FileInputStream input = new FileInputStream("D:\\code java\\Crawl-NFTs-Data\\demo-project\\src\\main\\resources\\selenium.properties")) {
+        try (FileInputStream input = new FileInputStream("src/main/resources/selenium.properties")) {
             properties.load(input);
             driverType = properties.getProperty("driverType");
             driverPath = properties.getProperty("driverPath");

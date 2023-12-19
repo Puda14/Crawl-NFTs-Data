@@ -15,7 +15,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.group10.crawler.helper.QueryMaker.addDayToString;
 import static org.group10.crawler.helper.WebDriverHelper.isAdvertisement;
@@ -34,6 +36,8 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
     private static TwitterProperty twitterProperty;
     private static TweetProperty tweetProperty;
     private static DataProcessor dataProcessor;
+    private static Map<String, Integer> TweetIdMap = new HashMap<>();
+
 
 
     public TwitterCrawler(){

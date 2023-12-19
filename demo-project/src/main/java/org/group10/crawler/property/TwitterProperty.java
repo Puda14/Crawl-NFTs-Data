@@ -28,7 +28,7 @@ public class TwitterProperty {
 
     private void loadProperties() {
         Properties properties = new Properties();
-        try (FileInputStream input = new FileInputStream("D:\\code java\\Crawl-NFTs-Data\\demo-project\\src\\main\\resources\\twitter.properties")) {
+        try (FileInputStream input = new FileInputStream("src/main/resources/twitter.properties")) {
             properties.load(input);
 
             loginUrl = properties.getProperty("loginUrl");

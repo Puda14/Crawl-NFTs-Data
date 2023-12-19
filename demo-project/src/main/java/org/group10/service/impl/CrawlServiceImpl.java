@@ -38,13 +38,14 @@ public class CrawlServiceImpl implements CrawlService {
             nft.setPriceHistoryList(PriceHistoryMapper.map(jsonObject));
             nftList.add(nft);
         }
-        FileReadAndWrite<NFT> fileReadAndWrite = new JsonFileReadAndWrite<>(nftFilePath);
-        fileReadAndWrite.writeToFile(nftList);
+        FileReadAndWrite<NFT> fileReadAndWrite = new JsonFileReadAndWrite<>();
+        fileReadAndWrite.writeToFile(nftList,nftFilePath);
     }
 
-    public List<Tweet>  postCrawl(){
+    @Override
+    public List<Tweet>  postCrawl(String keyword, String startDate, String endDate){
         TwitterCrawler twitterCrawler = new TwitterCrawler();
-        List<Tweet> tweets = (List<Tweet>) twitterCrawler.getWebsiteData("boredapeyc","2021-08-01","2021-08-03");
+        List<Tweet> tweets = (List<Tweet>) twitterCrawler.getWebsiteData(keyword, startDate, endDate);
         return tweets;
     }
 }

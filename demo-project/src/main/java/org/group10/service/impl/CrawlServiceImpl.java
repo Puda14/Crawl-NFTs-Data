@@ -1,12 +1,14 @@
 package org.group10.service.impl;
 
+import com.google.inject.Inject;
 import org.group10.crawler.APICrawler;
+import org.group10.crawler.SeleniumCrawler;
 import org.group10.crawler.impl.NoAuthApiCrawler;
-import org.group10.crawler.impl.TwitterCrawler;
 import org.group10.dto.nftpricefloorapi.JsonPriceHistory;
 import org.group10.dto.nftpricefloorapi.NFTDetail;
 import org.group10.model.post.Tweet;
 import org.group10.utils.fileio.FileReadAndWrite;
+import org.group10.utils.fileio.impl.CsvFileReadAndWrite;
 import org.group10.utils.fileio.impl.JsonFileReadAndWrite;
 import org.group10.model.nft.Detail;
 import org.group10.model.nft.NFT;
@@ -18,13 +20,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.group10.env.FileProperty.nftFilePath;
+import static org.group10.env.FileProperty.tweetFilePath;
 import static org.group10.env.NftSlugList.slugList;
 
 public class CrawlServiceImpl implements CrawlService {
 
+    private  final APICrawler apiCrawler;
+    private final SeleniumCrawler seleniumCrawler;
+
+    @Inject
+    public CrawlServiceImpl(APICrawler apiCrawler, SeleniumCrawler seleniumCrawler) {
+        this.apiCrawler = apiCrawler;
+        this.seleniumCrawler = seleniumCrawler;
+    }
+
     @Override
     public void nftCrawlByListOfNft(){
-        APICrawler apiCrawler = new NoAuthApiCrawler();
         List<NFT> nftList = new ArrayList<>();
         for(String slug : slugList) {
             String apiUrl = "https://api-bff.nftpricefloor.com/projects/"+ slug + "/charts/all";
@@ -43,9 +54,14 @@ public class CrawlServiceImpl implements CrawlService {
     }
 
     @Override
-    public List<Tweet>  postCrawl(String keyword, String startDate, String endDate){
-        TwitterCrawler twitterCrawler = new TwitterCrawler();
-        List<Tweet> tweets = (List<Tweet>) twitterCrawler.getWebsiteData(keyword, startDate, endDate);
-        return tweets;
+    public List<Tweet>  postCrawl(String keyword, String startDate, String endDate) {
+        List<Tweet> tweets;
+
+            tweets = seleniumCrawler.getWebsiteData(keyword, startDate, endDate);
+            FileReadAndWrite<Tweet> fileReadAndWrite = new CsvFileReadAndWrite();
+            fileReadAndWrite.writeToFile(tweets, tweetFilePath);
+            return tweets;
+
     }
+
 }

@@ -3,10 +3,7 @@ package org.group10.crawler.interaction.selenium;
 import org.group10.crawler.interaction.WebInteraction;
 import org.group10.crawler.property.TwitterProperty;
 import org.group10.model.post.Tweet;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 import static org.group10.crawler.helper.QueryMaker.makeQuery;
 import static org.group10.crawler.helper.WebDriverHelper.*;
@@ -14,37 +11,34 @@ import static org.group10.crawler.helper.WebDriverHelper.*;
 
 public class TwitterInteraction implements WebInteraction {
 
-    private TwitterProperty twitterProperty = new TwitterProperty();
-    private static final double AMOUNT_PER_SCROLL = 5000.0;
-    private static final String SCROLL_SCRIPT = "window.scrollBy(0, " + (int) AMOUNT_PER_SCROLL + ");";
-    private static final int LONG_DELAY_MS = 5000;
-    private static final int SHORT_DELAY_MS = 1000;
-
-    private static final int MAX_SCROLL_ATTEMPTS = 3;
-    private static final int MAX_TWEETS = 1000;
-    private static Double lastPosition = -1.0;
+    private final TwitterProperty twitterProperty = new TwitterProperty();
+    public static final double AMOUNT_PER_SCROLL = 5000.0;
+    public static final String SCROLL_SCRIPT = "window.scrollBy(0, " + (int) AMOUNT_PER_SCROLL + ");";
+    public static final int LONG_DELAY_MS = 5000;
+    public static final int MAX_SCROLL_ATTEMPTS = 3;
+    public static Double lastPosition = -1.0;
     @Override
-    public void login(WebDriver driver, String username, String password) {
+    public void login(WebDriver driver, String username, String password) throws NoSuchElementException, TimeoutException, StaleElementReferenceException {
         driver.get(twitterProperty.getLoginUrl());
         input(driver,twitterProperty.getUsernameInputField(),username);
         clickButton(driver,twitterProperty.getNextButton());
         input(driver,twitterProperty.getPasswordInputField(),password);
         clickButton(driver,twitterProperty.getLoginButton());
-        threadSleep(5000);
+        threadSleep(LONG_DELAY_MS);
     }
 
     @Override
-    public void logout(WebDriver driver) {
+    public void logout(WebDriver driver) throws NoSuchElementException, TimeoutException, StaleElementReferenceException {
         driver.get(twitterProperty.getLogoutUrl());
-        threadSleep(5000);
+        threadSleep(LONG_DELAY_MS);
         clickButton(driver,twitterProperty.getLogoutButton());
-        threadSleep(5000);
+        threadSleep(LONG_DELAY_MS);
     }
 
     public void search(WebDriver driver, String keyword, String since, int min_faves, int min_retweets, int min_replies, int filter_replies) {
         String search_url = "https://twitter.com/search?q=" + makeQuery(keyword, since, min_faves, min_retweets, min_replies, filter_replies) + "&src=typed_query&f=live";
         driver.get(search_url);
-        threadSleep(5000);
+        threadSleep(LONG_DELAY_MS);
     }
 
     @Override
@@ -53,6 +47,7 @@ public class TwitterInteraction implements WebInteraction {
         int scrollAttempt = 0;
         while (true) {
             jsExecutor.executeScript(SCROLL_SCRIPT);
+            System.out.println("t vua scroll");
             threadSleep(LONG_DELAY_MS);
             Object currPositionObject = jsExecutor.executeScript("return window.pageYOffset;");
             if (currPositionObject == null)

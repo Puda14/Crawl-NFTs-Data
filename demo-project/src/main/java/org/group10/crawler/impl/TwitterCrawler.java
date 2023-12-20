@@ -1,10 +1,9 @@
 package org.group10.crawler.impl;
 
+import com.google.inject.Inject;
 import org.group10.config.SeleniumConfig;
 import org.group10.crawler.SeleniumCrawler;
 import org.group10.crawler.dataprocessor.DataProcessor;
-import org.group10.crawler.dataprocessor.TweetDataProcessor;
-import org.group10.crawler.interaction.WebInteraction;
 import org.group10.crawler.interaction.selenium.TwitterInteraction;
 import org.group10.crawler.property.TweetProperty;
 import org.group10.crawler.property.TwitterProperty;
@@ -31,29 +30,26 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
     private static final int FILTER_REPLIES = 0;
     private static final Double FIRST_RELOAD_CONDITION = 1000.0;
     private static final String TWEET_XPATH = "//article[@data-testid='tweet']";
-    private static TwitterInteraction webInteraction;
-    private static SeleniumConfig seleniumConfig;
-    private static TwitterProperty twitterProperty;
-    private static TweetProperty tweetProperty;
-    private static DataProcessor dataProcessor;
-    private static Map<String, Integer> TweetIdMap = new HashMap<>();
+    private final TwitterInteraction webInteraction;
+    private final SeleniumConfig seleniumConfig;
+    private final TwitterProperty twitterProperty;
+    private final TweetProperty tweetProperty;
+    private final DataProcessor<Tweet,TweetProperty> dataProcessor;
+    private static final Map<String, Integer> TweetIdMap = new HashMap<>();
 
 
-
-    public TwitterCrawler(){
-        webInteraction = new TwitterInteraction();
-        seleniumConfig = new SeleniumConfig();
-        twitterProperty = new TwitterProperty();
-        tweetProperty = new TweetProperty();
-        dataProcessor = new TweetDataProcessor();
+    @Inject
+    public TwitterCrawler(SeleniumConfig seleniumConfig, TwitterInteraction twitterInteraction, TwitterProperty twitterProperty,TweetProperty tweetProperty ,DataProcessor dataProcessor){
+        this.webInteraction = twitterInteraction;
+        this.seleniumConfig = seleniumConfig;
+        this.twitterProperty = twitterProperty;
+        this.tweetProperty = tweetProperty;
+        this.dataProcessor = dataProcessor;
     }
 
     @Override
-    public Iterable<Tweet> getWebsiteData(String keyword, String startDay, String endDay) {
-        Iterable<Tweet> tweets = new ArrayList<>();
-        String tmp = startDay;
-        int finished = 0;
-        SeleniumConfig seleniumConfig = new SeleniumConfig();
+    public List<Tweet> getWebsiteData(String keyword, String startDay, String endDay) {
+        List<Tweet> tweets = new ArrayList<>();
         AccountManager accountManager = new AccountManager("account.txt");
         String accountDetails[] = accountManager.changeAccount();
         String pUsername = accountDetails[0];
@@ -61,7 +57,6 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
         WebDriver driver = seleniumConfig.initBrowser();
         webInteraction.login(driver, pUsername, pPassword);
         while (startDay.compareTo(endDay) <= 0) {
-//            search(driver, query);
             webInteraction.search(driver, keyword, startDay, MIN_FAVES, MIN_RETWEET, MIN_REPLY, FILTER_REPLIES);
 
             Double lastPosition = -2.0;
@@ -77,15 +72,21 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
                     for (WebElement article : articles) {
                         if (isAdvertisement(article))
                             continue;
-                        ((ArrayList<Tweet>) tweets).add((Tweet) dataProcessor.getElementData(article,tweetProperty));
+                        Tweet tweet = dataProcessor.getElementData(article,tweetProperty);
+                        String linkParts[] = tweet.getLink().split("/");
+                        String post_id = linkParts[linkParts.length - 1];
+                        if (TweetIdMap.get(post_id) != null && TweetIdMap.get(post_id).equals(1)) continue;
+                        TweetIdMap.put(post_id, 1);
+                        tweets.add(tweet);
+                        System.out.println(tweet);
                     }
-//                    System.out.println(lastPosition);
                 }
             } catch (Exception e) {
                 Thread.currentThread().interrupt();
                 e.printStackTrace();
             }
             System.out.println("last position: " + lastPosition + " " + currPosition);
+
             if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
                 webInteraction.logout(driver);
                 accountDetails = accountManager.changeAccount();

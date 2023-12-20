@@ -1,5 +1,6 @@
 package org.group10.config;
 
+import com.google.inject.Inject;
 import org.group10.crawler.property.SeleniumProperty;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,12 +11,15 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import static org.group10.crawler.helper.WebDriverHelper.threadSleep;
+import static org.group10.crawler.interaction.selenium.TwitterInteraction.LONG_DELAY_MS;
 
 public class SeleniumConfig {
-    private static SeleniumProperty seleniumProperty;
 
-    public SeleniumConfig() {
-        seleniumProperty = new SeleniumProperty();
+    private final SeleniumProperty seleniumProperty;
+
+    @Inject
+    public SeleniumConfig(SeleniumProperty seleniumProperty) {
+        this.seleniumProperty = seleniumProperty;
     }
 
     public WebDriver initBrowser() {
@@ -26,7 +30,7 @@ public class SeleniumConfig {
         options.addArguments("--disable-notifications");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        threadSleep(5000);
+        threadSleep(LONG_DELAY_MS);
         ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         driver.close();
@@ -36,7 +40,7 @@ public class SeleniumConfig {
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        threadSleep(5000);
+        threadSleep(LONG_DELAY_MS);
         return driver;
     }
 

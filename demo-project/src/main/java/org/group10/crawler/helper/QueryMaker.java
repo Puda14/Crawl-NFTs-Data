@@ -33,6 +33,7 @@ public class QueryMaker {
             query += "since%3A" + since + "%20";
         if (until != null)
             query += " until%3A" + until + "%20";
+//        query += "&tweet_mode=extended";
         return query;
     }
 

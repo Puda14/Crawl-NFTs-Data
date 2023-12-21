@@ -18,7 +18,5 @@ public class NFTCrawlTest {
         CrawlController crawlController = injector.getInstance(CrawlController.class);
 
         crawlController.crawlNftData(); // xem file moi da sinh chua
-
-
     }
 }

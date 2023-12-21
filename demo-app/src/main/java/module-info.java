@@ -3,10 +3,12 @@ module com.example.demoapp {
     requires javafx.fxml;
     requires static lombok;
     requires com.google.gson;
-    requires selenium.api;
     requires selenium.chrome.driver;
+    requires selenium.support;
+    requires selenium.java;
     requires com.google.guice;
     requires org.apache.commons.csv;
+    requires org.openqa.selenium.core;
 
 
     opens gui to javafx.fxml;
@@ -28,7 +30,7 @@ module com.example.demoapp {
     opens backend.crawler.interaction to com.google.guice;
     opens backend.crawler.property to com.google.guice;
     opens backend.controller to com.google.guice;
-    opens backend.config to com.google.guice;
+    opens backend.config to com.google.guice, selenium.chrome.driver;
 
 
 }

@@ -35,7 +35,7 @@ public class AccountManager {
     private void resetReader() {
         try {
             reader.close();
-            reader = new BufferedReader(new FileReader("src/sampleapp/account.txt"));
+            reader = new BufferedReader(new FileReader("D:\\code java\\Crawl-NFTs-Data\\demo-project\\account.txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }

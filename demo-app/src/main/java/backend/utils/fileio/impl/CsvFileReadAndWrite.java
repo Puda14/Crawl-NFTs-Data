@@ -11,6 +11,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,9 +58,9 @@ public class CsvFileReadAndWrite implements FileReadAndWrite<Tweet> {
 
     @Override
     public void writeToFile(Iterable<Tweet> data, String filePath) {
+        boolean fileExists = Files.exists(Paths.get(filePath));
         try (FileWriter writer = new FileWriter(filePath, true);
-             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT.withHeader(HEADERS))) {
-
+             CSVPrinter csvPrinter = new CSVPrinter(writer, fileExists ? CSVFormat.DEFAULT : CSVFormat.DEFAULT.withHeader(HEADERS))) {
             for (Tweet tweet : data) {
                 csvPrinter.printRecord(
                         tweet.getAccount(),

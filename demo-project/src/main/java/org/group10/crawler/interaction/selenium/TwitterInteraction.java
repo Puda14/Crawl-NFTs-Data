@@ -14,6 +14,7 @@ public class TwitterInteraction implements WebInteraction {
     private final TwitterProperty twitterProperty = new TwitterProperty();
     public static final double AMOUNT_PER_SCROLL = 5000.0;
     public static final String SCROLL_SCRIPT = "window.scrollBy(0, " + (int) AMOUNT_PER_SCROLL + ");";
+//    public static final String SCROLL_SCRIPT = "window.scrollTo(0, document.body.scrollHeight)";
     public static final int LONG_DELAY_MS = 5000;
 
     public static final double FIRST_RELOAD_CONDITION = 1000;
@@ -67,7 +68,7 @@ public class TwitterInteraction implements WebInteraction {
             scrollAttempt++;
             System.out.println(scrollAttempt + " " + currPosition);
             if (scrollAttempt >= MAX_SCROLL_ATTEMPTS) {
-                return -1.0;
+                return -1.0 * lastPosition;
             }
         }
     }

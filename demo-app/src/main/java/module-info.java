@@ -8,7 +8,11 @@ module com.example.demoapp {
     requires selenium.java;
     requires com.google.guice;
     requires org.apache.commons.csv;
+
     requires org.openqa.selenium.core;
+
+    requires java.desktop;
+
 
 
     opens gui to javafx.fxml;

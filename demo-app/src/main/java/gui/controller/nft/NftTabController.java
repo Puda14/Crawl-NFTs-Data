@@ -18,6 +18,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.scene.control.ListCell;
+import javafx.util.Callback;
 
 public class NftTabController {
     @FXML
@@ -30,13 +32,32 @@ public class NftTabController {
         NFTController nftController = injector.getInstance(NFTController.class);
         List<NFT> nfts = nftController.getAll();
         List<Detail> nftList = new ArrayList<>();
-        for (NFT nft: nfts){
+        for (NFT nft : nfts) {
             nftList.add(nft.getDetail());
         }
 
+        // Set up the cell factory to customize the display in the ListView
+        nftListView.setCellFactory(new Callback<ListView<Detail>, ListCell<Detail>>() {
+            @Override
+            public ListCell<Detail> call(ListView<Detail> param) {
+                return new ListCell<Detail>() {
+                    @Override
+                    protected void updateItem(Detail item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (item != null) {
+                            // Set the cell text to display the desired properties
+                            setText("Name: " + item.getName() + "\nBlockchain: " + item.getBlockchain() +
+                                    "\nRelease Date: " + item.getReleaseDate());
+                        } else {
+                            setText(null);
+                        }
+                    }
+                };
+            }
+        });
+
         // Populate the ListView with NFTs
         nftListView.getItems().addAll(nftList);
-
     }
 
     @FXML

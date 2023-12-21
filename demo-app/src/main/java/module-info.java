@@ -5,20 +5,29 @@ module com.example.demoapp {
     requires com.google.gson;
     requires selenium.api;
     requires selenium.chrome.driver;
+    requires com.google.guice;
+    requires org.apache.commons.csv;
 
 
-    opens com.example.demoapp to javafx.fxml;
-    exports com.example.demoapp;
-    exports com.example.demoapp.controller;
-    opens com.example.demoapp.controller to javafx.fxml;
-    exports com.example.demoapp.controller.nft;
-    opens com.example.demoapp.controller.nft to javafx.fxml;
-    opens com.example.demoapp.controller.home to javafx.fxml;
-    opens com.example.demoapp.controller.post to javafx.fxml;
-    opens com.example.demoapp.controller.crawler to javafx.fxml;
-    opens com.example.demoapp.controller.analyst to javafx.fxml;
-    opens group10.dto.nftpricefloorapi to com.google.gson;
-    opens group10.model.nft to com.google.gson;
+    opens gui to javafx.fxml;
+    exports gui;
+    exports gui.controller;
+    opens gui.controller to javafx.fxml;
+    exports gui.controller.nft;
+    opens gui.controller.nft to javafx.fxml;
+    opens gui.controller.home to javafx.fxml;
+    opens gui.controller.post to javafx.fxml;
+    opens gui.controller.crawler to javafx.fxml;
+    opens gui.controller.analyst to javafx.fxml;
+    opens backend.dto.nftpricefloorapi to com.google.gson;
+    opens backend.model.nft to com.google.gson;
+    opens backend.repository.impl to com.google.guice;
+    opens backend.service.impl to com.google.guice;
+    opens backend.crawler.impl to com.google.guice;
+    opens backend.crawler.dataprocessor to com.google.guice;
+    opens backend.crawler.interaction to com.google.guice;
+    opens backend.crawler.property to com.google.guice;
+    opens backend.controller to com.google.guice;
 
 
 }

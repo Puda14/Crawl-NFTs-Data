@@ -52,7 +52,7 @@ public class TweetDataProcessor implements DataProcessor<Tweet, TweetProperty> {
                     like = Integer.parseInt(part.replaceAll("[^0-9]", ""));
                     continue;
                 }
-                bookmark = Integer.parseInt(part.replaceAll("[^0-9]", ""));
+//                bookmark = Integer.parseInt(part.replaceAll("[^0-9]", ""));
             }
         }catch (NoSuchElementException e){
 

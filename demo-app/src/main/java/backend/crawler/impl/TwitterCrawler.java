@@ -33,12 +33,12 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
     private final SeleniumConfig seleniumConfig;
     private final TwitterProperty twitterProperty;
     private final TweetProperty tweetProperty;
-    private final DataProcessor<Tweet,TweetProperty> dataProcessor;
+    private final DataProcessor<Tweet, TweetProperty> dataProcessor;
     private static final Map<String, Integer> TweetIdMap = new HashMap<>();
 
 
     @Inject
-    public TwitterCrawler(SeleniumConfig seleniumConfig, TwitterInteraction twitterInteraction, TwitterProperty twitterProperty,TweetProperty tweetProperty ,DataProcessor dataProcessor){
+    public TwitterCrawler(SeleniumConfig seleniumConfig, TwitterInteraction twitterInteraction, TwitterProperty twitterProperty, TweetProperty tweetProperty, DataProcessor dataProcessor) {
         this.webInteraction = twitterInteraction;
         this.seleniumConfig = seleniumConfig;
         this.twitterProperty = twitterProperty;
@@ -65,14 +65,14 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
 //                    lastPosition = currPosition;
 //                    currPosition = webInteraction.scrollDown(driver);
                     lastPosition = webInteraction.scrollDown(driver);
-                    if(lastPosition.compareTo(FIRST_RELOAD_CONDITION * 1.0) < 0){
+                    if (lastPosition.compareTo(FIRST_RELOAD_CONDITION * 1.0) < 0) {
                         break;
                     }
                     List<WebElement> articles = driver.findElements(By.xpath(TWEET_XPATH));
                     for (WebElement article : articles) {
                         if (isAdvertisement(article))
                             continue;
-                        Tweet tweet = dataProcessor.getElementData(article,tweetProperty);
+                        Tweet tweet = dataProcessor.getElementData(article, tweetProperty);
                         String linkParts[] = tweet.getLink().split("/");
                         String post_id = linkParts[linkParts.length - 1];
                         if (TweetIdMap.get(post_id) != null && TweetIdMap.get(post_id).equals(1)) continue;
@@ -86,19 +86,27 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
                 e.printStackTrace();
             }
 //            System.out.println("last position: " + lastPosition + " " + currPosition);
-            if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
-                webInteraction.logout(driver);
-                accountDetails = accountManager.changeAccount();
-                pUsername = accountDetails[0];
-                pPassword = accountDetails[1];
-                System.out.println("change account to " + pUsername + " " + pPassword);
-                driver.manage().deleteAllCookies();
-                webInteraction.login(driver, pUsername, pPassword);
-                continue;
-            }
+//            if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
+//                webInteraction.logout(driver);
+//                accountDetails = accountManager.changeAccount();
+//                pUsername = accountDetails[0];
+//                pPassword = accountDetails[1];
+//                System.out.println("change account to " + pUsername + " " + pPassword);
+//                driver.manage().deleteAllCookies();
+//                webInteraction.login(driver, pUsername, pPassword);
+//                continue;
+//            }
 
             startDay = addDayToString(startDay, DAY_GAP + 1);
-            System.out.println(startDay + " " + endDay);
+            if (startDay.compareTo(endDay) > 0) break;
+//            System.out.println(startDay + " " + endDay);
+            webInteraction.logout(driver);
+            accountDetails = accountManager.changeAccount();
+            pUsername = accountDetails[0];
+            pPassword = accountDetails[1];
+            System.out.println("change account to " + pUsername + " " + pPassword);
+            driver.manage().deleteAllCookies();
+            webInteraction.login(driver, pUsername, pPassword);
         }
         driver.quit();
         return tweets;

@@ -28,6 +28,17 @@ public class WebDriverHelper {
         textField.sendKeys(input);
     }
 
+    public static boolean noResultDetected(WebDriver driver, String noResultProp){
+        try{
+            WebElement noResult = driver.findElement(By.xpath(noResultProp));
+            return true;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     public static boolean reloadButtonDetected(WebDriver driver, String reloadProp){
         try{
             WebElement reloadButton = driver.findElement(By.xpath(reloadProp));
@@ -38,4 +49,6 @@ public class WebDriverHelper {
             return false;
         }
     }
+
+
 }

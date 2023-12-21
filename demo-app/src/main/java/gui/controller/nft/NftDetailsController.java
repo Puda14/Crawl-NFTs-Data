@@ -3,16 +3,26 @@ package gui.controller.nft;
 import backend.dto.nftpricefloorapi.SocialMedia;
 import backend.dto.nftpricefloorapi.Marketplace;
 import backend.model.nft.Detail;
+import backend.model.nft.NFT;
+import backend.model.nft.PriceHistory;
 import javafx.fxml.FXML;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ListCell;
 import javafx.scene.text.Text;
+import javafx.util.StringConverter;
 
 import java.awt.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import javafx.application.Platform;
 
 public class NftDetailsController {
 
@@ -37,7 +47,12 @@ public class NftDetailsController {
     @FXML
     private ListView<Marketplace> marketplacesListView;
 
-    public void setNFTDetails(Detail nftDetails) {
+    @FXML
+    private LineChart<Number, Number> priceHistoryChart;
+
+    public void setNFTDetails(NFT nft) {
+        Detail nftDetails = nft.getDetail();
+
         nameLabel.setText("Name: " + nftDetails.getName());
         releaseDateLabel.setText("Release Date: " + nftDetails.getReleaseDate());
         contractText.setText("Contract: " + nftDetails.getContract());
@@ -75,6 +90,30 @@ public class NftDetailsController {
         });
 
         marketplacesListView.getItems().setAll(nftDetails.getMarketplaces());
+
+
+
+        List<PriceHistory> priceHistoryList = nft.getPriceHistoryList();
+
+        Platform.runLater(() -> {
+            XYChart.Series<Number, Number> series = new XYChart.Series<>();
+            series.setName("Price History");
+
+            for (PriceHistory priceHistory : priceHistoryList) {
+                Double volumeUsd = priceHistory.getVolumeUsd();
+                if (volumeUsd != null) {
+                    series.getData().add(new XYChart.Data<>(priceHistory.getTimestamps().getTime(), volumeUsd));
+                }
+            }
+
+            NumberAxis xAxis = new NumberAxis();
+            xAxis.setLabel("Timestamps");
+
+            NumberAxis yAxis = new NumberAxis();
+            yAxis.setLabel("Volume (USD)");
+
+            priceHistoryChart.getData().add(series);
+        });
     }
 
     private void openURL(String url) {

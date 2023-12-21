@@ -22,8 +22,9 @@ import javafx.scene.control.ListCell;
 import javafx.util.Callback;
 
 public class NftTabController {
+
     @FXML
-    private ListView<Detail> nftListView;
+    private ListView<NFT> nftListView;
 
 
     public void initialize() {
@@ -31,23 +32,20 @@ public class NftTabController {
         Injector injector = Guice.createInjector(new ConfigModule());
         NFTController nftController = injector.getInstance(NFTController.class);
         List<NFT> nfts = nftController.getAll();
-        List<Detail> nftList = new ArrayList<>();
-        for (NFT nft : nfts) {
-            nftList.add(nft.getDetail());
-        }
 
         // Set up the cell factory to customize the display in the ListView
-        nftListView.setCellFactory(new Callback<ListView<Detail>, ListCell<Detail>>() {
+        nftListView.setCellFactory(new Callback<ListView<NFT>, ListCell<NFT>>() {
             @Override
-            public ListCell<Detail> call(ListView<Detail> param) {
-                return new ListCell<Detail>() {
+            public ListCell<NFT> call(ListView<NFT> param) {
+                return new ListCell<NFT>() {
                     @Override
-                    protected void updateItem(Detail item, boolean empty) {
+                    protected void updateItem(NFT item, boolean empty) {
                         super.updateItem(item, empty);
                         if (item != null) {
                             // Set the cell text to display the desired properties
-                            setText("Name: " + item.getName() + "\nBlockchain: " + item.getBlockchain() +
-                                    "\nRelease Date: " + item.getReleaseDate());
+                            setText("Name: " + item.getDetail().getName() +
+                                    "\nBlockchain: " + item.getDetail().getBlockchain() +
+                                    "\nRelease Date: " + item.getDetail().getReleaseDate());
                         } else {
                             setText(null);
                         }
@@ -57,13 +55,13 @@ public class NftTabController {
         });
 
         // Populate the ListView with NFTs
-        nftListView.getItems().addAll(nftList);
+        nftListView.getItems().addAll(nfts);
     }
 
     @FXML
     private void showNFTDetails(MouseEvent event) {
         // Get the selected NFT from the ListView
-        Detail selectedNFT = nftListView.getSelectionModel().getSelectedItem();
+        NFT selectedNFT = nftListView.getSelectionModel().getSelectedItem();
 
         // Load the details FXML file and controller
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/nft-details.fxml"));

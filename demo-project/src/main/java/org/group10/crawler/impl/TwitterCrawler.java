@@ -23,7 +23,7 @@ import static org.group10.crawler.helper.WebDriverHelper.*;
 
 public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
     private static final int DAY_GAP = 3;
-    private static final int MIN_FAVES = 5;
+    private static final int MIN_FAVES = 2;
     private static final int MIN_RETWEET = 0;
     private static final int MIN_REPLY = 0;
     private static final int FILTER_REPLIES = 0;
@@ -86,7 +86,10 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
                 e.printStackTrace();
             }
 //            System.out.println("last position: " + lastPosition + " " + currPosition);
-            if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
+//            if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
+            startDay = addDayToString(startDay, DAY_GAP + 1);
+            if(startDay.compareTo(endDay) > 0) break;
+            System.out.println(startDay + " " + endDay);
                 webInteraction.logout(driver);
                 accountDetails = accountManager.changeAccount();
                 pUsername = accountDetails[0];
@@ -94,11 +97,11 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
                 System.out.println("change account to " + pUsername + " " + pPassword);
                 driver.manage().deleteAllCookies();
                 webInteraction.login(driver, pUsername, pPassword);
-                continue;
-            }
+//                continue;
+//            }
 
-            startDay = addDayToString(startDay, DAY_GAP + 1);
-            System.out.println(startDay + " " + endDay);
+//            startDay = addDayToString(startDay, DAY_GAP + 1);
+//            System.out.println(startDay + " " + endDay);
         }
         driver.quit();
         return tweets;

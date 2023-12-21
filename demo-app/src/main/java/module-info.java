@@ -7,6 +7,7 @@ module com.example.demoapp {
     requires selenium.chrome.driver;
     requires com.google.guice;
     requires org.apache.commons.csv;
+    requires java.desktop;
 
 
     opens gui to javafx.fxml;

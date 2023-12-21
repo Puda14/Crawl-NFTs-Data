@@ -16,6 +16,8 @@ import org.group10.service.CrawlService;
 import org.group10.utils.mapper.NftDetailMapper;
 import org.group10.utils.mapper.PriceHistoryMapper;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,8 +51,11 @@ public class CrawlServiceImpl implements CrawlService {
             nft.setPriceHistoryList(PriceHistoryMapper.map(jsonObject));
             nftList.add(nft);
         }
+        LocalDateTime localDateTime = LocalDateTime.now();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss");
+        String filePath = "nft";
         FileReadAndWrite<NFT> fileReadAndWrite = new JsonFileReadAndWrite<>();
-        fileReadAndWrite.writeToFile(nftList,nftFilePath);
+        fileReadAndWrite.writeToFile(nftList,filePath + dtf.format(localDateTime) + ".json");
     }
 
     @Override

@@ -18,21 +18,21 @@ public class TweetDataProcessor implements DataProcessor<Tweet, TweetProperty> {
         } catch (NoSuchElementException e){
             link = " ";
         }
-//        get account href
+        //get account href
         WebElement accountWebElement = article.findElement(By.xpath(tweetProperty.getAccountProp()));
         account = (accountWebElement.getText().replaceAll("\n", " "));
 
-//        get time
+        //get time
         WebElement timeWebElement = article.findElement(By.xpath(tweetProperty.getTimeProp()));
         time = (timeWebElement.getAttribute("datetime").replaceAll("\n", " "));
-//get text
-        try {
-            WebElement tweetTextElement = article.findElement(By.xpath(tweetProperty.getTweetTextProp()));
-            tweetText = (tweetTextElement.getText().replaceAll("\n", " "));
-        }catch (NoSuchElementException e){
-            tweetText = " ";
-        }
-
+        //get text
+//        try {
+//            WebElement tweetTextElement = article.findElement(By.xpath(tweetProperty.getTweetTextProp()));
+//            tweetText = (tweetTextElement.getText().replaceAll("\n", " "));
+//        }catch (NoSuchElementException e){
+//            tweetText = " ";
+//        }
+        tweetText = " ";
         String group;
 
         try {

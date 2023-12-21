@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.group10.crawler.helper.WebDriverHelper.threadSleep;
 import static org.group10.crawler.interaction.selenium.TwitterInteraction.LONG_DELAY_MS;
+import static org.group10.crawler.interaction.selenium.TwitterInteraction.SHORT_DELAY_MS;
 
 public class SeleniumConfig {
 
@@ -30,7 +31,7 @@ public class SeleniumConfig {
         options.addArguments("--disable-notifications");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        threadSleep(LONG_DELAY_MS);
+        threadSleep(SHORT_DELAY_MS);
         ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         driver.close();

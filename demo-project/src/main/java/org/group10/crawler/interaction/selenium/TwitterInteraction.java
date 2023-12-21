@@ -15,6 +15,10 @@ public class TwitterInteraction implements WebInteraction {
     public static final double AMOUNT_PER_SCROLL = 5000.0;
     public static final String SCROLL_SCRIPT = "window.scrollBy(0, " + (int) AMOUNT_PER_SCROLL + ");";
     public static final int LONG_DELAY_MS = 5000;
+
+    public static final double FIRST_RELOAD_CONDITION = 1000;
+    public static final int SHORT_DELAY_MS = 2000;
+
     public static final int MAX_SCROLL_ATTEMPTS = 3;
     public static Double lastPosition = -1.0;
     @Override
@@ -47,14 +51,15 @@ public class TwitterInteraction implements WebInteraction {
         int scrollAttempt = 0;
         while (true) {
             jsExecutor.executeScript(SCROLL_SCRIPT);
-            System.out.println("t vua scroll");
-            threadSleep(LONG_DELAY_MS);
+//            System.out.println("t vua scroll");
+            threadSleep(SHORT_DELAY_MS);
             Object currPositionObject = jsExecutor.executeScript("return window.pageYOffset;");
             if (currPositionObject == null)
                 return -1.0;
             Double currPosition = Double.parseDouble(currPositionObject.toString());
-            if(currPosition.compareTo(AMOUNT_PER_SCROLL) < 0)
-                return -1.0;
+            if(currPosition < FIRST_RELOAD_CONDITION){
+                return currPosition;
+            }
             if (!lastPosition.equals(currPosition)) {
                 lastPosition = currPosition;
                 return currPosition;

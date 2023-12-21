@@ -16,10 +16,8 @@ public class CrawlTest {
         NFTController nftController = injector.getInstance(NFTController.class);
         CrawlController crawlController = injector.getInstance(CrawlController.class);
 
-        List<Tweet> tweetList = crawlController.crawlTweetDataByKeyword("boredapeyc", "2022-03-13", "2022-03-21");
+        List<Tweet> tweetList = crawlController.crawlTweetDataByKeyword("boredapeyc", "2021-08-01", "2021-12-21");
         System.out.println(tweetList);
-
-
 
     }
 }

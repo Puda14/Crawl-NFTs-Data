@@ -19,8 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.group10.crawler.helper.QueryMaker.addDayToString;
-import static org.group10.crawler.helper.WebDriverHelper.isAdvertisement;
-import static org.group10.crawler.helper.WebDriverHelper.reloadButtonDetected;
+import static org.group10.crawler.helper.WebDriverHelper.*;
 
 public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
     private static final int DAY_GAP = 3;
@@ -60,12 +59,13 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
             webInteraction.search(driver, keyword, startDay, MIN_FAVES, MIN_RETWEET, MIN_REPLY, FILTER_REPLIES);
 
             Double lastPosition = -2.0;
-            Double currPosition = -2.0;
+//            Double currPosition = -2.0;
             try {
                 while (true) {
-                    lastPosition = currPosition;
-                    currPosition = webInteraction.scrollDown(driver);
-                    if(currPosition.compareTo(FIRST_RELOAD_CONDITION * 1.0) < 0){
+//                    lastPosition = currPosition;
+//                    currPosition = webInteraction.scrollDown(driver);
+                    lastPosition = webInteraction.scrollDown(driver);
+                    if(lastPosition.compareTo(FIRST_RELOAD_CONDITION * 1.0) < 0){
                         break;
                     }
                     List<WebElement> articles = driver.findElements(By.xpath(TWEET_XPATH));
@@ -85,8 +85,7 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
                 Thread.currentThread().interrupt();
                 e.printStackTrace();
             }
-            System.out.println("last position: " + lastPosition + " " + currPosition);
-
+//            System.out.println("last position: " + lastPosition + " " + currPosition);
             if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
                 webInteraction.logout(driver);
                 accountDetails = accountManager.changeAccount();

@@ -23,11 +23,20 @@ public class TwitterInteraction implements WebInteraction {
     public static final int MAX_SCROLL_ATTEMPTS = 3;
     public static Double lastPosition = -1.0;
     @Override
-    public void login(WebDriver driver, String username, String password) throws NoSuchElementException, TimeoutException, StaleElementReferenceException {
+    public void login(WebDriver driver, String username, String password, String email) throws NoSuchElementException, TimeoutException, StaleElementReferenceException {
         driver.get(twitterProperty.getLoginUrl());
         input(driver,twitterProperty.getUsernameInputField(),username);
         clickButton(driver,twitterProperty.getNextButton());
-        input(driver,twitterProperty.getPasswordInputField(),password);
+//        input(driver,twitterProperty.getPasswordInputField(),password);
+        try{
+            WebElement passwordField = driver.findElement(By.xpath(twitterProperty.getPasswordInputField()));
+            passwordField.sendKeys(password);
+        }
+        catch (Exception e){
+            input(driver, twitterProperty.getEmailInputField(), email);
+            clickButton(driver,twitterProperty.getNextButton());
+            input(driver, twitterProperty.getPasswordInputField(), password);
+        }
         clickButton(driver,twitterProperty.getLoginButton());
         threadSleep(LONG_DELAY_MS);
     }
@@ -40,8 +49,8 @@ public class TwitterInteraction implements WebInteraction {
         threadSleep(LONG_DELAY_MS);
     }
 
-    public void search(WebDriver driver, String keyword, String since, int min_faves, int min_retweets, int min_replies, int filter_replies) {
-        String search_url = "https://twitter.com/search?q=" + makeQuery(keyword, since, min_faves, min_retweets, min_replies, filter_replies) + "&src=typed_query&f=live";
+    public void search(WebDriver driver, String keyword, String since, String endDate, int min_faves, int min_retweets, int min_replies, int filter_replies) {
+        String search_url = "https://twitter.com/search?q=" + makeQuery(keyword, since, endDate, min_faves, min_retweets, min_replies, filter_replies) + "&src=typed_query&f=live";
         driver.get(search_url);
         threadSleep(LONG_DELAY_MS);
     }

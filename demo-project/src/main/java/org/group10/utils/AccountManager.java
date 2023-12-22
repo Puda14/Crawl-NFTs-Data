@@ -16,15 +16,17 @@ public class AccountManager {
         }
     }
 
-    public String[] changeAccount() {
-        String[] accountDetails = new String[2];
+    public String[] changeAccount(String filePath) {
+        String[] accountDetails = new String[3];
         try {
             accountDetails[0] = reader.readLine(); // username
             accountDetails[1] = reader.readLine(); // password
+            accountDetails[2] = reader.readLine(); // email
             if (accountDetails[0] == null || accountDetails[1] == null) {
-                resetReader();
+                resetReader(filePath);
                 accountDetails[0] = reader.readLine(); // username
                 accountDetails[1] = reader.readLine(); // password
+                accountDetails[2] = reader.readLine(); // email
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -32,10 +34,10 @@ public class AccountManager {
         return accountDetails;
     }
 
-    private void resetReader() {
+    private void resetReader(String filePath) {
         try {
             reader.close();
-            reader = new BufferedReader(new FileReader("D:\\code java\\Crawl-NFTs-Data\\demo-project\\account.txt"));
+            reader = new BufferedReader(new FileReader(filePath));
         } catch (IOException e) {
             e.printStackTrace();
         }

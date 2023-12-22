@@ -51,23 +51,28 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
     public List<Tweet> getWebsiteData(String keyword, String startDay, String endDay) {
         List<Tweet> tweets = new ArrayList<>();
         AccountManager accountManager = new AccountManager("account.txt");
-        String accountDetails[] = accountManager.changeAccount();
-        String pUsername = accountDetails[0];
-        String pPassword = accountDetails[1];
         WebDriver driver = seleniumConfig.initBrowser();
-        webInteraction.login(driver, pUsername, pPassword);
         while (startDay.compareTo(endDay) <= 0) {
-            webInteraction.search(driver, keyword, startDay, MIN_FAVES, MIN_RETWEET, MIN_REPLY, FILTER_REPLIES);
+            String accountDetails[] = accountManager.changeAccount("account.txt");
+            String pUsername = accountDetails[0];
+            String pPassword = accountDetails[1];
+            String pEmail = accountDetails[2];
+            webInteraction.login(driver, pUsername, pPassword, pEmail);
+            webInteraction.search(driver, keyword, startDay, endDay, MIN_FAVES, MIN_RETWEET, MIN_REPLY, FILTER_REPLIES);
 
             Double lastPosition = -2.0;
             try {
                 while (true) {
-//                    lastPosition = currPosition;
-//                    currPosition = webInteraction.scrollDown(driver);
                     lastPosition = webInteraction.scrollDown(driver);
-                    if (lastPosition.compareTo(FIRST_RELOAD_CONDITION * 1.0) < 0) {
+                    //if reload button detected, break
+                    if(lastPosition.compareTo(FIRST_RELOAD_CONDITION * 1.0) < 0 && reloadButtonDetected(driver,twitterProperty.getReloadButton()))
                         break;
-                    }
+                    //if end of page detected, break
+//                    if (lastPosition.compareTo(FIRST_RELOAD_CONDITION * 1.0) < 0)
+//                        break;
+                    //if cant scroll down anymore, break
+                    if(lastPosition.compareTo(0.0) < 0)
+                        break;
                     List<WebElement> articles = driver.findElements(By.xpath(TWEET_XPATH));
                     for (WebElement article : articles) {
                         if (isAdvertisement(article))
@@ -87,17 +92,15 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
             }
             System.out.println("last position: " + lastPosition);
 //            if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
-            if(lastPosition.compareTo(LOADED_SOME_TWITTER) < 0)
+            if(lastPosition.compareTo(LOADED_SOME_TWITTER) < 0 || noResultDetected(driver, twitterProperty.getNoResult()))
                 startDay = addDayToString(startDay, (DAY_GAP + 1));
+            else{
+                if(!reloadButtonDetected(driver,twitterProperty.getReloadButton()))
+                    startDay = addDayToString(startDay, (DAY_GAP + 1));
+            }
             if (startDay.compareTo(endDay) > 0) break;
             System.out.println(startDay + " " + endDay);
             webInteraction.logout(driver);
-            accountDetails = accountManager.changeAccount();
-            pUsername = accountDetails[0];
-            pPassword = accountDetails[1];
-            System.out.println("change account to " + pUsername + " " + pPassword);
-            driver.manage().deleteAllCookies();
-            webInteraction.login(driver, pUsername, pPassword);
 //                continue;
 //            }
 

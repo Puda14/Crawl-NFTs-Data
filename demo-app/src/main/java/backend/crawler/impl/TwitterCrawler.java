@@ -51,10 +51,10 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
     @Override
     public List<Tweet> getWebsiteData(String keyword, String startDay, String endDay) {
         List<Tweet> tweets = new ArrayList<>();
-        AccountManager accountManager = new AccountManager("accountFilePath");
+        AccountManager accountManager = new AccountManager(accountFilePath);
         WebDriver driver = seleniumConfig.initBrowser();
         while (startDay.compareTo(endDay) <= 0) {
-            String accountDetails[] = accountManager.changeAccount("accountFilePath");
+            String accountDetails[] = accountManager.changeAccount(accountFilePath);
             String pUsername = accountDetails[0];
             String pPassword = accountDetails[1];
             String pEmail = accountDetails[2];

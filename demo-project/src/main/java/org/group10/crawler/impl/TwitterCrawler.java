@@ -50,61 +50,62 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
     @Override
     public List<Tweet> getWebsiteData(String keyword, String startDay, String endDay) {
         List<Tweet> tweets = new ArrayList<>();
-        AccountManager accountManager = new AccountManager("account.txt");
-        String accountDetails[] = accountManager.changeAccount();
+        AccountManager accountManager = new AccountManager("accountManagerPath");
+        String accountDetails[] = accountManager.changeAccount("accountManagerPath");
         String pUsername = accountDetails[0];
         String pPassword = accountDetails[1];
-        WebDriver driver = seleniumConfig.initBrowser();
-        webInteraction.login(driver, pUsername, pPassword);
+//        WebDriver driver = seleniumConfig.initBrowser();
+//        webInteraction.login(driver, pUsername, pPassword);
         while (startDay.compareTo(endDay) <= 0) {
-            webInteraction.search(driver, keyword, startDay, MIN_FAVES, MIN_RETWEET, MIN_REPLY, FILTER_REPLIES);
+//            webInteraction.search(driver, keyword, startDay, MIN_FAVES, MIN_RETWEET, MIN_REPLY, FILTER_REPLIES);
 
             Double lastPosition = -2.0;
-            try {
-                while (true) {
-//                    lastPosition = currPosition;
-//                    currPosition = webInteraction.scrollDown(driver);
-                    lastPosition = webInteraction.scrollDown(driver);
-                    if (lastPosition.compareTo(FIRST_RELOAD_CONDITION * 1.0) < 0) {
-                        break;
-                    }
-                    List<WebElement> articles = driver.findElements(By.xpath(TWEET_XPATH));
-                    for (WebElement article : articles) {
-                        if (isAdvertisement(article))
-                            continue;
-                        Tweet tweet = dataProcessor.getElementData(article, tweetProperty);
-                        String linkParts[] = tweet.getLink().split("/");
-                        String post_id = linkParts[linkParts.length - 1];
-                        if (TweetIdMap.get(post_id) != null && TweetIdMap.get(post_id).equals(1)) continue;
-                        TweetIdMap.put(post_id, 1);
-                        tweets.add(tweet);
-                        System.out.println(tweet);
-                    }
-                }
-            } catch (Exception e) {
-                Thread.currentThread().interrupt();
-                e.printStackTrace();
-            }
-            System.out.println("last position: " + lastPosition);
+//            try {
+//                while (true) {
+////                    lastPosition = currPosition;
+////                    currPosition = webInteraction.scrollDown(driver);
+//                    lastPosition = webInteraction.scrollDown(driver);
+//                    if (lastPosition.compareTo(FIRST_RELOAD_CONDITION * 1.0) < 0) {
+//                        break;
+//                    }
+//                    List<WebElement> articles = driver.findElements(By.xpath(TWEET_XPATH));
+//                    for (WebElement article : articles) {
+//                        if (isAdvertisement(article))
+//                            continue;
+//                        Tweet tweet = dataProcessor.getElementData(article, tweetProperty);
+//                        String linkParts[] = tweet.getLink().split("/");
+//                        String post_id = linkParts[linkParts.length - 1];
+//                        if (TweetIdMap.get(post_id) != null && TweetIdMap.get(post_id).equals(1)) continue;
+//                        TweetIdMap.put(post_id, 1);
+//                        tweets.add(tweet);
+//                        System.out.println(tweet);
+//                    }
+//                }
+//            } catch (Exception e) {
+//                Thread.currentThread().interrupt();
+//                e.printStackTrace();
+//            }
+//            System.out.println("last position: " + lastPosition);
 //            if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
+            lastPosition = -202000.0;
             if(lastPosition.compareTo(LOADED_SOME_TWITTER) < 0)
                 startDay = addDayToString(startDay, (DAY_GAP + 1));
             if (startDay.compareTo(endDay) > 0) break;
             System.out.println(startDay + " " + endDay);
-            webInteraction.logout(driver);
-            accountDetails = accountManager.changeAccount();
+//            webInteraction.logout(driver);
+            accountDetails = accountManager.changeAccount("accountManagerPath");
             pUsername = accountDetails[0];
             pPassword = accountDetails[1];
             System.out.println("change account to " + pUsername + " " + pPassword);
-            driver.manage().deleteAllCookies();
-            webInteraction.login(driver, pUsername, pPassword);
+//            driver.manage().deleteAllCookies();
+//            webInteraction.login(driver, pUsername, pPassword);
 //                continue;
 //            }
 
 //            startDay = addDayToString(startDay, DAY_GAP + 1);
 //            System.out.println(startDay + " " + endDay);
         }
-        driver.quit();
+//        driver.quit();
         return tweets;
     }
 }

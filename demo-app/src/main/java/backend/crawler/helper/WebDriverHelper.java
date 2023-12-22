@@ -34,7 +34,7 @@ public class WebDriverHelper {
             return true;
         }
         catch (Exception e){
-            e.printStackTrace();
+//            e.printStackTrace();
             return false;
         }
     }
@@ -45,7 +45,7 @@ public class WebDriverHelper {
             return true;
         }
         catch (Exception e){
-            e.printStackTrace();
+//            e.printStackTrace();
             return false;
         }
     }

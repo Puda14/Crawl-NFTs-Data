@@ -24,7 +24,7 @@
    <ListView fx:id="marketplacesListView" layoutX="620.0" layoutY="101.0" prefHeight="200.0" prefWidth="132.0" />
    <Label alignment="CENTER" layoutX="392.0" layoutY="310.0" prefHeight="17.0" prefWidth="132.0" text="Social Media" />
    <Label alignment="CENTER" layoutX="620.0" layoutY="310.0" prefHeight="17.0" prefWidth="132.0" text="Market Places" />
-    <LineChart fx:id="priceHistoryChart" layoutX="92.0" layoutY="355.0" prefHeight="400.0" prefWidth="600.0">
+    <LineChart fx:id="priceHistoryChart" layoutX="92.0" layoutY="355.0" prefHeight="400.0" prefWidth="640.0">
         <xAxis>
             <NumberAxis label="Timestamps" side="BOTTOM" />
         </xAxis>

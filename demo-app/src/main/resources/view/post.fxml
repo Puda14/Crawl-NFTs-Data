@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<?import javafx.scene.text.Text?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="gui.controller.post.PostController"
-            prefHeight="400.0" prefWidth="600.0">
-<Pane>
-    <Text>Post</Text>
-</Pane>
+<AnchorPane prefHeight="556.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.post.PostTabController">
+ <ListView fx:id="postListView" layoutX="264.0" prefHeight="610.0" prefWidth="609.0" />
+   <Button fx:id="searchTweetButton" layoutX="32.0" layoutY="48.0" mnemonicParsing="false" text="Search" />
+   <TextField fx:id="tweetTextField" layoutX="100.0" layoutY="50.0" />
+   <Button fx:id="allTweetButton" layoutX="33.0" layoutY="94.0" mnemonicParsing="false" text="All" />
 </AnchorPane>

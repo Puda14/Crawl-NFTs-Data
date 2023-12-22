@@ -16,10 +16,12 @@ public class TwitterProperty {
     private String logoutUrl;
     private String usernameInputField;
     private String passwordInputField;
+    private String emailInputField;
     private String nextButton;
     private String loginButton;
     private String logoutButton;
     private String reloadButton;
+    private String noResult;
 
 
     public TwitterProperty() {
@@ -35,10 +37,12 @@ public class TwitterProperty {
             logoutUrl = properties.getProperty("logoutUrl");
             usernameInputField = properties.getProperty("usernameInputField");
             passwordInputField = properties.getProperty("passwordInputField");
+            emailInputField = properties.getProperty("emailInputField");
             nextButton = properties.getProperty("nextButton");
             loginButton = properties.getProperty("loginButton");
             logoutButton = properties.getProperty("logoutButton");
             reloadButton = properties.getProperty("reloadButton");
+            noResult = properties.getProperty("noTweetFound");
 
         } catch (IOException ex) {
             ex.printStackTrace();

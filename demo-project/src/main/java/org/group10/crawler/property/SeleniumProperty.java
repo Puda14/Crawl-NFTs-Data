@@ -13,6 +13,7 @@ public class SeleniumProperty {
     private String driverType;
     private String driverPath;
     private String extensionPath;
+    private String accountManagerPath;
 
     public SeleniumProperty() {
         loadProperties();
@@ -25,6 +26,7 @@ public class SeleniumProperty {
             driverType = properties.getProperty("driverType");
             driverPath = properties.getProperty("driverPath");
             extensionPath = properties.getProperty("extensionPath");
+            accountManagerPath = properties.getProperty("accountManagerPath");
 
         } catch (IOException ex) {
             ex.printStackTrace();

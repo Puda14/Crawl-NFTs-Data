@@ -23,11 +23,20 @@ public class TwitterInteraction implements WebInteraction {
     public static final int MAX_SCROLL_ATTEMPTS = 3;
     public static Double lastPosition = -1.0;
     @Override
-    public void login(WebDriver driver, String username, String password) throws NoSuchElementException, TimeoutException, StaleElementReferenceException {
+    public void login(WebDriver driver, String username, String password, String email) throws NoSuchElementException, TimeoutException, StaleElementReferenceException {
         driver.get(twitterProperty.getLoginUrl());
         input(driver,twitterProperty.getUsernameInputField(),username);
         clickButton(driver,twitterProperty.getNextButton());
-        input(driver,twitterProperty.getPasswordInputField(),password);
+//        input(driver,twitterProperty.getPasswordInputField(),password);
+        try{
+            WebElement passwordField = driver.findElement(By.xpath(twitterProperty.getPasswordInputField()));
+            passwordField.sendKeys(password);
+        }
+        catch (Exception e){
+            input(driver, twitterProperty.getEmailInputField(), email);
+            clickButton(driver,twitterProperty.getNextButton());
+            input(driver, twitterProperty.getPasswordInputField(), password);
+        }
         clickButton(driver,twitterProperty.getLoginButton());
         threadSleep(LONG_DELAY_MS);
     }

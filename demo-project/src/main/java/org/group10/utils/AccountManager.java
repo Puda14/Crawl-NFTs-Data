@@ -17,14 +17,17 @@ public class AccountManager {
     }
 
     public String[] changeAccount(String filePath) {
-        String[] accountDetails = new String[2];
+        String[] accountDetails = new String[3];
+
         try {
             accountDetails[0] = reader.readLine(); // username
             accountDetails[1] = reader.readLine(); // password
+            accountDetails[2] = reader.readLine(); // email
             if (accountDetails[0] == null || accountDetails[1] == null) {
                 resetReader(filePath);
                 accountDetails[0] = reader.readLine(); // username
                 accountDetails[1] = reader.readLine(); // password
+                accountDetails[2] = reader.readLine(); // email
             }
         } catch (IOException e) {
             e.printStackTrace();

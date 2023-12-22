@@ -14,6 +14,7 @@ public class TwitterInteraction implements WebInteraction {
     private final TwitterProperty twitterProperty = new TwitterProperty();
     public static final double AMOUNT_PER_SCROLL = 5000.0;
     public static final String SCROLL_SCRIPT = "window.scrollBy(0, " + (int) AMOUNT_PER_SCROLL + ");";
+//    public static final String SCROLL_SCRIPT = "window.scrollTo(0, document.body.scrollHeight)";
     public static final int LONG_DELAY_MS = 5000;
 
     public static final double FIRST_RELOAD_CONDITION = 1000;
@@ -39,8 +40,8 @@ public class TwitterInteraction implements WebInteraction {
         threadSleep(LONG_DELAY_MS);
     }
 
-    public void search(WebDriver driver, String keyword, String since, int min_faves, int min_retweets, int min_replies, int filter_replies) {
-        String search_url = "https://twitter.com/search?q=" + makeQuery(keyword, since, min_faves, min_retweets, min_replies, filter_replies) + "&src=typed_query&f=live";
+    public void search(WebDriver driver, String keyword, String since, String endDate, int min_faves, int min_retweets, int min_replies, int filter_replies) {
+        String search_url = "https://twitter.com/search?q=" + makeQuery(keyword, since, endDate, min_faves, min_retweets, min_replies, filter_replies) + "&src=typed_query&f=live";
         driver.get(search_url);
         threadSleep(LONG_DELAY_MS);
     }
@@ -67,7 +68,7 @@ public class TwitterInteraction implements WebInteraction {
             scrollAttempt++;
             System.out.println(scrollAttempt + " " + currPosition);
             if (scrollAttempt >= MAX_SCROLL_ATTEMPTS) {
-                return -1.0;
+                return -1.0 * lastPosition;
             }
         }
     }

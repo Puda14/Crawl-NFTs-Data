@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class BasePost {
-    private String link;
     private String account;
+    private String link;
     private String timeStamp;
 
 

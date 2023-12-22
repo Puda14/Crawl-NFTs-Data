@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CsvFileReadAndWrite implements FileReadAndWrite<Tweet> {
-    private static final String[] HEADERS = {"link", "account", "timestamp", "tweetText", "reply", "retweet", "like"};
+    private static final String[] HEADERS = {"account","link", "timestamp", "tweetText", "reply", "retweet", "like"};
 
     @Override
     public List<Tweet> readFromFile(Type type, String filePath) {
@@ -33,8 +33,8 @@ public class CsvFileReadAndWrite implements FileReadAndWrite<Tweet> {
                 line++;
                 try {
                     Tweet tweet = new Tweet(
-                            csvRecord.get("link"),
                             csvRecord.get("account"),
+                            csvRecord.get("link"),
                             csvRecord.get("timestamp"),
                             csvRecord.get("tweetText"),
                             Integer.parseInt(csvRecord.get("reply")),

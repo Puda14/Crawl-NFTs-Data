@@ -15,8 +15,8 @@ public class Tweet extends BasePost{
     Integer retweet;
     Integer like;
 
-    public Tweet(String link, String account, String time, String tweetText, Integer reply, Integer retweet, Integer like) {
-        super(link,account,time);
+    public Tweet(String account,String link, String time, String tweetText, Integer reply, Integer retweet, Integer like) {
+        super(account,link,time);
         this.tweetText = tweetText;
         this.reply = reply;
         this.retweet = retweet;

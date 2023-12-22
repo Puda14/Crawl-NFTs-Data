@@ -24,6 +24,8 @@ import java.util.List;
 import static backend.env.FileProperty.nftFilePath;
 import static backend.env.FileProperty.tweetFilePath;
 import static backend.env.NftSlugList.slugList;
+import static backend.utils.validate.Validator.isValidDate;
+import static backend.utils.validate.Validator.isValidKeyword;
 
 public class CrawlServiceImpl implements CrawlService {
 
@@ -60,12 +62,15 @@ public class CrawlServiceImpl implements CrawlService {
 
     @Override
     public List<Tweet>  postCrawl(String keyword, String startDate, String endDate) {
-        List<Tweet> tweets;
-        tweets = seleniumCrawler.getWebsiteData(keyword, startDate, endDate);
-        FileReadAndWrite<Tweet> fileReadAndWrite = new CsvFileReadAndWrite();
-        fileReadAndWrite.writeToFile(tweets, tweetFilePath);
-        return tweets;
 
+        List<Tweet> tweets;
+        if(isValidKeyword(keyword) && isValidDate(startDate) && isValidDate(endDate)) {
+            tweets = seleniumCrawler.getWebsiteData(keyword, startDate, endDate);
+            FileReadAndWrite<Tweet> fileReadAndWrite = new CsvFileReadAndWrite();
+            fileReadAndWrite.writeToFile(tweets, tweetFilePath);
+            return tweets;
+        }
+        return null;
     }
 
 }

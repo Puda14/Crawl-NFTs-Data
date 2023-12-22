@@ -40,8 +40,8 @@ public class TwitterInteraction implements WebInteraction {
         threadSleep(LONG_DELAY_MS);
     }
 
-    public void search(WebDriver driver, String keyword, String since, int min_faves, int min_retweets, int min_replies, int filter_replies) {
-        String search_url = "https://twitter.com/search?q=" + makeQuery(keyword, since, min_faves, min_retweets, min_replies, filter_replies) + "&src=typed_query&f=live";
+    public void search(WebDriver driver, String keyword, String since, String endDate, int min_faves, int min_retweets, int min_replies, int filter_replies) {
+        String search_url = "https://twitter.com/search?q=" + makeQuery(keyword, since, endDate, min_faves, min_retweets, min_replies, filter_replies) + "&src=typed_query&f=live";
         driver.get(search_url);
         threadSleep(LONG_DELAY_MS);
     }

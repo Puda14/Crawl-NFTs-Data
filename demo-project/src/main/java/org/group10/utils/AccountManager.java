@@ -18,6 +18,7 @@ public class AccountManager {
 
     public String[] changeAccount(String filePath) {
         String[] accountDetails = new String[3];
+
         try {
             accountDetails[0] = reader.readLine(); // username
             accountDetails[1] = reader.readLine(); // password

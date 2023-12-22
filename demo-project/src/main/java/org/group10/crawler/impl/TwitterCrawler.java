@@ -92,7 +92,9 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
             }
             System.out.println("last position: " + lastPosition);
 //            if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
+
             if(lastPosition.compareTo(LOADED_SOME_TWITTER) < 0 || noResultDetected(driver, twitterProperty.getNoResult()))
+
                 startDay = addDayToString(startDay, (DAY_GAP + 1));
             else{
                 if(!reloadButtonDetected(driver,twitterProperty.getReloadButton()))
@@ -101,7 +103,9 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
             if (startDay.compareTo(endDay) > 0) break;
             System.out.println(startDay + " " + endDay);
             webInteraction.logout(driver);
+
 //                continue;
+
 //            }
 
 //            startDay = addDayToString(startDay, DAY_GAP + 1);

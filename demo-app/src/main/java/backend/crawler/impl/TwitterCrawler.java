@@ -20,6 +20,7 @@ import java.util.Map;
 
 import static backend.crawler.helper.QueryMaker.addDayToString;
 import static backend.crawler.helper.WebDriverHelper.*;
+import static backend.env.FileProperty.accountFilePath;
 
 public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
     private static final int DAY_GAP = 3;
@@ -49,7 +50,7 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
     @Override
     public List<Tweet> getWebsiteData(String keyword, String startDay, String endDay) {
         List<Tweet> tweets = new ArrayList<>();
-        AccountManager accountManager = new AccountManager("account.txt");
+        AccountManager accountManager = new AccountManager(accountFilePath);
         String accountDetails[] = accountManager.changeAccount();
         String pUsername = accountDetails[0];
         String pPassword = accountDetails[1];

@@ -87,7 +87,7 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
             }
             System.out.println("last position: " + lastPosition);
 //            if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
-            lastPosition = -202000.0;
+//            lastPosition = -202000.0;
             if(lastPosition.compareTo(LOADED_SOME_TWITTER) < 0)
                 startDay = addDayToString(startDay, (DAY_GAP + 1));
             if (startDay.compareTo(endDay) > 0) break;

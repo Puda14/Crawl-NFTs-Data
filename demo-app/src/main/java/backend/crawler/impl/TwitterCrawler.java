@@ -84,7 +84,7 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
                         if (TweetIdMap.get(post_id) != null && TweetIdMap.get(post_id).equals(1)) continue;
                         TweetIdMap.put(post_id, 1);
                         tweets.add(tweet);
-                        System.out.println(tweet);
+//                        System.out.println(tweet);
                     }
                 }
             } catch (Exception e) {

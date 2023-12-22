@@ -28,9 +28,11 @@ public class SeleniumConfig {
         String extensionPath = seleniumProperty.getExtensionPath();
         ChromeOptions options = new ChromeOptions();
         options.addExtensions(new File(extensionPath));
+//        options.addArguments("--headless");
+        options.addArguments("start-maximized");
         options.addArguments("--disable-notifications");
         WebDriver driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         threadSleep(SHORT_DELAY_MS);
         ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));

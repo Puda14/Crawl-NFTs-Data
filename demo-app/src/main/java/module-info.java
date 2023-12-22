@@ -10,7 +10,7 @@ module com.example.demoapp {
     requires org.apache.commons.csv;
 
     requires org.openqa.selenium.core;
-
+    requires javafx.web;
     requires java.desktop;
 
 

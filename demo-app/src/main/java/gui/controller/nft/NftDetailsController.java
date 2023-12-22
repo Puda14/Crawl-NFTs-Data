@@ -10,9 +10,11 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
+
 import javafx.scene.text.Text;
+import javafx.scene.web.WebEngine;
 import javafx.util.StringConverter;
 
 import java.awt.*;
@@ -94,26 +96,28 @@ public class NftDetailsController {
 
 
         List<PriceHistory> priceHistoryList = nft.getPriceHistoryList();
+//        WebEngine webEngine = chartWebView.getEngine();
+//        webEngine.loadContent();
 
-        Platform.runLater(() -> {
-            XYChart.Series<Number, Number> series = new XYChart.Series<>();
-            series.setName("Price History");
-
-            for (PriceHistory priceHistory : priceHistoryList) {
-                Double volumeUsd = priceHistory.getVolumeUsd();
-                if (volumeUsd != null) {
-                    series.getData().add(new XYChart.Data<>(priceHistory.getTimestamps().getTime(), volumeUsd));
-                }
-            }
-
-            NumberAxis xAxis = new NumberAxis();
-            xAxis.setLabel("Timestamps");
-
-            NumberAxis yAxis = new NumberAxis();
-            yAxis.setLabel("Volume (USD)");
-
-            priceHistoryChart.getData().add(series);
-        });
+//        Platform.runLater(() -> {
+//            XYChart.Series<Number, Number> series = new XYChart.Series<>();
+//            series.setName("Price History");
+//
+//            for (PriceHistory priceHistory : priceHistoryList) {
+//                Double volumeUsd = priceHistory.getVolumeUsd();
+//                if (volumeUsd != null) {
+//                    series.getData().add(new XYChart.Data<>(priceHistory.getTimestamps().getTime(), volumeUsd));
+//                }
+//            }
+//
+//            NumberAxis xAxis = new NumberAxis();
+//            xAxis.setLabel("Timestamps");
+//
+//            NumberAxis yAxis = new NumberAxis();
+//            yAxis.setLabel("Volume (USD)");
+//
+//            priceHistoryChart.getData().add(series);
+//        });
     }
 
     private void openURL(String url) {

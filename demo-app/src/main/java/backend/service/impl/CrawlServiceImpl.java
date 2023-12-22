@@ -61,11 +61,10 @@ public class CrawlServiceImpl implements CrawlService {
     @Override
     public List<Tweet>  postCrawl(String keyword, String startDate, String endDate) {
         List<Tweet> tweets;
-
-            tweets = seleniumCrawler.getWebsiteData(keyword, startDate, endDate);
-            FileReadAndWrite<Tweet> fileReadAndWrite = new CsvFileReadAndWrite();
-            fileReadAndWrite.writeToFile(tweets, tweetFilePath);
-            return tweets;
+        tweets = seleniumCrawler.getWebsiteData(keyword, startDate, endDate);
+        FileReadAndWrite<Tweet> fileReadAndWrite = new CsvFileReadAndWrite();
+        fileReadAndWrite.writeToFile(tweets, tweetFilePath);
+        return tweets;
 
     }
 

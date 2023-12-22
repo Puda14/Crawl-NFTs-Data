@@ -14,7 +14,6 @@ import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 
 import javafx.scene.text.Text;
-import javafx.scene.web.WebEngine;
 import javafx.util.StringConverter;
 
 import java.awt.*;
@@ -24,7 +23,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import javafx.application.Platform;
 
 public class NftDetailsController {
 

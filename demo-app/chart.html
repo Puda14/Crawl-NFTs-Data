@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Price History Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div style="width:80%;">
+    <canvas id="myChart" width="600" height="400"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script>
+    // Load JSON data using Fetch API
+    fetch('nft-list.json')
+        .then(response => response.json())
+        .then(data => {
+            const nftData = data[0]; // Choose the first NFT (index 0) from the data array
+            createLineChart(nftData.nftDetail.details.name, nftData.priceHistoryList);
+        })
+        .catch(error => console.error('Error fetching data:', error));
+
+    function createLineChart(nftName, priceHistoryList) {
+        var ctx = document.getElementById('myChart').getContext('2d');
+
+        // Chuyển đổi timestamps thành chuỗi ngày tháng
+        const dates = priceHistoryList.map(item => formatDate(item.timestamps));
+
+        function formatDate(timestamp) {
+            return moment(timestamp, "MMM D, YYYY, h:mm:ss A").format("MMM D, YYYY, h:mm:ss A");
+        }
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    label: 'Floor Price (USD)',
+                    borderColor: 'rgb(75, 192, 192)',
+                    data: priceHistoryList.map(item => item.floorUsd),
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        type: 'category', // Đặt loại trục x thành 'category' để sử dụng chuỗi ngày
+                        labels: dates,
+                        position: 'bottom'
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Floor Price (USD)'
+                        }
+                    }
+                }
+            },plugins: {
+                zoom: {
+                    pan: {
+                        enabled: true,
+                        mode: 'x'
+                    },
+                    zoom: {
+                        enabled: true,
+                        mode: 'x'
+                    }
+                }
+            }
+        });
+
+
+
+    }
+</script>
+</body>
+</html>

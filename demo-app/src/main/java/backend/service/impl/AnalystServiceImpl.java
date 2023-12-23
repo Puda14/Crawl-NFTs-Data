@@ -32,11 +32,11 @@ public class AnalystServiceImpl implements AnalystService {
                 continue;
             Matcher matcher = pattern.matcher(tweet.getTweetText());
             while(matcher.find()){
-                if(hashtagCount.containsKey(matcher.group())){
-                    hashtagCount.put(matcher.group(), hashtagCount.get(matcher.group()) + 1);
+                if(hashtagCount.containsKey(matcher.group().toLowerCase())){
+                    hashtagCount.put(matcher.group().toLowerCase(), hashtagCount.get(matcher.group().toLowerCase()) + 1);
                 }
                 else{
-                    hashtagCount.put(matcher.group(), 1);
+                    hashtagCount.put(matcher.group().toLowerCase(), 1);
                 }
             }
         }

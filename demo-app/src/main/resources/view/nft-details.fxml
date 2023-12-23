@@ -5,35 +5,46 @@
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="786.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.nft.NftDetailsController">
-   <Pane layoutX="83.0" layoutY="110.0" prefHeight="200.0" prefWidth="282.0">
+<AnchorPane prefHeight="968.0" prefWidth="827.0" stylesheets="@nft-details-styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.nft.NftDetailsController">
+   <Pane id="bottomPane" layoutY="-2.0" prefHeight="56.0" prefWidth="1001.0">
       <children>
-          <Label fx:id="nameLabel" layoutX="9.0" layoutY="6.0" prefHeight="17.0" prefWidth="264.0" text="Name" />
-         <Label fx:id="blockchainLabel" layoutX="9.0" layoutY="39.0" prefHeight="17.0" prefWidth="264.0" text="Blockchain" />
-          <Label fx:id="releaseDateLabel" layoutX="9.0" layoutY="71.0" prefHeight="17.0" prefWidth="264.0" text="Release Date" />
-         <Label fx:id="totalSupplyLabel" layoutX="9.0" layoutY="100.0" prefHeight="17.0" prefWidth="264.0" text="Total Supply" />
-      <!--   <Label fx:id="contractLabel" layoutX="53.0" layoutY="411.0" prefHeight="17.0" prefWidth="299.0" text="Contract" />-->
-         <Text fx:id="contractText" layoutX="9.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contract" wrappingWidth="264.0" />
+         <Label id="headLabel" layoutX="25.0" layoutY="19.0" text="INFORMATION" />
       </children>
    </Pane>
-   <Label layoutX="382.0" layoutY="14.0" text="Information" />
-   <ListView fx:id="socialMediaListView" layoutX="392.0" layoutY="101.0" prefHeight="200.0" prefWidth="132.0" />
-   <ListView fx:id="marketplacesListView" layoutX="620.0" layoutY="101.0" prefHeight="200.0" prefWidth="132.0" />
-   <Label alignment="CENTER" layoutX="392.0" layoutY="310.0" prefHeight="17.0" prefWidth="132.0" text="Social Media" />
-   <Label alignment="CENTER" layoutX="620.0" layoutY="310.0" prefHeight="17.0" prefWidth="132.0" text="Market Places" />
-    <Pane fx:id="chartPane" layoutY="370.0" prefHeight="414.0" prefWidth="826.0">
-
-         <LineChart prefHeight="400.0" prefWidth="804.0">
-           <xAxis>
-             <CategoryAxis side="BOTTOM" />
-           </xAxis>
-           <yAxis>
-             <NumberAxis side="LEFT" />
-           </yAxis>
-         </LineChart>
-     </Pane>
+   <Pane id="detailPane" layoutX="117.0" layoutY="101.0" prefHeight="200.0" prefWidth="282.0">
+      <children>
+          <Label id="label" fx:id="nameLabel" layoutX="9.0" layoutY="6.0" prefHeight="17.0" prefWidth="264.0" text="Name" />
+         <Label id="label" fx:id="blockchainLabel" layoutX="9.0" layoutY="41.0" prefHeight="17.0" prefWidth="264.0" text="Blockchain" />
+          <Label id="label" fx:id="releaseDateLabel" layoutX="9.0" layoutY="69.0" prefHeight="17.0" prefWidth="264.0" text="Release Date" />
+         <Label id="label" fx:id="totalSupplyLabel" layoutX="9.0" layoutY="100.0" prefHeight="17.0" prefWidth="264.0" text="Total Supply" />
+      <!--   <Label fx:id="contractLabel" layoutX="53.0" layoutY="411.0" prefHeight="17.0" prefWidth="299.0" text="Contract" />-->
+         <Text id="text" fx:id="contractText" layoutX="9.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contract" wrappingWidth="264.0" />
+      </children>
+   </Pane>
+   <ListView id="myListView" fx:id="socialMediaListView" layoutX="514.0" layoutY="101.0" prefHeight="200.0" prefWidth="132.0" />
+   <ListView id="myListView" fx:id="marketplacesListView" layoutX="742.0" layoutY="101.0" prefHeight="200.0" prefWidth="132.0" />
+   <Label id="headLabel" alignment="CENTER" layoutX="514.0" layoutY="310.0" prefHeight="17.0" prefWidth="132.0" text="Social Media" />
+   <Label id="headLabel" alignment="CENTER" layoutX="742.0" layoutY="310.0" prefHeight="17.0" prefWidth="132.0" text="Marketplaces" />
+   <ScrollPane fx:id="ScrollPane" layoutY="344.0" prefHeight="623.0" prefWidth="1001.0">
+      <content>
+         <Pane fx:id="chartPane" prefWidth="1199.0">
+            <children>
+            
+                                                                <LineChart id="LineChart" layoutX="8.0" layoutY="4.0" prefHeight="581.0" prefWidth="1199.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+            </children>
+         </Pane>
+      </content>
+   </ScrollPane>
 </AnchorPane>

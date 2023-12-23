@@ -90,7 +90,14 @@ public class DashboardController implements Initializable {
     }
 
     @FXML
-    private void exitApp(ActionEvent event){
-
+    private void showHashtag(ActionEvent event){
+        Parent fxml = null;
+        try {
+            fxml = FXMLLoader.load(getClass().getResource("/view/hashtag.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(fxml);
     }
 }

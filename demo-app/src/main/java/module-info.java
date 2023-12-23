@@ -25,6 +25,7 @@ module com.example.demoapp {
     opens gui.controller.post to javafx.fxml;
     opens gui.controller.crawler to javafx.fxml;
     opens gui.controller.analyst to javafx.fxml;
+    opens gui.controller.hashtag to javafx.fxml;
     opens backend.dto.nftpricefloorapi to com.google.gson;
     opens backend.model.nft to com.google.gson;
     opens backend.repository.impl to com.google.guice;
@@ -35,7 +36,6 @@ module com.example.demoapp {
     opens backend.crawler.property to com.google.guice;
     opens backend.controller to com.google.guice;
     opens backend.config to com.google.guice, selenium.chrome.driver;
-
 
 }
 

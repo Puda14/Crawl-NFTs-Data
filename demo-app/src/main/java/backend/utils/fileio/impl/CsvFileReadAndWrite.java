@@ -79,4 +79,57 @@ public class CsvFileReadAndWrite implements FileReadAndWrite<Tweet> {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public Tweet readObjectFromFile(Type type, String filePath) {
+        Tweet tweet = null;
+        CSVFormat csvFormat = CSVFormat.DEFAULT.builder()
+                .setHeader(HEADERS)
+                .setSkipHeaderRecord(true)
+                .build();
+        try (FileReader reader = new FileReader(filePath);
+             CSVParser csvParser = csvFormat.parse(reader)) {
+            for (CSVRecord csvRecord : csvParser) {
+                try {
+                        tweet = new Tweet(
+                            csvRecord.get("account"),
+                            csvRecord.get("link"),
+                            csvRecord.get("timestamp"),
+                            csvRecord.get("tweetText"),
+                            Integer.parseInt(csvRecord.get("reply")),
+                            Integer.parseInt(csvRecord.get("retweet")),
+                            Integer.parseInt(csvRecord.get("like"))
+                    );
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return tweet;
+    }
+
+    @Override
+    public void writeObjectToFile(Tweet tweet, String filePath) {
+        try (FileWriter writer = new FileWriter(filePath, false);
+             CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT.withHeader(HEADERS))) {
+                csvPrinter.printRecord(
+                        tweet.getAccount(),
+                        tweet.getLink(),
+                        tweet.getTimeStamp(),
+                        tweet.getTweetText(),
+                        tweet.getReply(),
+                        tweet.getRetweet(),
+                        tweet.getLike()
+                );
+            csvPrinter.flush();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

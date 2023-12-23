@@ -1,5 +1,6 @@
 package backend.controller;
 
+import backend.model.nft.NFT;
 import com.google.inject.Inject;
 import backend.model.post.Tweet;
 import backend.service.CrawlService;
@@ -16,6 +17,9 @@ public class CrawlController {
 
     public void crawlNftData(){
         crawlService.nftCrawlByListOfNft();
+    }
+    public NFT crawlNftBySlug(String slug){
+        return crawlService.crawlNftBySlugName(slug);
     }
 
     public List<Tweet> crawlTweetDataByKeyword(String keyword, String startDate, String endDate){

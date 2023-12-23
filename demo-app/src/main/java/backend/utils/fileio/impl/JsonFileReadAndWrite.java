@@ -34,4 +34,24 @@ public class JsonFileReadAndWrite<T> implements FileReadAndWrite<T> {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public T readObjectFromFile(Type type, String filePath) {
+        try (FileReader fileReader = new FileReader(filePath)) {
+            return new Gson().fromJson(fileReader, type);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public void writeObjectToFile(T data, String filePath) {
+        try (FileWriter fileWriter = new FileWriter(filePath, false)) {
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            gson.toJson(data, fileWriter);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

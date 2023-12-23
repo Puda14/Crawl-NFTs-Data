@@ -20,9 +20,9 @@
       </Pane>
       <Button fx:id="getTopHashtagButton" layoutX="236.0" layoutY="200.0" mnemonicParsing="false" text="Get" />
       <Label layoutX="520.0" layoutY="14.0" text="Top Hashtag" />
-       <TableView fx:id="tableView" layoutX="416.0" layoutY="43.0" prefHeight="445.0" prefWidth="275.0">
+       <TableView fx:id="tableView" layoutX="416.0" layoutY="43.0" prefHeight="445.0" prefWidth="314.0">
            <columns>
-               <TableColumn fx:id="topColumn" prefWidth="62.0" text="Top" />
+               <TableColumn fx:id="topColumn" prefWidth="101.0" text="Top" />
                <TableColumn fx:id="hashtagColumn" prefWidth="101.0" text="Hashtag" />
                <TableColumn fx:id="countColumn" prefWidth="111.0" text="Count" />
            </columns>

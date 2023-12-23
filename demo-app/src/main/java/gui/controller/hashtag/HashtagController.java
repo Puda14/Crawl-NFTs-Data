@@ -5,7 +5,7 @@ import backend.controller.AnalystController;
 import backend.dto.twitter.HashtagCount;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -13,8 +13,6 @@ import static backend.utils.validate.Validator.isValidDate;
 
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-
-import java.util.List;
 
 
 public class HashtagController {
@@ -38,9 +36,7 @@ public class HashtagController {
     private TableColumn<HashtagCount, Integer> countColumn;
 
     @FXML
-    private TableColumn topColumn;
-
-    private int topCounter = -6;
+    TableColumn<HashtagCount, Number> topColumn;
 
     public void initialize() {
 
@@ -70,9 +66,9 @@ public class HashtagController {
                 AnalystController analystController = injector.getInstance(AnalystController.class);
 
                 // Table of Top Hashtag
-                topColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(topCounter++).asObject());
                 hashtagColumn.setCellValueFactory(new PropertyValueFactory<>("hashtag"));
                 countColumn.setCellValueFactory(new PropertyValueFactory<>("count"));
+                topColumn.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(tableView.getItems().indexOf(param.getValue()) + 1));
 
                 ObservableList<HashtagCount> data = FXCollections.observableArrayList(
                         analystController.getTrendingHashtag(startDate, endDate)

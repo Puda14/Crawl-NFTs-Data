@@ -11,14 +11,14 @@
    <children>
       <Pane layoutX="207.0" layoutY="54.0" prefHeight="200.0" prefWidth="303.0">
          <children>
-            <TextField fx:id="keywordTextField" layoutX="140.0" layoutY="20.0" />
-            <TextField fx:id="startDateTextField" layoutX="140.0" layoutY="88.0" text="yyyy-mm-dd" />
-            <TextField fx:id="endDateTextField" layoutX="140.0" layoutY="149.0" text="yyyy-mm-dd" />
+            <TextField fx:id="keywordTextField" promptText="keyword" layoutX="140.0" layoutY="20.0" />
+            <TextField fx:id="startDateTextField" promptText="yyyy-mm-dd" layoutX="140.0" layoutY="88.0"/>
+            <TextField fx:id="endDateTextField" promptText="yyyy-mm-dd" layoutX="140.0" layoutY="149.0" />
             <Label layoutX="46.0" layoutY="24.0" text="Keyword" />
             <Label layoutX="46.0" layoutY="92.0" text="Start Date" />
             <Label layoutX="46.0" layoutY="153.0" text="End Date" />
          </children>
       </Pane>
-      <Button fx:id="crawlButton" layoutX="458.0" layoutY="275.0" mnemonicParsing="false" text="Crawl" />
+      <Button fx:id="crawlButton" layoutX="458.0" layoutY="275.0" mnemonicParsing="false" text="Crawl Data" />
    </children>
 </AnchorPane>

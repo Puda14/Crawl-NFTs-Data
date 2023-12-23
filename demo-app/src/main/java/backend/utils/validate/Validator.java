@@ -17,6 +17,6 @@ public class Validator {
         Pattern pattern = Pattern.compile(KEYWORD_REGEX);
         Matcher matcher = pattern.matcher(keyword);
 
-        return matcher.matches();
+        return matcher.matches() && !keyword.isEmpty();
     }
 }

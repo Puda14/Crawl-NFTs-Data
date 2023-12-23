@@ -5,9 +5,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="556.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.post.PostTabController">
- <ListView fx:id="postListView" layoutX="264.0" prefHeight="610.0" prefWidth="609.0" />
-   <Button fx:id="searchTweetButton" layoutX="32.0" layoutY="48.0" mnemonicParsing="false" text="Search" />
+<AnchorPane prefHeight="604.0" prefWidth="873.0" stylesheets="@post-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.post.PostTabController">
+    <ListView fx:id="postListView" layoutX="264.0" prefHeight="617.0" prefWidth="609.0" styleClass="styledListView" />
+    <Button id="Button1" fx:id="searchTweetButton" layoutX="32.0" layoutY="48.0" mnemonicParsing="false" text="Search" />
    <TextField fx:id="tweetTextField" layoutX="100.0" layoutY="50.0" />
-   <Button fx:id="allTweetButton" layoutX="33.0" layoutY="94.0" mnemonicParsing="false" text="All" />
+   <Button id="Button1" fx:id="allTweetButton" layoutX="33.0" layoutY="94.0" mnemonicParsing="false" text="List All" />
 </AnchorPane>

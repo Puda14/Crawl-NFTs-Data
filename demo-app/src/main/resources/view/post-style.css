@@ -1,0 +1,53 @@
+#Button1 {
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+    -fx-background-color: #208cec;
+    -fx-font-weight: bold;
+}
+
+#Button1:hover {
+    -fx-background-color: #105c8f;
+    -fx-text-fill: white;
+}
+
+#postListView {
+    -fx-control-inner-background: #f8f8f8;
+}
+
+#postListView .list-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+
+#postListView .list-cell:hover {
+    -fx-background-color: #e6e6e6;
+}
+
+#postListView .list-cell:focused {
+    -fx-background-color: #d4e4f5;
+}
+
+#postListView .list-cell:pressed {
+    -fx-background-color: #a9cde3;
+}
+
+#searchTweetButton, #allTweetButton {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-background-color: #208cec;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+}
+
+#searchTweetButton:hover, #allTweetButton:hover {
+    -fx-background-color: #105c8f;
+}
+
+#searchTweetButton:hover, #allTweetButton:hover {
+    -fx-background-color: #105c8f;
+}

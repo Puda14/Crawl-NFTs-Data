@@ -10,6 +10,8 @@ import backend.model.post.Tweet;
 
 import java.util.List;
 
+import static backend.env.NftSlugList.slugList;
+
 public class NFTCrawlTest {
     public static void main(String[] args) {
         System.out.println("test crawl nft");
@@ -17,6 +19,6 @@ public class NFTCrawlTest {
         NFTController nftController = injector.getInstance(NFTController.class);
         CrawlController crawlController = injector.getInstance(CrawlController.class);
 
-        crawlController.crawlNftData(); // xem file moi da sinh chua
+        System.out.println(crawlController.crawlNftBySlug(slugList.get(1)));
     }
 }

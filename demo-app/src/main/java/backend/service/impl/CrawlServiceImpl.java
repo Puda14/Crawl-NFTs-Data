@@ -24,6 +24,7 @@ import java.util.List;
 import static backend.env.FileProperty.nftFilePath;
 import static backend.env.FileProperty.tweetFilePath;
 import static backend.env.NftSlugList.slugList;
+import static backend.utils.file.FileManager.generateFileNameWithTimestamp;
 import static backend.utils.validate.Validator.isValidDate;
 import static backend.utils.validate.Validator.isValidKeyword;
 
@@ -53,11 +54,30 @@ public class CrawlServiceImpl implements CrawlService {
             nft.setPriceHistoryList(PriceHistoryMapper.map(jsonObject));
             nftList.add(nft);
         }
-        LocalDateTime localDateTime = LocalDateTime.now();
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss");
+
         String filePath = "nft";
+        String fileExtension = ".json";
+        String fileName = generateFileNameWithTimestamp(filePath, fileExtension);
         FileReadAndWrite<NFT> fileReadAndWrite = new JsonFileReadAndWrite<>();
-        fileReadAndWrite.writeToFile(nftList,filePath + dtf.format(localDateTime) + ".json");
+        fileReadAndWrite.writeToFile(nftList,fileName);
+    }
+
+    @Override
+    public NFT crawlNftBySlugName(String slug) {
+        NFT nft = new NFT();
+        String apiUrl = "https://api-bff.nftpricefloor.com/projects/"+ slug + "/charts/all";
+        String detailApi = "https://api-bff.nftpricefloor.com/projects/" + slug;
+        NFTDetail nftDetail = apiCrawler.getApiData(detailApi, NFTDetail.class);
+        NftDetailMapper mapper = new NftDetailMapper();
+        Detail detail = mapper.map(nftDetail);
+        nft.setDetail(detail);
+        JsonPriceHistory jsonObject = apiCrawler.getApiData(apiUrl, JsonPriceHistory.class);
+        nft.setPriceHistoryList(PriceHistoryMapper.map(jsonObject));
+        String fileExtension = ".json";
+        String fileName = generateFileNameWithTimestamp(slug, fileExtension);
+        FileReadAndWrite<NFT> fileReadAndWrite = new JsonFileReadAndWrite<>();
+        fileReadAndWrite.writeObjectToFile(nft,fileName);
+        return nft;
     }
 
     @Override
@@ -66,6 +86,8 @@ public class CrawlServiceImpl implements CrawlService {
         List<Tweet> tweets;
         if(isValidKeyword(keyword) && isValidDate(startDate) && isValidDate(endDate)) {
             tweets = seleniumCrawler.getWebsiteData(keyword, startDate, endDate);
+            String fileExtension = ".csv";
+            String fileName = generateFileNameWithTimestamp("tweet", fileExtension);
             FileReadAndWrite<Tweet> fileReadAndWrite = new CsvFileReadAndWrite();
             fileReadAndWrite.writeToFile(tweets, tweetFilePath);
             return tweets;

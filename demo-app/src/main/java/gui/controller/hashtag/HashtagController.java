@@ -1,11 +1,20 @@
 package gui.controller.hashtag;
 
-import backend.model.post.Tweet;
+import backend.ConfigModule;
+import backend.controller.AnalystController;
+import backend.dto.twitter.HashtagCount;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import static backend.utils.validate.Validator.isValidDate;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.util.List;
 
 
 public class HashtagController {
@@ -18,6 +27,20 @@ public class HashtagController {
 
     @FXML
     private Button getTopHashtagButton;
+
+    @FXML
+    private TableView<HashtagCount> tableView;
+
+    @FXML
+    private TableColumn<HashtagCount, String> hashtagColumn;
+
+    @FXML
+    private TableColumn<HashtagCount, Integer> countColumn;
+
+    @FXML
+    private TableColumn topColumn;
+
+    private int topCounter = -6;
 
     public void initialize() {
 
@@ -39,11 +62,26 @@ public class HashtagController {
             String startDate = startDateTextField.getText();
             String endDate = endDateTextField.getText();
             System.out.println(startDate + " " + endDate);
+
             if (isValidInput(startDate, endDate)) {
 
                 // Get top Hashtag
+                Injector injector = Guice.createInjector(new ConfigModule());
+                AnalystController analystController = injector.getInstance(AnalystController.class);
+
+                // Table of Top Hashtag
+                topColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(topCounter++).asObject());                hashtagColumn.setCellValueFactory(new PropertyValueFactory<>("hashtag"));
+                countColumn.setCellValueFactory(new PropertyValueFactory<>("count"));
+
+                ObservableList<HashtagCount> data = FXCollections.observableArrayList(
+                        analystController.getTrendingHashtag(startDate, endDate)
+                );
+
+                tableView.setItems(data);
             }
         });
+
+
 
     }
 

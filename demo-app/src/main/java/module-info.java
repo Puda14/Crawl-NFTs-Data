@@ -37,6 +37,7 @@ module com.example.demoapp {
     opens backend.controller to com.google.guice;
     opens backend.config to com.google.guice, selenium.chrome.driver;
     opens backend.crawler to com.google.guice;
+    opens backend.dto.twitter to javafx.base;
 
 }
 

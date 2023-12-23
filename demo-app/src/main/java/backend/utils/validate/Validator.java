@@ -11,7 +11,7 @@ public class Validator {
         Matcher matcher = pattern.matcher(inputDate);
         return matcher.matches();
     }
-    private static final String KEYWORD_REGEX = "^[a-zA-Z0-9. ]*$";
+    private static final String KEYWORD_REGEX = "^[a-zA-Z0-9.# ]*$";
 
     public static boolean isValidKeyword(String keyword) {
         Pattern pattern = Pattern.compile(KEYWORD_REGEX);

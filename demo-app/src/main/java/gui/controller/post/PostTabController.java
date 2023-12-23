@@ -6,8 +6,9 @@ import backend.model.post.Tweet;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import javafx.fxml.FXML;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.util.Callback;
 
 import java.awt.*;
@@ -16,9 +17,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-
 
 
 public class PostTabController {
@@ -73,12 +71,21 @@ public class PostTabController {
 
                 System.out.println("User input: " + tweetText);
                 List<Tweet> searchTweets = postController.getByKeyword(tweetText);
-                System.out.println("List: " + postController.getByKeyword(tweetText));
+                if(searchTweets == null){
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Notification");
+                    alert.setHeaderText(null);
+                    alert.setContentText("NOT FOUND");
+                    alert.showAndWait();
+                }
+                else {
+                    System.out.println("List: " + postController.getByKeyword(tweetText));
 
-                if(!searchTweets.isEmpty()){
-                    postListView.getItems().clear();
-                    postListView.getItems().addAll(searchTweets);
-                    postListView.setVisible(true);
+                    if(!searchTweets.isEmpty()){
+                        postListView.getItems().clear();
+                        postListView.getItems().addAll(searchTweets);
+                        postListView.setVisible(true);
+                    }
                 }
 
 

@@ -1,12 +1,3 @@
-smith_john23811
-twitpass123
-kibagoing4@gmail.com
-dmartian50851
-twitpass123
-kaidodx@gmail.com
-twistFroG
-twitpass123
-binh.dv210103@sis.hust.edu.vn
 nft_hunter_hust
 Tuan!762003
 tuan.nh210894@sis.hust.edu.vn
@@ -16,7 +7,13 @@ usetocrawl1@gmail.com
 caoxemphim
 twitpass123
 caoxemphim@gmail.com
-nightcrawl342
+smith_john23811
 twitpass123
-nightcrawl342@gmail.com
+kibagoing4@gmail.com
+dmartian50851
+twitpass123
+kaidodx@gmail.com
+twistFroG
+twitpass123
+binh.dv210103@sis.hust.edu.vn
 

@@ -101,16 +101,12 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
                 if(!reloadButtonDetected(driver,twitterProperty.getReloadButton()))
                     startDay = addDayToString(startDay, (DAY_GAP + 1));
             }
+            if (emptyStateDetected(driver,twitterProperty.getEmptyState()))
+                break;
+
             if (startDay.compareTo(endDay) > 0) break;
             System.out.println(startDay + " " + endDay);
             webInteraction.logout(driver);
-
-//                continue;
-
-//            }
-
-//            startDay = addDayToString(startDay, DAY_GAP + 1);
-//            System.out.println(startDay + " " + endDay);
         }
         driver.quit();
         return tweets;

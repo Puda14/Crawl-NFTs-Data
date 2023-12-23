@@ -39,6 +39,16 @@ public class WebDriverHelper {
         }
     }
 
+    public static boolean emptyStateDetected(WebDriver driver, String emptyProp){
+        try{
+            WebElement noResult = driver.findElement(By.xpath(emptyProp));
+            return true;
+        }
+        catch (Exception e){
+//            e.printStackTrace();
+            return false;
+        }
+    }
     public static boolean reloadButtonDetected(WebDriver driver, String reloadProp){
         try{
             WebElement reloadButton = driver.findElement(By.xpath(reloadProp));

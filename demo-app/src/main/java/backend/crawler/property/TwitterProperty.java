@@ -22,6 +22,7 @@ public class TwitterProperty {
     private String logoutButton;
     private String reloadButton;
     private String noResult;
+    private String emptyState;
 
 
     public TwitterProperty() {
@@ -42,7 +43,8 @@ public class TwitterProperty {
             loginButton = properties.getProperty("loginButton");
             logoutButton = properties.getProperty("logoutButton");
             reloadButton = properties.getProperty("reloadButton");
-            noResult = properties.getProperty("noTweetFound");
+            noResult = properties.getProperty("noTweetsFound");
+            emptyState = properties.getProperty("emptyState");
 
         } catch (IOException ex) {
             ex.printStackTrace();

@@ -2,6 +2,7 @@ package gui.controller.crawler;
 
 import backend.ConfigModule;
 import backend.controller.CrawlController;
+import backend.model.nft.NFT;
 import backend.model.post.Tweet;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -83,11 +84,11 @@ public class CrawlerTabController {
 
                 // Use Guice to inject dependencies and create CrawlController
                 Injector injector = Guice.createInjector(new ConfigModule());
-                CrawlController crawlController = injector.getInstance(CrawlController.class);
+                CrawlController crawlPostController = injector.getInstance(CrawlController.class);
 
                 // Asynchronously crawl tweet data
                 CompletableFuture<List<Tweet>> crawlFuture = CompletableFuture.supplyAsync(() ->
-                        crawlController.crawlTweetDataByKeyword(keyword, startDate, endDate));
+                        crawlPostController.crawlTweetDataByKeyword(keyword, startDate, endDate));
 
                 // Handle the completion of the crawlFuture
                 crawlFuture.thenAccept(tweets -> {
@@ -95,12 +96,8 @@ public class CrawlerTabController {
 
                     // Update UI on the JavaFX application thread
                     Platform.runLater(() -> {
-                        // Show an information alert upon successful crawl
-                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                        alert.setTitle("Notification");
-                        alert.setHeaderText(null);
-                        alert.setContentText("Crawl complete");
-                        alert.showAndWait();
+
+                        notification();
 
                         // Reset crawling flag and enable input fields and button
                         isCrawling = false;
@@ -108,12 +105,6 @@ public class CrawlerTabController {
                     });
                 });
             } else {
-                // Show an error alert for invalid input
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Notification");
-                alert.setHeaderText(null);
-                alert.setContentText("yyyy-mm-dd");
-                alert.showAndWait();
 
                 // Reset crawling flag and enable input fields and button
                 isCrawling = false;
@@ -124,7 +115,18 @@ public class CrawlerTabController {
         // Disable crawlButton initially
         crawlPostButton.setDisable(true);
 
-        nftComboBox.getItems().addAll("Mục 1", "Mục 2", "Mục 3");
+        nftComboBox.getItems().addAll(
+                "bored-ape-yacht-club" ,
+                "azuki" ,
+                "proof-moonbirds" ,
+                "pudgy-penguins" ,
+                "bored-ape-kennel-club" ,
+                "meebits" ,
+                "degods" ,
+                "otherdeed" ,
+                "mutant-ape-yacht-club" ,
+                "cryptopunks" );
+
         updateCrawlNFTButtonState();
 
 
@@ -134,11 +136,32 @@ public class CrawlerTabController {
             updateCrawlNFTButtonState();
         });
 
-        System.out.println("NFT selected: " + nftSlugName);
 
         crawlNFTButton.setOnAction(event -> {
             if (!isCrawling) {
                 // Crawl NFT
+
+                // Use Guice to inject dependencies and create CrawlController
+                Injector injector = Guice.createInjector(new ConfigModule());
+                CrawlController crawlController = injector.getInstance(CrawlController.class);
+
+                // Asynchronously crawl tweet data
+                CompletableFuture<NFT> nftCrawlFuture = CompletableFuture.supplyAsync(() ->
+                        crawlController.crawlNftBySlug(nftSlugName));
+
+                nftCrawlFuture.thenAccept(nft -> {
+                    System.out.println(nft);
+
+                    // Update UI on the JavaFX application thread
+                    Platform.runLater(() -> {
+
+                        notification();
+
+                        // Reset crawling flag and enable input fields and button
+                        isCrawling = false;
+                        enableInputFieldsAndButton();
+                    });
+                });
 
                 isCrawling = false;
                 updateCrawlNFTButtonState();
@@ -190,5 +213,14 @@ public class CrawlerTabController {
         } else {
             crawlNFTButton.setDisable(false);
         }
+    }
+
+    private void notification(){
+        // Show an information alert upon successful crawl
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Notification");
+        alert.setHeaderText(null);
+        alert.setContentText("Crawl complete");
+        alert.showAndWait();
     }
 }

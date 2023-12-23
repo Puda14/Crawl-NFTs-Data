@@ -11,6 +11,7 @@ import lombok.Data;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
@@ -54,7 +55,7 @@ public class TestDataAnalyst {
         long inputTime = inputDate.getTime();
         for (Tweet tweet : tweetList) {
             long tweetTime = toDate(tweet.getTimeStamp()).getTime();
-            if (inputTime - tweetTime <= n * 24 * 60 * 60 * 1000) {
+            if (tweetTime >= inputTime - (n-1) * 24 * 60 * 60 * 1000 && tweetTime < inputTime) {
                 count++;
             }
         }
@@ -70,47 +71,73 @@ public class TestDataAnalyst {
 
         NFT nft = nftController.getByName("Bored Ape Yacht Club");
         List<PriceHistory> priceHistory = nft.getPriceHistoryList(); // lấy lịch sử giá
-        System.out.println(priceHistory.get(1).getTimestamps());
+        System.out.println(priceHistory.get(5).getTimestamps());
 
-
-
-
-
+        List<TweetPrice> tweetPriceList = new ArrayList<>();
         //lấy list tweet
         List<Tweet> tweetList = postController.getAllPost();
-        System.out.println(tweetList.get(1).getTimeStamp());
-        System.out.println();
+        for (PriceHistory entry : priceHistory) {
+            if(entry.getTimestamps().before(toDate("2022-07-30T23:48:07.000Z"))) {
+                Date timestamp = entry.getTimestamps();
+                int numberOfPostsInLast3Days = countPostsInLastNDays(tweetList, timestamp, 3);
+                TweetPrice tweetPrice = new TweetPrice();
+                tweetPrice.setPrice(entry.getFloorUsd());
+                tweetPrice.setTimestamp(entry.getTimestamps());
+                tweetPrice.setTweetN((double) numberOfPostsInLast3Days);
+                tweetPriceList.add(tweetPrice);
+            }
+        }
+        System.out.println(tweetPriceList);
 
-//        System.out.println("Thang 10");
-//        System.out.println(countZ(tweetList, "2021-10-01"));
-//        System.out.println(countZ(tweetList, "2021-10-02"));
-//        System.out.println(countZ(tweetList, "2021-10-03"));
-//        System.out.println(countZ(tweetList, "2021-10-04"));
-//        System.out.println(countZ(tweetList, "2021-10-05"));
-//        System.out.println(countZ(tweetList, "2021-10-06"));
-//        System.out.println(countZ(tweetList, "2021-10-07"));
-//        System.out.println(countZ(tweetList, "2021-10-08"));
-//        System.out.println(countZ(tweetList, "2021-10-09"));
-//        System.out.println(countZ(tweetList, "2021-10-10"));
-//        System.out.println(countZ(tweetList, "2021-10-11"));
-//        System.out.println(countZ(tweetList, "2021-10-12"));
-//        System.out.println(countZ(tweetList, "2021-10-13"));
-//        System.out.println(countZ(tweetList, "2021-10-14"));
-//        System.out.println(countZ(tweetList, "2021-10-15"));
-//        System.out.println(countZ(tweetList, "2021-10-16"));
-//        System.out.println(countZ(tweetList, "2021-10-17"));
-//        System.out.println(countZ(tweetList, "2021-10-18"));
-//        System.out.println(countZ(tweetList, "2021-10-19"));
-//        System.out.println(countZ(tweetList, "2021-10-20"));
-//        System.out.println(countZ(tweetList, "2021-10-21"));
-//        System.out.println(countZ(tweetList, "2021-10-22"));
-//        System.out.println(countZ(tweetList, "2021-10-23"));
-//        System.out.println(countZ(tweetList, "2021-10-25"));
-//        System.out.println(countZ(tweetList, "2021-10-26"));
-//        System.out.println(countZ(tweetList, "2021-10-27"));
-//        System.out.println(countZ(tweetList, "2021-10-28"));
-//        System.out.println(countZ(tweetList, "2021-10-29"));
-//        System.out.println(countZ(tweetList, "2021-10-30"));
+        List<Double> variableX = new ArrayList<>();
+        List<Double> variableY = new ArrayList<>() ;
+        for (TweetPrice tweetPrice : tweetPriceList){
+            if(tweetPrice.getPrice() == null) System.out.println(tweetPrice);
+            variableX.add(tweetPrice.getPrice());
+            variableY.add(tweetPrice.getTweetN());
+        }
+        // Tính hệ số tương quan Pearson
+        double correlation = calculatePearsonCorrelation(variableX, variableY);
 
+        // In ra kết quả
+        System.out.println("Hệ số tương quan Pearson: " + correlation);
+    }
+
+    private static double calculatePearsonCorrelation(List<Double> variableX, List<Double> variableY) {
+        int n = variableX.size();
+
+        // Tính giá trị trung bình của X và Y
+        double meanX = calculateMean(variableX);
+        double meanY = calculateMean(variableY);
+
+        // Tính tử số và mẫu số
+        double numerator = 0.0;
+        double denominatorX = 0.0;
+        double denominatorY = 0.0;
+
+        for (int i = 0; i < n; i++) {
+            double diffX = variableX.get(i) - meanX;
+            double diffY = variableY.get(i) - meanY;
+
+            numerator += diffX * diffY;
+            denominatorX += diffX * diffX;
+            denominatorY += diffY * diffY;
+        }
+
+        // Tính hệ số tương quan Pearson
+        double correlation = numerator / Math.sqrt(denominatorX * denominatorY);
+
+        return correlation;
+    }
+
+    // Hàm tính giá trị trung bình của một danh sách số
+    private static double calculateMean(List<Double> values) {
+        double sum = 0.0;
+
+        for (Double value : values) {
+            sum += value;
+        }
+
+        return sum / values.size();
     }
 }

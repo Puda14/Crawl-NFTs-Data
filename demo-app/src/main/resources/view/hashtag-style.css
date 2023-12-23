@@ -1,0 +1,91 @@
+#screenHashtag {
+ -fx-background-color: #FFE382;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+#getTopHashtagButton {
+    -fx-background-color: #FFE382;
+    -fx-padding: 10;
+    -fx-text-fill: #333333;
+    -fx-background-radius: 10;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+#getTopHashtagButton:hover {
+    -fx-background-color: #FFD966;
+}
+
+
+/* TextField Style */
+#dateTextField {
+    -fx-pref-width: 200;
+    -fx-pref-height: 30;
+    -fx-font-size: 14px;
+    -fx-border-color: grey;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-color: white;
+    -fx-text-fill: #333333;
+}
+
+#dateTextField:hover {
+    -fx-background-color: #ecf0f1;
+}
+
+    #dateTextField:focused {
+    -fx-border-color: #2980b9;
+}
+
+
+/* TableColumn Style */
+#topHashtabTable .table-column {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+/* TableView Style */
+#topHashtabTable .column-header-background {
+    -fx-background-color: #3498db;
+}
+
+#topHashtabTable .column-header {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Cell Style */
+#topHashtabTable .table-cell {
+    -fx-text-fill: #333333;
+}
+
+/* Row Style */
+#topHashtabTable .table-row-cell {
+    -fx-background-color: #ecf0f1;
+}
+
+#topHashtabTable .table-row-cell:odd {
+    -fx-background-color: #d5e5f2;
+}
+
+#topHashtabTable .table-row-cell:hover {
+    -fx-background-color: #FFAD84;
+    -fx-text-fill: white;
+}
+
+
+#tableLabelId{
+   -fx-background-color: transparent;
+    -fx-padding: 10;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-border-color: #FFAD84;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}

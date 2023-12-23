@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import static backend.env.NftSlugList.slugs;
 import static backend.utils.validate.Validator.isValidDate;
 import static backend.utils.validate.Validator.isValidKeyword;
 
@@ -115,17 +116,7 @@ public class CrawlerTabController {
         // Disable crawlButton initially
         crawlPostButton.setDisable(true);
 
-        nftComboBox.getItems().addAll(
-                "bored-ape-yacht-club" ,
-                "azuki" ,
-                "proof-moonbirds" ,
-                "pudgy-penguins" ,
-                "bored-ape-kennel-club" ,
-                "meebits" ,
-                "degods" ,
-                "otherdeed" ,
-                "mutant-ape-yacht-club" ,
-                "cryptopunks" );
+        nftComboBox.getItems().addAll(slugs);
 
         updateCrawlNFTButtonState();
 

@@ -13,6 +13,6 @@ public class NftSlugList {
          "degods" ,
          "otherdeed" ,
          "mutant-ape-yacht-club" ,
-         "cryptopunks" ,};
+         "cryptopunks"};
     public static final List<String> slugList = Arrays.asList(slugs);
 }

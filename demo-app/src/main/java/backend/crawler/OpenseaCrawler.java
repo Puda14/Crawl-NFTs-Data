@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 public class OpenseaCrawler {
     private final SeleniumConfig seleniumConfig;
 
@@ -27,11 +28,16 @@ public class OpenseaCrawler {
     public void Crawl() {
         WebDriver driver = seleniumConfig.initBrowser();
 
-        String url = "https://opensea.io/rankings?sortBy=total_volume";
+        String url = "https://nftpricefloor.com/?sort=volume&dir=desc&temp=90d";
         driver.get(url);
-        String nameXpath = "/html/body/div[1]/div/div[4]/main/div/div[1]/div[3]/div/div[4]/div[13]/div/a";
-        WebElement nameElement = driver.findElement(By.xpath(nameXpath));
-        String name = nameElement.getText();
-        System.out.println(name);
+        String nameXpath = "/html/body/div[1]/div[2]/div[2]/div[2]/main/table/tbody//td[2]/a";
+        List<WebElement> nameElements = driver.findElements(By.xpath(nameXpath));
+        for (WebElement nameElement : nameElements) {
+            String name = nameElement.getText();
+            String link = nameElement.getAttribute("href");
+            String[] parts = link.split("/");
+            link = parts[parts.length - 1];
+            System.out.println(name + " " + link);
+        }
     }
 }

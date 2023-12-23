@@ -27,6 +27,9 @@ public class AnalystServiceImpl implements AnalystService {
         List<HashtagCount> hashtags = new ArrayList<>();
         Pattern pattern = Pattern.compile("#\\w+");
         List<String> hashtagList = new ArrayList<>();
+        startDate = startDate + "T00:00:00.000Z";
+        endDate = endDate + "T23:59:59.999Z";
+
         for(Tweet tweet: tweetList){
             if(tweet.getTimeStamp().compareTo(endDate) > 0 || tweet.getTimeStamp().compareTo(startDate) < 0)
                 continue;

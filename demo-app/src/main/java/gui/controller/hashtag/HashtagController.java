@@ -1,8 +1,10 @@
 package gui.controller.hashtag;
 
+import backend.model.post.Tweet;
 import javafx.fxml.FXML;
 import static backend.utils.validate.Validator.isValidDate;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 
@@ -14,8 +16,8 @@ public class HashtagController {
     @FXML
     private TextField endDateTextField;
 
-   @FXML
-   private Button getTopHashtagButton;
+    @FXML
+    private Button getTopHashtagButton;
 
     public void initialize() {
 

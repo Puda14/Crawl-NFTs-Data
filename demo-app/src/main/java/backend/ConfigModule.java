@@ -1,5 +1,7 @@
 package backend;
 
+import backend.service.AnalystService;
+import backend.service.impl.AnalystServiceImpl;
 import com.google.inject.AbstractModule;
 import com.google.inject.TypeLiteral;
 import backend.config.SeleniumConfig;
@@ -37,6 +39,7 @@ public class ConfigModule extends AbstractModule {
         bind(NftService.class).to(NFTServiceImpl.class);
         bind(PostService.class).to(PostServiceImpl.class);
         bind(CrawlService.class).to(CrawlServiceImpl.class);
+        bind(AnalystService.class).to(AnalystServiceImpl.class);
         bind(new TypeLiteral<FileReadAndWrite<NFT>>(){}).toInstance(new JsonFileReadAndWrite());
         bind(new TypeLiteral<FileReadAndWrite<Tweet>>(){}).toInstance(new CsvFileReadAndWrite());
 
@@ -47,6 +50,7 @@ public class ConfigModule extends AbstractModule {
         bind(SeleniumCrawler.class).to(TwitterCrawler.class);
         bind(APICrawler.class).to(NoAuthApiCrawler.class);
         bind(TwitterInteraction.class).toInstance(new TwitterInteraction());
+
 
     }
 }

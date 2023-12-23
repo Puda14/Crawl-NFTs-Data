@@ -70,7 +70,8 @@ public class HashtagController {
                 AnalystController analystController = injector.getInstance(AnalystController.class);
 
                 // Table of Top Hashtag
-                topColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(topCounter++).asObject());                hashtagColumn.setCellValueFactory(new PropertyValueFactory<>("hashtag"));
+                topColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(topCounter++).asObject());
+                hashtagColumn.setCellValueFactory(new PropertyValueFactory<>("hashtag"));
                 countColumn.setCellValueFactory(new PropertyValueFactory<>("count"));
 
                 ObservableList<HashtagCount> data = FXCollections.observableArrayList(

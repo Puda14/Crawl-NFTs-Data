@@ -50,10 +50,11 @@ public class PostTabController {
                             setOnMouseClicked(event -> openURL(item.getLink()));
                             // Set the cell text to display the desired properties
                             setText("Account: " + item.getAccount() +
+                                    "\nTimestamp: " + item.getTimeStamp() +
                                     "\nContent: " + item.getTweetText() +
                                     "\nLike: " + item.getLike() +
-                                    "\nRetweet: " + item.getRetweet() +
-                                    "\nReply: " + item.getReply()
+                                    " Retweet: " + item.getRetweet() +
+                                    " Reply: " + item.getReply()
                             );
                         } else {
                             setText(null);

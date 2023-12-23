@@ -14,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.util.StringConverter;
@@ -105,10 +106,10 @@ public class NftDetailsController {
 
             for (PriceHistory item : priceHistoryList) {
                 if (item.getTimestamps() != null) {
-                    series.getData().add(new XYChart.Data<>(item.getTimestamps().toString(), item.getVolumeUsd()));
+                    series.getData().add(new XYChart.Data<>(item.getTimestamps().toString(), item.getFloorUsd()));
                 }
             }
-
+            lineChart.setTitle("Price History");
             lineChart.getData().add(series);
         }
     }

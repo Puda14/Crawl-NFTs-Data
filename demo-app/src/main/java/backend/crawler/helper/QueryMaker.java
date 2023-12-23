@@ -6,7 +6,7 @@ import java.util.Calendar;
 
 
 public class QueryMaker {
-    private static final int DAY_GAP = 3;
+    private static final int DAY_GAP = 1;
     public static String makeQuery(String keyword, String since, String endDate, int min_faves, int min_retweets, int min_replies, int filter_replies){
         //until = since + 3 days
         String until = addDayToString(since, DAY_GAP);

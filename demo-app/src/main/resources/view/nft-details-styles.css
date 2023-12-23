@@ -1,0 +1,69 @@
+#detailPane {
+    -fx-background-color: #3498db;
+     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+     -fx-border-radius: 5px;
+     -fx-padding: 20px;
+}
+
+#text {
+    -fx-text-fill: #2ecc71;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+}
+
+#label {
+    -fx-text-fill: #FFECD6;
+    -fx-font-size: 14px;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+}
+
+#bottomPane {
+       -fx-border-color: #0F2167;
+       -fx-border-width: 0 0 2 0;
+}
+
+#headLabel{
+  -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-font-size: 16px;
+    -fx-text-fill: #0F2167;
+}
+
+#myListView .list-cell {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-background-color: #ffffff;
+}
+
+
+#myListView .list-cell:hover {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #4CB9E7;
+}
+
+
+#myListView {
+    -fx-border-color: #0F2167;
+    -fx-border-width: 0 0 2 0;
+}
+
+#LineChart .chart-series-line {
+    -fx-stroke: #FF8C00;
+    -fx-stroke-width: 2px;
+}
+
+#LineChart .chart-line-symbol {
+    -fx-background-color: #FF8C00, #ffffff;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+
+#LineChart .chart-line-symbol:selected {
+    -fx-background-color: #ff0000, #ffffff;
+}

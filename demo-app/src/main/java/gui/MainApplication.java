@@ -14,7 +14,7 @@ public class MainApplication extends Application {
         primaryStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/view/dashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
-        stage.setTitle("Hello!");
+        stage.setTitle("Awesome App");
         stage.setScene(scene);
         stage.show();
     }

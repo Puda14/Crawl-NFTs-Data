@@ -9,6 +9,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 import java.util.List;
@@ -19,7 +20,10 @@ import static backend.utils.validate.Validator.isValidKeyword;
 
 public class CrawlerTabController {
     @FXML
-    private Button crawlButton;
+    private Button crawlPostButton;
+
+    @FXML
+    private Button crawlNFTButton;
 
     @FXML
     private TextField keywordTextField;
@@ -31,6 +35,11 @@ public class CrawlerTabController {
     private TextField endDateTextField;
 
     private boolean isCrawling = false;
+
+    @FXML
+    private ComboBox<String> nftComboBox;
+
+    private String nftSlugName;
 
     /**
      * Initializes the controller. Configures listeners for input fields and sets up the crawl button.
@@ -52,10 +61,10 @@ public class CrawlerTabController {
         });
 
         // Action event for the crawlButton
-        crawlButton.setOnAction(event -> {
+        crawlPostButton.setOnAction(event -> {
             // Check if crawling is already in progress
             if (isCrawling) {
-                crawlButton.setDisable(true);
+                crawlPostButton.setDisable(true);
                 return;
             }
 
@@ -113,7 +122,28 @@ public class CrawlerTabController {
         });
 
         // Disable crawlButton initially
-        crawlButton.setDisable(true);
+        crawlPostButton.setDisable(true);
+
+        nftComboBox.getItems().addAll("Mục 1", "Mục 2", "Mục 3");
+        updateCrawlNFTButtonState();
+
+
+        nftComboBox.valueProperty().addListener((observableNFT, oldValueNFT, newValueNFT) -> {
+            System.out.println("NFT selected: " + newValueNFT);
+            nftSlugName = newValueNFT;
+            updateCrawlNFTButtonState();
+        });
+
+        System.out.println("NFT selected: " + nftSlugName);
+
+        crawlNFTButton.setOnAction(event -> {
+            if (!isCrawling) {
+                // Crawl NFT
+
+                isCrawling = false;
+                updateCrawlNFTButtonState();
+            }
+        });
     }
 
     /**
@@ -126,9 +156,9 @@ public class CrawlerTabController {
 
         // Enable or disable crawlButton based on input validation
         if (isValidInput(keyword, startDate, endDate)) {
-            crawlButton.setDisable(false);
+            crawlPostButton.setDisable(false);
         } else {
-            crawlButton.setDisable(true);
+            crawlPostButton.setDisable(true);
         }
     }
 
@@ -151,6 +181,14 @@ public class CrawlerTabController {
         keywordTextField.setDisable(false);
         startDateTextField.setDisable(false);
         endDateTextField.setDisable(false);
-        crawlButton.setDisable(false);
+        crawlPostButton.setDisable(false);
+    }
+
+    private void updateCrawlNFTButtonState() {
+        if (nftSlugName == null || isCrawling) {
+            crawlNFTButton.setDisable(true);
+        } else {
+            crawlNFTButton.setDisable(false);
+        }
     }
 }

@@ -1,0 +1,25 @@
+#nftListView {
+    -fx-control-inner-background: #f8f8f8; /* Màu nền của khung ListView */
+}
+
+#nftListView .list-cell {
+    -fx-background-color: #ffffff; /* Màu nền của mỗi ListCell */
+    -fx-border-color: #e0e0e0; /* Màu đường viền giữa các ListCell */
+    -fx-border-width: 0 0 1 0; /* Độ dày của đường viền dưới của mỗi ListCell */
+    -fx-padding: 10; /* Khoảng cách giữa nội dung và biên của mỗi ListCell */
+    -fx-text-fill: #333333; /* Màu chữ của mỗi ListCell */
+    -fx-font-size: 14px; /* Cỡ chữ của mỗi ListCell */
+    -fx-font-weight: normal; /* Chữ không in đậm */
+}
+
+#nftListView .list-cell:hover {
+    -fx-background-color: #e6e6e6; /* Màu nền khi hover mỗi ListCell */
+}
+
+#nftListView .list-cell:focused {
+    -fx-background-color: #d4e4f5; /* Màu nền khi ListCell được focus */
+}
+
+#nftListView .list-cell:pressed {
+    -fx-background-color: #a9cde3; /* Màu nền khi ListCell được bấm */
+}

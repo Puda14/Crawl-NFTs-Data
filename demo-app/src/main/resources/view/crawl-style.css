@@ -1,0 +1,123 @@
+#screenCrawlPost {
+ -fx-background-color: #3498db;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+#screenCrawNFT {
+ -fx-background-color: #4caf50;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+
+#keywordTextField {
+    -fx-pref-width: 200;
+    -fx-pref-height: 30;
+    -fx-font-size: 14px;
+    -fx-border-color: #3498db;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-color: white;
+    -fx-text-fill: #333333;
+}
+
+#startDateTextField, #endDateTextField {
+    -fx-pref-width: 200;
+    -fx-pref-height: 30;
+    -fx-font-size: 14px;
+    -fx-border-color: #3498db;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-color: white;
+    -fx-text-fill: #333333;
+}
+
+
+#keywordTextField:hover, #startDateTextField:hover, #endDateTextField:hover {
+    -fx-background-color: #ecf0f1;
+}
+
+
+#keywordTextField:focused, #startDateTextField:focused, #endDateTextField:focused {
+    -fx-border-color: #2980b9;
+}
+
+#crawlNFTButton {
+    -fx-font-size: 14px;
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-pref-width: 120;
+    -fx-pref-height: 40;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+
+    /* hover */
+    -fx-background-insets: 0, 0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 5, 4 4 0 0, 3 3 0 0, 2 2 0 0;
+    -fx-background-color: #219653;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+#crawlNFTButton:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+
+
+
+#crawlPostButton {
+    -fx-font-size: 14px;
+    -fx-background-color: #1a5276;
+    -fx-text-fill: white;
+    -fx-pref-width: 120;
+    -fx-pref-height: 40;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+
+    /* hover */
+    -fx-background-insets: 0, 0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 5, 4 4 0 0, 3 3 0 0, 2 2 0 0;
+    -fx-background-color: #2980b9;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+#crawlPostButton:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+
+
+/* Combo Box */
+#nftComboBox {
+    -fx-pref-width: 248;
+    -fx-background-color: white;
+    -fx-text-fill: #2ecc71;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+}
+
+#nftComboBox .arrow-button {
+    -fx-background-color: white;
+    -fx-shape: "M0,0 L1,0 0.5,1 Z";
+}
+
+#nftComboBox .list-cell:hover {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+}
+
+#labelStyle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}

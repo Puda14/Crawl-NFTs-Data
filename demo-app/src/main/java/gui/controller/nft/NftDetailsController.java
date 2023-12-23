@@ -6,6 +6,7 @@ import backend.model.nft.Detail;
 import backend.model.nft.NFT;
 import backend.model.nft.PriceHistory;
 import javafx.fxml.FXML;
+import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
@@ -13,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.util.StringConverter;
 
@@ -48,7 +50,9 @@ public class NftDetailsController {
     private ListView<Marketplace> marketplacesListView;
 
     @FXML
-    private LineChart<Number, Number> priceHistoryChart;
+    private Pane chartPane;
+
+    private LineChart<String, Number> lineChart;
 
     public void setNFTDetails(NFT nft) {
         Detail nftDetails = nft.getDetail();
@@ -92,30 +96,21 @@ public class NftDetailsController {
         marketplacesListView.getItems().setAll(nftDetails.getMarketplaces());
 
 
-
         List<PriceHistory> priceHistoryList = nft.getPriceHistoryList();
-//        WebEngine webEngine = chartWebView.getEngine();
-//        webEngine.loadContent();
 
-//        Platform.runLater(() -> {
-//            XYChart.Series<Number, Number> series = new XYChart.Series<>();
-//            series.setName("Price History");
-//
-//            for (PriceHistory priceHistory : priceHistoryList) {
-//                Double volumeUsd = priceHistory.getVolumeUsd();
-//                if (volumeUsd != null) {
-//                    series.getData().add(new XYChart.Data<>(priceHistory.getTimestamps().getTime(), volumeUsd));
-//                }
-//            }
-//
-//            NumberAxis xAxis = new NumberAxis();
-//            xAxis.setLabel("Timestamps");
-//
-//            NumberAxis yAxis = new NumberAxis();
-//            yAxis.setLabel("Volume (USD)");
-//
-//            priceHistoryChart.getData().add(series);
-//        });
+        lineChart = (LineChart<String, Number>) chartPane.lookup(".chart");
+
+        if (lineChart != null) {
+            XYChart.Series<String, Number> series = new XYChart.Series<>();
+
+            for (PriceHistory item : priceHistoryList) {
+                if (item.getTimestamps() != null) {
+                    series.getData().add(new XYChart.Data<>(item.getTimestamps().toString(), item.getVolumeUsd()));
+                }
+            }
+
+            lineChart.getData().add(series);
+        }
     }
 
     private void openURL(String url) {

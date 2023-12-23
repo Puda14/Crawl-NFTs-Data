@@ -74,6 +74,8 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
                     //if cant scroll down anymore, break
                     if(lastPosition.compareTo(0.0) < 0)
                         break;
+                    if(noResultDetected(driver, twitterProperty.getNoResult()))
+                        break;
                     List<WebElement> articles = driver.findElements(By.xpath(TWEET_XPATH));
                     for (WebElement article : articles) {
                         if (isAdvertisement(article))
@@ -95,7 +97,6 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
 //            if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
 
             if(lastPosition.compareTo(LOADED_SOME_TWITTER) < 0 || noResultDetected(driver, twitterProperty.getNoResult()))
-
                 startDay = addDayToString(startDay, (DAY_GAP + 1));
             else{
                 if(!reloadButtonDetected(driver,twitterProperty.getReloadButton()))

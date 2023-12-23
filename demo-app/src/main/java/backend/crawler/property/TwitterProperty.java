@@ -42,7 +42,7 @@ public class TwitterProperty {
             loginButton = properties.getProperty("loginButton");
             logoutButton = properties.getProperty("logoutButton");
             reloadButton = properties.getProperty("reloadButton");
-            noResult = properties.getProperty("noTweetFound");
+            noResult = properties.getProperty("noTweetsFound");
 
         } catch (IOException ex) {
             ex.printStackTrace();

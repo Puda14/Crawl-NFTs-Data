@@ -73,6 +73,8 @@ public class TestDataAnalyst {
         List<PriceHistory> priceHistory = nft.getPriceHistoryList(); // lấy lịch sử giá
         System.out.println(priceHistory.get(5).getTimestamps());
 
+        String start = "2021-08-01";
+        String end = "2021-07-30";
         List<TweetPrice> tweetPriceList = new ArrayList<>();
         //lấy list tweet
         List<Tweet> tweetList = postController.getAllPost();
@@ -87,6 +89,7 @@ public class TestDataAnalyst {
                 tweetPriceList.add(tweetPrice);
             }
         }
+
         System.out.println(tweetPriceList);
 
         List<Double> variableX = new ArrayList<>();

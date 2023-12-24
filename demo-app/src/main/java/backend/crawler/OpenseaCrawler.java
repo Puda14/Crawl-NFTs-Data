@@ -32,12 +32,13 @@ public class OpenseaCrawler {
         driver.get(url);
         String nameXpath = "/html/body/div[1]/div[2]/div[2]/div[2]/main/table/tbody//td[2]/a";
         List<WebElement> nameElements = driver.findElements(By.xpath(nameXpath));
+        int cnt = 1;
         for (WebElement nameElement : nameElements) {
             String name = nameElement.getText();
             String link = nameElement.getAttribute("href");
             String[] parts = link.split("/");
             link = parts[parts.length - 1];
-            System.out.println(name + " " + link);
+            System.out.println(name + " " + link + " " + cnt++);
         }
     }
 }

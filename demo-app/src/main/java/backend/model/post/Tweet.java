@@ -10,10 +10,10 @@ import lombok.NoArgsConstructor;
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class Tweet extends BasePost{
-    String tweetText;
-    Integer reply;
-    Integer retweet;
-    Integer like;
+   private String tweetText;
+   private Integer reply;
+   private Integer retweet;
+   private Integer like;
 
     public Tweet(String account,String link, String time, String tweetText, Integer reply, Integer retweet, Integer like) {
         super(account,link,time);

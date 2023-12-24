@@ -1,4 +1,4 @@
-package gui.controller.hashtag;
+package gui.controller.trending;
 
 import backend.ConfigModule;
 import backend.controller.AnalystController;
@@ -19,7 +19,7 @@ import static backend.utils.validate.Validator.isValidDate;
 /**
  * Controller class for handling interactions in the Hashtag Analysis GUI.
  */
-public class HashtagController {
+public class TopTrending {
 
     @FXML
     private TextField startDateTextField;
@@ -31,6 +31,12 @@ public class HashtagController {
     private Button getTopHashtagButton;
 
     @FXML
+    private Button getTopNFTButton;
+
+    @FXML
+    private ComboBox nftComboBox;
+
+    @FXML
     private TableView<HashtagCount> tableView;
 
     @FXML
@@ -40,13 +46,30 @@ public class HashtagController {
     private TableColumn<HashtagCount, Integer> countColumn;
 
     @FXML
-    private TableColumn<HashtagCount, Number> topColumn;
+    private TableColumn<HashtagCount, Number> topHashtagColumn;
 
     @FXML
-    private Pagination pagination;
+    private TableColumn<HashtagCount, String> nftColumn;
+
+    @FXML
+    private TableColumn<HashtagCount, Integer> countNftColumn;
+
+    @FXML
+    private TableColumn<HashtagCount, Number> topNftColumn;
+
+    @FXML
+    private Pagination paginationHashtagTableView;
+
+    @FXML
+    private Pagination paginationNftTableView;
+
+    @FXML
+    private String topNftTime;
 
     private final int ITEMS_PER_PAGE = 10;
-    private ObservableList<HashtagCount> data;
+    private ObservableList<HashtagCount> dataHashtag;
+
+//    private ObservableList<...> dataNft;
     private int totalPageCount = 0;
 
     public void initialize() {
@@ -64,7 +87,7 @@ public class HashtagController {
             // Handle when a row is selected (if needed)
         });
 
-        pagination.currentPageIndexProperty().addListener((observable, oldValue, newValue) -> {
+        paginationHashtagTableView.currentPageIndexProperty().addListener((observable, oldValue, newValue) -> {
             loadTableViewData(newValue.intValue());
         });
 
@@ -79,10 +102,10 @@ public class HashtagController {
                 // Get top Hashtag
                 Injector injector = Guice.createInjector(new ConfigModule());
                 AnalystController analystController = injector.getInstance(AnalystController.class);
-                data = FXCollections.observableArrayList(analystController.getTrendingHashtag(startDate, endDate));
+                dataHashtag = FXCollections.observableArrayList(analystController.getTrendingHashtag(startDate, endDate));
 
                 // Data Test for pagination
-                data.addAll(new HashtagCount("hashtag1", 10),
+                dataHashtag.addAll(new HashtagCount("hashtag1", 10),
                         new HashtagCount("hashtag2", 15),
                         new HashtagCount("hashtag3", 20),
                         new HashtagCount("hashtag4", 5),
@@ -95,21 +118,37 @@ public class HashtagController {
                 hashtagColumn.setCellValueFactory(new PropertyValueFactory<>("hashtag"));
                 countColumn.setCellValueFactory(new PropertyValueFactory<>("count"));
 
-                // Update topColumn value using an overall index
-                topColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<HashtagCount, Number>, ObservableValue<Number>>() {
+                // Update topHashtagColumn value using an overall index
+                topHashtagColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<HashtagCount, Number>, ObservableValue<Number>>() {
                     @Override
                     public ObservableValue<Number> call(TableColumn.CellDataFeatures<HashtagCount, Number> param) {
-                        return new ReadOnlyObjectWrapper<>(data.indexOf(param.getValue()) + 1);
+                        return new ReadOnlyObjectWrapper<>(dataHashtag.indexOf(param.getValue()) + 1);
                     }
                 });
 
-                totalPageCount = (int) Math.ceil((double) data.size() / ITEMS_PER_PAGE);
-                pagination.setPageCount(totalPageCount);
+                totalPageCount = (int) Math.ceil((double) dataHashtag.size() / ITEMS_PER_PAGE);
+                paginationHashtagTableView.setPageCount(totalPageCount);
 
                 // Init Screen
-                pagination.setCurrentPageIndex(0);
+                paginationHashtagTableView.setCurrentPageIndex(0);
                 loadTableViewData(0);
             }
+        });
+
+        nftComboBox.getItems().addAll("24h", "7days", "9days", "90days");
+
+        getTopNFTButton.setDisable(true);
+        nftComboBox.valueProperty().addListener((observableNFT, oldTopNftTime, newTopNftTime) -> {
+            topNftTime = (String) newTopNftTime;
+            getTopNFTButton.setDisable(false);
+        });
+
+        getTopNFTButton.setOnAction(event -> {
+
+            // Get top NFT by topNftTime
+
+            // Data test
+            
         });
     }
 
@@ -145,10 +184,10 @@ public class HashtagController {
      */
     private void loadTableViewData(int pageIndex) {
         int fromIndex = pageIndex * ITEMS_PER_PAGE;
-        int toIndex = Math.min(fromIndex + ITEMS_PER_PAGE, data.size());
+        int toIndex = Math.min(fromIndex + ITEMS_PER_PAGE, dataHashtag.size());
 
         if (fromIndex < toIndex) {
-            tableView.setItems(FXCollections.observableArrayList(data.subList(fromIndex, toIndex)));
+            tableView.setItems(FXCollections.observableArrayList(dataHashtag.subList(fromIndex, toIndex)));
         } else {
             tableView.setItems(FXCollections.emptyObservableList());
         }

@@ -25,7 +25,7 @@ module com.example.demoapp {
     opens gui.controller.post to javafx.fxml;
     opens gui.controller.crawler to javafx.fxml;
     opens gui.controller.analyst to javafx.fxml;
-    opens gui.controller.hashtag to javafx.fxml;
+    opens gui.controller.trending to javafx.fxml;
     opens backend.dto.nftpricefloorapi to com.google.gson;
     opens backend.model.nft to com.google.gson;
     opens backend.repository.impl to com.google.guice;

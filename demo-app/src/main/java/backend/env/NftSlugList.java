@@ -14,5 +14,16 @@ public class NftSlugList {
          "otherdeed" ,
          "mutant-ape-yacht-club" ,
          "cryptopunks"};
+
+    public static final String[] nftNames = {  "Bored Ape Yacht Club" ,
+            "Azuki" ,
+            "Proof Moonbirds" ,
+            "Pudgy Penguins" ,
+            "Bored Ape Kennel Club" ,
+            "Meebits" ,
+            "Degods" ,
+            "Otherdeed" ,
+            "Mutant Ape Yacht Club" ,
+            "Cryptopunks"};
     public static final List<String> slugList = Arrays.asList(slugs);
 }

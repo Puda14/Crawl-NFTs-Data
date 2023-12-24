@@ -34,15 +34,14 @@
       <content>
          <Pane fx:id="chartPane" prefWidth="1199.0">
             <children>
-            
-                                                                <LineChart id="LineChart" layoutX="8.0" layoutY="4.0" prefHeight="581.0" prefWidth="1199.0">
+                <LineChart id="LineChart" layoutX="8.0" layoutY="4.0" prefHeight="581.0" prefWidth="1199.0">
                     <xAxis>
                       <CategoryAxis side="BOTTOM" />
                     </xAxis>
                     <yAxis>
                       <NumberAxis side="LEFT" />
                     </yAxis>
-                  </LineChart>
+                </LineChart>
             </children>
          </Pane>
       </content>

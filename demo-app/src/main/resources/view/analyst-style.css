@@ -1,0 +1,66 @@
+#bottomPane {
+       -fx-border-color: #0F2167;
+       -fx-border-width: 0 0 2 0;
+}
+
+#headLabel{
+  -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-font-size: 16px;
+    -fx-text-fill: #0F2167;
+}
+
+#screen {
+ -fx-background-color: #83A2FF;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+#showLineChartButton {
+    -fx-background-color: #FFD28F;
+    -fx-padding: 10;
+    -fx-text-fill: #333333;
+    -fx-background-radius: 10;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+#showLineChartButton:hover {
+    -fx-background-color: #FFD966;
+}
+
+#nftComboBox {
+    -fx-pref-width: 248;
+    -fx-background-color: white;
+    -fx-text-fill: #2ecc71;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+}
+
+#nftComboBox .arrow-button {
+    -fx-background-color: white;
+    -fx-shape: "M0,0 L1,0 0.5,1 Z";
+}
+
+#nftComboBox .list-cell:hover {
+    -fx-background-color: #FFE3BB;
+    -fx-text-fill: black;
+}
+
+#tableLabelId{
+   -fx-background-color: transparent;
+    -fx-padding: 10;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-border-color: #FFD28F;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}

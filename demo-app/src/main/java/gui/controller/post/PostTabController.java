@@ -70,7 +70,7 @@ public class PostTabController {
             if (!tweetText.isEmpty()) {
 
                 System.out.println("User input: " + tweetText);
-                List<Tweet> searchTweets = postController.getByKeyword(tweetText);
+                List<Tweet> searchTweets = postController.getByKeywordOrAccount(tweetText);
                 if(searchTweets == null){
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Notification");

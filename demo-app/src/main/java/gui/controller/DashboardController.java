@@ -93,7 +93,7 @@ public class DashboardController implements Initializable {
     private void showHashtag(ActionEvent event){
         Parent fxml = null;
         try {
-            fxml = FXMLLoader.load(getClass().getResource("/view/hashtag.fxml"));
+            fxml = FXMLLoader.load(getClass().getResource("/view/trending.fxml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

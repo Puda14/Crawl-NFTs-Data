@@ -20,4 +20,5 @@ public class PostController {
     public List<Tweet> getByKeyword(String keyword){
         return postService.getByKeyword(keyword);
     }
+    public List<Tweet> getByKeywordOrAccount(String keyword){return postService.getByKeywordOrAccount(keyword);}
 }

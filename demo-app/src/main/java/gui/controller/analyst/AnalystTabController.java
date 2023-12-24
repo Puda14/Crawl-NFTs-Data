@@ -94,7 +94,7 @@ public class AnalystTabController {
 
             // PieChart
             pieChart.getData().clear();
-            
+
             PieChart.Data slice1 = new PieChart.Data("Pearson correlation coefficient", correlation);
 
             pieChart.getData().add(slice1);

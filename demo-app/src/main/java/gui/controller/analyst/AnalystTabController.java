@@ -53,6 +53,8 @@ public class AnalystTabController {
 
         nftComboBox.valueProperty().addListener((observableNFT, oldValueNFT, newValueNFT) -> {
 
+            tweetPriceList.clear();
+
             // Select nft
             nftName = newValueNFT;
             System.out.println("NFT selected: " + nftName);

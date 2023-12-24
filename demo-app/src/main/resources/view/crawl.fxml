@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="552.0" prefWidth="850.0" stylesheets="@crawl-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.crawler.CrawlerTabController">
+<AnchorPane prefHeight="552.0" prefWidth="977.0" stylesheets="@crawl-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.crawler.CrawlerTabController">
    <children>
-      <Pane id="screenCrawlPost" layoutX="50.0" layoutY="48.0" prefHeight="253.0" prefWidth="372.0">
+      <Pane id="screenCrawlPost" layoutX="49.0" layoutY="176.0" prefHeight="253.0" prefWidth="372.0">
          <children>
             <TextField id="keywordTextField" fx:id="keywordTextField" layoutX="140.0" layoutY="20.0" promptText="keyword" />
             <TextField id="startDateTextField" fx:id="startDateTextField" layoutX="140.0" layoutY="88.0" promptText="yyyy-mm-dd" />
@@ -21,7 +21,7 @@
             <Button id="crawlPostButton" fx:id="crawlPostButton" layoutX="240.0" layoutY="199.0" mnemonicParsing="false" text="Crawl Post" />
          </children>
       </Pane>
-      <Pane id="screenCrawNFT" layoutX="493.0" layoutY="52.0" prefHeight="253.0" prefWidth="337.0">
+      <Pane id="screenCrawNFT" layoutX="492.0" layoutY="180.0" prefHeight="253.0" prefWidth="337.0">
          <children>
             <Button id="crawlNFTButton" fx:id="crawlNFTButton" layoutX="202.0" layoutY="192.0" mnemonicParsing="false" text="Crawl NFT" />
             <ComboBox id="nftComboBox" fx:id="nftComboBox" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="248.0">
@@ -30,6 +30,11 @@
             </FXCollections>
                </items>
             </ComboBox>
+         </children>
+      </Pane>
+      <Pane id="bottomPane" prefHeight="56.0" prefWidth="993.0">
+         <children>
+            <Label id="headLabel" layoutX="25.0" layoutY="19.0" text="Crawl Tool" />
          </children>
       </Pane>
    </children>

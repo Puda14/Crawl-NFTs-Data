@@ -85,9 +85,10 @@ public class AnalystTabController {
             List<Double> variableX = new ArrayList<>();
             List<Double> variableY = new ArrayList<>();
             for (TweetPrice tweetPrice : tweetPriceList) {
-                if (tweetPrice.getPrice() == null) System.out.println(tweetPrice);
-                variableX.add(tweetPrice.getPrice());
-                variableY.add(tweetPrice.getTweetN());
+                if (tweetPrice.getTweetN() > 0) {
+                    variableX.add(tweetPrice.getPrice());
+                    variableY.add(tweetPrice.getTweetN());
+                }
             }
 
             // Calculate the Pearson correlation coefficient

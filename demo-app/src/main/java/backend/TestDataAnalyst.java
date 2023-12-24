@@ -45,10 +45,6 @@ public class TestDataAnalyst {
         return null;
     }
 
-    public static int sum3day(Date date){
-
-        return 0;
-    }
 
     public static int countPostsInLastNDays(List<Tweet> tweetList, Date inputDate, int n) {
         int count = 0;
@@ -87,14 +83,20 @@ public class TestDataAnalyst {
                 tweetPriceList.add(tweetPrice);
             }
         }
-        System.out.println(tweetPriceList);
+        for(TweetPrice tweetPrice : tweetPriceList) {
+            System.out.println(tweetPrice.getTimestamp() + " : " + tweetPrice.getPrice() + " - " + tweetPrice.getTweetN());
+        }
 
         List<Double> variableX = new ArrayList<>();
         List<Double> variableY = new ArrayList<>() ;
         for (TweetPrice tweetPrice : tweetPriceList){
-            if(tweetPrice.getPrice() == null) System.out.println(tweetPrice);
-            variableX.add(tweetPrice.getPrice());
-            variableY.add(tweetPrice.getTweetN());
+
+            if(tweetPrice.getTweetN() > 1 && tweetPrice.getTimestamp().before(toDate("2022-07-01T03:48:07.000Z"))
+                    &&tweetPrice.getTimestamp().after(toDate("2022-05-30T23:48:07.000Z"))) {
+                System.out.println(tweetPrice);
+                variableX.add(tweetPrice.getPrice());
+                variableY.add(tweetPrice.getTweetN());
+            }
         }
         // Tính hệ số tương quan Pearson
         double correlation = calculatePearsonCorrelation(variableX, variableY);

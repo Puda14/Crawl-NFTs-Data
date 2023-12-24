@@ -1,6 +1,6 @@
 package backend.service.impl;
 
-import backend.TweetPrice;
+import backend.dto.twitter.TweetPrice;
 import backend.dto.twitter.HashtagCount;
 import backend.model.nft.NFT;
 import backend.model.nft.PriceHistory;

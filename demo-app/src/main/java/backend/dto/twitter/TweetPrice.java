@@ -1,4 +1,4 @@
-package backend;
+package backend.dto.twitter;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

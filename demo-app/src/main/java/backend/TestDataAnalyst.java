@@ -1,23 +1,12 @@
 package backend;
 
 import backend.controller.AnalystController;
-import backend.model.nft.PriceHistory;
+import backend.dto.twitter.TweetPrice;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import backend.controller.NFTController;
-import backend.controller.PostController;
-import backend.model.nft.NFT;
 import backend.model.post.Tweet;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.TimeZone;
 
-import static backend.utils.DataAnalyst.countPostsInLastNDays;
-import static backend.utils.DatetimeFormat.toDate;
-import static backend.utils.algorithm.PearsonCorrelation.calculatePearsonCorrelation;
+import java.util.List;
 
 public class TestDataAnalyst {
 

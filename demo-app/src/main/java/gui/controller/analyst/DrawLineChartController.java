@@ -1,6 +1,6 @@
 package gui.controller.analyst;
 
-import backend.TweetPrice;
+import backend.dto.twitter.TweetPrice;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;

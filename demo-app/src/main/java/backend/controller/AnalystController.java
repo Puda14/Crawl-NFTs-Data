@@ -1,6 +1,6 @@
 package backend.controller;
 
-import backend.TweetPrice;
+import backend.dto.twitter.TweetPrice;
 import backend.dto.twitter.HashtagCount;
 import backend.service.AnalystService;
 import com.google.inject.Inject;

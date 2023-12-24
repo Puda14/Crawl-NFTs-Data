@@ -1,6 +1,6 @@
 package backend.service;
 
-import backend.TweetPrice;
+import backend.dto.twitter.TweetPrice;
 import backend.dto.twitter.HashtagCount;
 
 import java.util.List;

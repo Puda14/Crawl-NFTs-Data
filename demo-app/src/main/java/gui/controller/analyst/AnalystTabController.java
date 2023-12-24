@@ -1,13 +1,8 @@
 package gui.controller.analyst;
 
 import backend.ConfigModule;
-import backend.TweetPrice;
+import backend.dto.twitter.TweetPrice;
 import backend.controller.AnalystController;
-import backend.controller.NFTController;
-import backend.controller.PostController;
-import backend.model.nft.NFT;
-import backend.model.nft.PriceHistory;
-import backend.model.post.Tweet;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import javafx.fxml.FXML;

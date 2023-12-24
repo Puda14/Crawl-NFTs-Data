@@ -42,7 +42,7 @@ public class DrawLineChartController {
             int index = 0;
             for (TweetPrice item : tweetPriceList) {
                 if (item.getTimestamp() != null && ++index <= MAX) {
-                    series.getData().add(new XYChart.Data<>(item.getTimestamp().toString(), item.getTweetN()));
+                    series.getData().add(new XYChart.Data<>(item.getTimestamp().toString(), item.getTweetNumber()));
                 }
             }
 

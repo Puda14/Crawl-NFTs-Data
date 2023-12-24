@@ -11,6 +11,6 @@ import java.util.Date;
 @Data
 public class TweetPrice {
     Date timestamp;
-    Double tweetN;
+    Double tweetNumber;
     Double price;
 }

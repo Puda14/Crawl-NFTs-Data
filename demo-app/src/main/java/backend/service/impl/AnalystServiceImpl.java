@@ -1,23 +1,32 @@
 package backend.service.impl;
 
+import backend.TweetPrice;
 import backend.dto.twitter.HashtagCount;
+import backend.model.nft.NFT;
+import backend.model.nft.PriceHistory;
 import backend.model.post.Tweet;
+import backend.repository.NftRepository;
 import backend.repository.TweetRepository;
 import backend.service.AnalystService;
 import backend.utils.algorithm.ValueComparator;
-import com.google.gson.reflect.TypeToken;
 import com.google.inject.Inject;
 
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static backend.utils.DataAnalyst.countPostsInLastNDays;
+import static backend.utils.DatetimeFormat.toDate;
+import static backend.utils.algorithm.PearsonCorrelation.calculatePearsonCorrelation;
+
 public class AnalystServiceImpl implements AnalystService {
     private final TweetRepository tweetRepository;
+    private final NftRepository nftRepository;
 
     @Inject
-    public AnalystServiceImpl(TweetRepository tweetRepository) {
+    public AnalystServiceImpl(TweetRepository tweetRepository, NftRepository nftRepository) {
         this.tweetRepository = tweetRepository;
+        this.nftRepository = nftRepository;
     }
 
     @Override
@@ -57,4 +66,44 @@ public class AnalystServiceImpl implements AnalystService {
         }
         return hashtags;
     }
+
+    @Override
+    public List<TweetPrice> getTweetAndPriceByTime(String nftName, String startDate, String endDate) {
+        startDate = startDate + "T00:00:00.000Z";
+        endDate = endDate + "T23:59:59.999Z";
+        List<Tweet> tweets = tweetRepository.findAll();
+        NFT nft = nftRepository.getOneByName(nftName);
+        List<PriceHistory> priceHistory = nft.getPriceHistoryList();
+        List<TweetPrice> tweetPriceList = new ArrayList<>();
+        for (PriceHistory entry : priceHistory) {
+            if(entry.getTimestamps().before(toDate(endDate)) && entry.getTimestamps().after(toDate(startDate))) {
+                Date timestamp = entry.getTimestamps();
+                int numberOfPostsInLast3Days = countPostsInLastNDays(tweets, timestamp, 3);
+                TweetPrice tweetPrice = new TweetPrice();
+                tweetPrice.setPrice(entry.getFloorUsd());
+                tweetPrice.setTimestamp(entry.getTimestamps());
+                tweetPrice.setTweetNumber((double) numberOfPostsInLast3Days);
+                tweetPriceList.add(tweetPrice);
+            }
+        }
+        return tweetPriceList;
+    }
+
+    @Override
+    public Double PearsonCorrelationCalculate(List<TweetPrice> tweetPriceList, String startDate, String endDate) {
+        startDate = startDate + "T00:00:00.000Z";
+        endDate = endDate + "T23:59:59.999Z";
+        List<Double> variableX = new ArrayList<>();
+        List<Double> variableY = new ArrayList<>() ;
+        for (TweetPrice tweetPrice : tweetPriceList){
+            if(tweetPrice.getTweetNumber() > 1 && tweetPrice.getTimestamp().before(toDate(endDate))
+                    &&tweetPrice.getTimestamp().after(toDate(startDate))) {
+                variableX.add(tweetPrice.getPrice());
+                variableY.add(tweetPrice.getTweetNumber());
+            }
+        }
+        return calculatePearsonCorrelation(variableX, variableY);
+    }
+
+
 }

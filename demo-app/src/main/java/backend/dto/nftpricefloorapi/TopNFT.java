@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class TopNFT {
-    String name;
-    String slug;
-    Integer top;
+    private String name;
+    private String slug;
+    private Integer top;
 }

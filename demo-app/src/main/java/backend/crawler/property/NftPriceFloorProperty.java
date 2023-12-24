@@ -2,8 +2,6 @@ package backend.crawler.property;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;

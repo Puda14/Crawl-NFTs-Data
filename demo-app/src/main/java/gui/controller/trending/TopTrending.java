@@ -69,7 +69,6 @@ public class TopTrending {
     private final int ITEMS_PER_PAGE = 10;
     private ObservableList<HashtagCount> dataHashtag;
 
-//    private ObservableList<...> dataNft;
     private int totalPageCount = 0;
 
     public void initialize() {

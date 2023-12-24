@@ -40,7 +40,6 @@ public class NoAuthApiCrawler implements APICrawler {
             throw new RuntimeException(e);
         }
         if (responseCode == HttpURLConnection.HTTP_OK) {
-            // Đọc dữ liệu từ InputStream
             BufferedReader reader = null;
             try {
                 reader = new BufferedReader(new InputStreamReader(con.getInputStream()));

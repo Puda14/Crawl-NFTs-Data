@@ -1,7 +1,5 @@
 package backend.crawler.helper;
 
-import lombok.NoArgsConstructor;
-
 import java.util.Calendar;
 
 

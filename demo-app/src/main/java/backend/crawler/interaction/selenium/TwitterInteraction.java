@@ -26,7 +26,6 @@ public class TwitterInteraction implements WebInteraction {
         driver.get(twitterProperty.getLoginUrl());
         input(driver,twitterProperty.getUsernameInputField(),username);
         clickButton(driver,twitterProperty.getNextButton());
-//        input(driver,twitterProperty.getPasswordInputField(),password);
         try{
             WebElement passwordField = driver.findElement(By.xpath(twitterProperty.getPasswordInputField()));
             passwordField.sendKeys(password);
@@ -60,7 +59,6 @@ public class TwitterInteraction implements WebInteraction {
         int scrollAttempt = 0;
         while (true) {
             jsExecutor.executeScript(SCROLL_SCRIPT);
-//            System.out.println("t vua scroll");
             threadSleep(SHORT_DELAY_MS);
             Object currPositionObject = jsExecutor.executeScript("return window.pageYOffset;");
             if (currPositionObject == null)

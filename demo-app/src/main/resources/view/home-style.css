@@ -1,0 +1,78 @@
+#bottomPane {
+       -fx-border-color: #0F2167;
+       -fx-border-width: 0 0 2 0;
+}
+
+#headLabel{
+  -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-font-size: 16px;
+    -fx-text-fill: #0F2167;
+}
+
+#screen1 {
+    -fx-background-color: #AC87C5;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+    -fx-font-size: 18px;
+    -fx-text-fill: lack;
+}
+
+#screen2 {
+    -fx-background-color: #E0AED0;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+    -fx-font-size: 18px;
+    -fx-text-fill: lack;
+}
+
+#screen3 {
+    -fx-background-color: #FFE5E5;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+    -fx-font-size: 18px;
+    -fx-text-fill: lack;
+}
+
+#label1{
+    -fx-background-color: #AC87C5;
+    -fx-padding: 10;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+    -fx-font-size: 18px;
+    -fx-text-fill: #ffffff;
+}
+
+#label2{
+    -fx-background-color: #E0AED0;
+    -fx-padding: 10;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+    -fx-font-size: 18px;
+    -fx-text-fill: #ffffff;
+}
+
+#label3{
+    -fx-background-color: #FFE5E5;
+    -fx-padding: 10;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+}
+
+#label4{
+    -fx-background-color: #756AB6;
+    -fx-padding: 10;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+    -fx-font-size: 18px;
+    -fx-text-fill: #ffffff;
+}
+

@@ -6,15 +6,19 @@ import backend.dto.twitter.HashtagCount;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import static backend.utils.validate.Validator.isValidDate;
-
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.Callback;
 
+import static backend.utils.validate.Validator.isValidDate;
 
+/**
+ * Controller class for handling interactions in the Hashtag Analysis GUI.
+ */
 public class HashtagController {
 
     @FXML
@@ -36,54 +40,86 @@ public class HashtagController {
     private TableColumn<HashtagCount, Integer> countColumn;
 
     @FXML
-    TableColumn<HashtagCount, Number> topColumn;
+    private TableColumn<HashtagCount, Number> topColumn;
+
+    @FXML
+    private Pagination pagination;
+
+    private final int ITEMS_PER_PAGE = 10;
+    private ObservableList<HashtagCount> data;
+    private int totalPageCount = 0;
 
     public void initialize() {
-
         getTopHashtagButton.setDisable(true);
 
-        // Listener for startDateTextField changes
         startDateTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             validateInputAndUpdateButtonState();
         });
 
-        // Listener for endDateTextField changes
         endDateTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             validateInputAndUpdateButtonState();
         });
 
+        tableView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            // Handle when a row is selected (if needed)
+        });
+
+        pagination.currentPageIndexProperty().addListener((observable, oldValue, newValue) -> {
+            loadTableViewData(newValue.intValue());
+        });
+
         getTopHashtagButton.setOnAction(event -> {
 
-            // Get input values
+            // User input
             String startDate = startDateTextField.getText();
             String endDate = endDateTextField.getText();
-            System.out.println(startDate + " " + endDate);
 
             if (isValidInput(startDate, endDate)) {
 
                 // Get top Hashtag
                 Injector injector = Guice.createInjector(new ConfigModule());
                 AnalystController analystController = injector.getInstance(AnalystController.class);
+                data = FXCollections.observableArrayList(analystController.getTrendingHashtag(startDate, endDate));
 
-                // Table of Top Hashtag
+                // Data Test for pagination
+                data.addAll(new HashtagCount("hashtag1", 10),
+                        new HashtagCount("hashtag2", 15),
+                        new HashtagCount("hashtag3", 20),
+                        new HashtagCount("hashtag4", 5),
+                        new HashtagCount("hashtag5", 8),
+                        new HashtagCount("hashtag6", 12),
+                        new HashtagCount("hashtag7", 18),
+                        new HashtagCount("hashtag8", 25),
+                        new HashtagCount("hashtag9", 30));
+
                 hashtagColumn.setCellValueFactory(new PropertyValueFactory<>("hashtag"));
                 countColumn.setCellValueFactory(new PropertyValueFactory<>("count"));
-                topColumn.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(tableView.getItems().indexOf(param.getValue()) + 1));
 
-                ObservableList<HashtagCount> data = FXCollections.observableArrayList(
-                        analystController.getTrendingHashtag(startDate, endDate)
-                );
+                // Update topColumn value using an overall index
+                topColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<HashtagCount, Number>, ObservableValue<Number>>() {
+                    @Override
+                    public ObservableValue<Number> call(TableColumn.CellDataFeatures<HashtagCount, Number> param) {
+                        return new ReadOnlyObjectWrapper<>(data.indexOf(param.getValue()) + 1);
+                    }
+                });
 
-                tableView.setItems(data);
+                totalPageCount = (int) Math.ceil((double) data.size() / ITEMS_PER_PAGE);
+                pagination.setPageCount(totalPageCount);
+
+                // Init Screen
+                pagination.setCurrentPageIndex(0);
+                loadTableViewData(0);
             }
         });
     }
 
+    /**
+     * Validates input in the date fields and updates the state of the analysis button accordingly.
+     */
     private void validateInputAndUpdateButtonState() {
         String startDate = startDateTextField.getText();
         String endDate = endDateTextField.getText();
 
-        // Enable or disable crawlButton based on input validation
         if (isValidInput(startDate, endDate)) {
             getTopHashtagButton.setDisable(false);
         } else {
@@ -91,7 +127,30 @@ public class HashtagController {
         }
     }
 
+    /**
+     * Checks if the provided dates are valid.
+     *
+     * @param startDate The start date.
+     * @param endDate   The end date.
+     * @return True if both dates are valid; otherwise, false.
+     */
     private boolean isValidInput(String startDate, String endDate) {
         return isValidDate(startDate) && isValidDate(endDate);
+    }
+
+    /**
+     * Loads data into the table view based on the current page index.
+     *
+     * @param pageIndex The index of the current page.
+     */
+    private void loadTableViewData(int pageIndex) {
+        int fromIndex = pageIndex * ITEMS_PER_PAGE;
+        int toIndex = Math.min(fromIndex + ITEMS_PER_PAGE, data.size());
+
+        if (fromIndex < toIndex) {
+            tableView.setItems(FXCollections.observableArrayList(data.subList(fromIndex, toIndex)));
+        } else {
+            tableView.setItems(FXCollections.emptyObservableList());
+        }
     }
 }

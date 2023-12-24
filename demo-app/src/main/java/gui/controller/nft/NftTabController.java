@@ -3,7 +3,6 @@ package gui.controller.nft;
 
 import backend.ConfigModule;
 import backend.controller.NFTController;
-import backend.model.nft.Detail;
 import backend.model.nft.NFT;
 import com.google.inject.Guice;
 import com.google.inject.Injector;

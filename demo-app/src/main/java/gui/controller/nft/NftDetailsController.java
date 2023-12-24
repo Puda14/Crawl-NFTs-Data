@@ -6,25 +6,19 @@ import backend.model.nft.Detail;
 import backend.model.nft.NFT;
 import backend.model.nft.PriceHistory;
 import javafx.fxml.FXML;
-import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
-import javafx.util.StringConverter;
 
 import java.awt.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 public class NftDetailsController {

@@ -31,12 +31,6 @@ public class TopTrending {
     private Button getTopHashtagButton;
 
     @FXML
-    private Button getTopNFTButton;
-
-    @FXML
-    private ComboBox nftComboBox;
-
-    @FXML
     private TableView<HashtagCount> tableView;
 
     @FXML
@@ -49,27 +43,11 @@ public class TopTrending {
     private TableColumn<HashtagCount, Number> topHashtagColumn;
 
     @FXML
-    private TableColumn<HashtagCount, String> nftColumn;
-
-    @FXML
-    private TableColumn<HashtagCount, Integer> countNftColumn;
-
-    @FXML
-    private TableColumn<HashtagCount, Number> topNftColumn;
-
-    @FXML
     private Pagination paginationHashtagTableView;
-
-    @FXML
-    private Pagination paginationNftTableView;
-
-    @FXML
-    private String topNftTime;
 
     private final int ITEMS_PER_PAGE = 10;
     private ObservableList<HashtagCount> dataHashtag;
 
-//    private ObservableList<...> dataNft;
     private int totalPageCount = 0;
 
     public void initialize() {
@@ -104,17 +82,6 @@ public class TopTrending {
                 AnalystController analystController = injector.getInstance(AnalystController.class);
                 dataHashtag = FXCollections.observableArrayList(analystController.getTrendingHashtag(startDate, endDate));
 
-                // Data Test for pagination
-                dataHashtag.addAll(new HashtagCount("hashtag1", 10),
-                        new HashtagCount("hashtag2", 15),
-                        new HashtagCount("hashtag3", 20),
-                        new HashtagCount("hashtag4", 5),
-                        new HashtagCount("hashtag5", 8),
-                        new HashtagCount("hashtag6", 12),
-                        new HashtagCount("hashtag7", 18),
-                        new HashtagCount("hashtag8", 25),
-                        new HashtagCount("hashtag9", 30));
-
                 hashtagColumn.setCellValueFactory(new PropertyValueFactory<>("hashtag"));
                 countColumn.setCellValueFactory(new PropertyValueFactory<>("count"));
 
@@ -135,21 +102,6 @@ public class TopTrending {
             }
         });
 
-        nftComboBox.getItems().addAll("24h", "7days", "9days", "90days");
-
-        getTopNFTButton.setDisable(true);
-        nftComboBox.valueProperty().addListener((observableNFT, oldTopNftTime, newTopNftTime) -> {
-            topNftTime = (String) newTopNftTime;
-            getTopNFTButton.setDisable(false);
-        });
-
-        getTopNFTButton.setOnAction(event -> {
-
-            // Get top NFT by topNftTime
-
-            // Data test
-
-        });
     }
 
     /**

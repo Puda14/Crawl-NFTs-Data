@@ -7,6 +7,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import static backend.env.FilePath.seleniumPropFilePath;
+
 @AllArgsConstructor
 @Data
 public class SeleniumProperty {
@@ -20,7 +22,7 @@ public class SeleniumProperty {
 
     private void loadProperties() {
         Properties properties = new Properties();
-        try (FileInputStream input = new FileInputStream("src/main/resources/selenium.properties")) {
+        try (FileInputStream input = new FileInputStream(seleniumPropFilePath)) {
             properties.load(input);
             driverType = properties.getProperty("driverType");
             driverPath = properties.getProperty("driverPath");

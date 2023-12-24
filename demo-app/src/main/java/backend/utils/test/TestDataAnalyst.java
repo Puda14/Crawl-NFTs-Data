@@ -1,5 +1,6 @@
-package backend;
+package backend.utils.test;
 
+import backend.ConfigModule;
 import backend.controller.AnalystController;
 import backend.dto.twitter.TweetPrice;
 import com.google.inject.Guice;
@@ -32,8 +33,10 @@ public class TestDataAnalyst {
         String end = "2022-07-30";
         String name = "Bored Ape Yacht Club";
         List<TweetPrice> tweetPriceList = analystController.getTweetAndPriceByTime(name, start,end);
-        System.out.println(tweetPriceList);
-    }
+        for (TweetPrice tweetPrice : tweetPriceList){
+            if(tweetPrice.getTweetNumber() == 0) System.out.println(tweetPrice);
+
+        }    }
 
 
 }

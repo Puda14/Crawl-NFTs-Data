@@ -51,7 +51,10 @@ public class AnalystTabController {
             System.out.println("NFT selected: " + nftName);
 
             tweetPriceList = analystController.getTweetAndPriceByTime(nftName,"2021-08-01", "2022-07-30");
-            System.out.println(tweetPriceList);
+            for (TweetPrice tweetPrice : tweetPriceList){
+                if(tweetPrice.getTweetNumber() == 0) System.out.println(tweetPrice);
+
+            }
             // Calculate the Pearson correlation coefficient
             double correlation = analystController.calculatePearsonCorrelation(tweetPriceList,"2021-08-01", "2022-07-30");
             System.out.println("Pearson correlation coefficient: " + correlation);

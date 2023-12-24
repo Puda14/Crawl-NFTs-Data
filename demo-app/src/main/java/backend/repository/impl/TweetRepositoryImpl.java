@@ -9,7 +9,7 @@ import backend.model.post.Tweet;
 import java.util.ArrayList;
 import java.util.List;
 
-import static backend.env.FileProperty.tweetFilePath;
+import static backend.env.FilePath.tweetFilePath;
 
 public class TweetRepositoryImpl implements TweetRepository {
 

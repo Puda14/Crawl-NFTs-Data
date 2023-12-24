@@ -1,5 +1,6 @@
-package backend;
+package backend.utils.test;
 
+import backend.ConfigModule;
 import backend.controller.AnalystController;
 import com.google.inject.Guice;
 import com.google.inject.Injector;

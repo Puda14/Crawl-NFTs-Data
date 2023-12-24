@@ -21,7 +21,6 @@ public class TweetDataProcessor implements DataProcessor<Tweet, TweetProperty> {
         //get account href
         WebElement accountWebElement = article.findElement(By.xpath(tweetProperty.getAccountProp()));
         account = (accountWebElement.getText().replaceAll("\n", " "));
-        //better now
         //get time
         WebElement timeWebElement = article.findElement(By.xpath(tweetProperty.getTimeProp()));
         time = (timeWebElement.getAttribute("datetime").replaceAll("\n", " "));
@@ -32,7 +31,6 @@ public class TweetDataProcessor implements DataProcessor<Tweet, TweetProperty> {
         } catch(NoSuchElementException e){
             tweetText = " ";
         }
-//        tweetText = " ";
         String group;
 
         try {
@@ -50,14 +48,12 @@ public class TweetDataProcessor implements DataProcessor<Tweet, TweetProperty> {
                 }
                 if (part.contains("like")) {
                     like = Integer.parseInt(part.replaceAll("[^0-9]", ""));
-                    continue;
                 }
-//                bookmark = Integer.parseInt(part.replaceAll("[^0-9]", ""));
             }
         }catch (NoSuchElementException e){
 
         }
-        Tweet tweet = new Tweet(link,account,time,tweetText,reply,retweet,like);
+        Tweet tweet = new Tweet(account,link,time,tweetText,reply,retweet,like);
         return tweet;
     }
 

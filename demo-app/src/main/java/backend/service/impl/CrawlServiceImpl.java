@@ -3,7 +3,6 @@ package backend.service.impl;
 import com.google.inject.Inject;
 import backend.crawler.APICrawler;
 import backend.crawler.SeleniumCrawler;
-import backend.crawler.impl.NoAuthApiCrawler;
 import backend.dto.nftpricefloorapi.JsonPriceHistory;
 import backend.dto.nftpricefloorapi.NFTDetail;
 import backend.model.post.Tweet;
@@ -16,13 +15,10 @@ import backend.service.CrawlService;
 import backend.utils.mapper.NftDetailMapper;
 import backend.utils.mapper.PriceHistoryMapper;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-import static backend.env.FileProperty.nftFilePath;
-import static backend.env.FileProperty.tweetFilePath;
+import static backend.env.FilePath.tweetFilePath;
 import static backend.env.NftSlugList.slugList;
 import static backend.utils.file.FileManager.generateFileNameWithTimestamp;
 import static backend.utils.validate.Validator.isValidDate;

@@ -1,5 +1,6 @@
-package backend;
+package backend.utils.test;
 
+import backend.ConfigModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import backend.controller.CrawlController;

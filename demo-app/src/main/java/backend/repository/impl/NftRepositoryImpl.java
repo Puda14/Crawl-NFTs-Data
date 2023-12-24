@@ -2,14 +2,13 @@ package backend.repository.impl;
 
 import com.google.gson.reflect.TypeToken;
 import com.google.inject.Inject;
-import backend.repository.BaseRepository;
 import backend.repository.NftRepository;
 import backend.utils.fileio.FileReadAndWrite;
 import backend.model.nft.NFT;
 
 import java.util.List;
 
-import static backend.env.FileProperty.nftFilePath;
+import static backend.env.FilePath.nftFilePath;
 
 public class NftRepositoryImpl implements NftRepository {
 

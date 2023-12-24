@@ -35,7 +35,6 @@ public class AnalystServiceImpl implements AnalystService {
         Map<String, Integer> hashtagCount = new HashMap<>();
         List<HashtagCount> hashtags = new ArrayList<>();
         Pattern pattern = Pattern.compile("#\\w+");
-        List<String> hashtagList = new ArrayList<>();
         startDate = startDate + "T00:00:00.000Z";
         endDate = endDate + "T23:59:59.999Z";
 
@@ -79,11 +78,13 @@ public class AnalystServiceImpl implements AnalystService {
             if(entry.getTimestamps().before(toDate(endDate)) && entry.getTimestamps().after(toDate(startDate))) {
                 Date timestamp = entry.getTimestamps();
                 int numberOfPostsInLast3Days = countPostsInLastNDays(tweets, timestamp, 3);
-                TweetPrice tweetPrice = new TweetPrice();
-                tweetPrice.setPrice(entry.getFloorUsd());
-                tweetPrice.setTimestamp(entry.getTimestamps());
-                tweetPrice.setTweetNumber((double) numberOfPostsInLast3Days);
-                tweetPriceList.add(tweetPrice);
+                if(numberOfPostsInLast3Days > 0) {
+                    TweetPrice tweetPrice = new TweetPrice();
+                    tweetPrice.setPrice(entry.getFloorUsd());
+                    tweetPrice.setTimestamp(entry.getTimestamps());
+                    tweetPrice.setTweetNumber((double) numberOfPostsInLast3Days);
+                    tweetPriceList.add(tweetPrice);
+                }
             }
         }
         return tweetPriceList;

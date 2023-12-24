@@ -1,5 +1,6 @@
 package backend;
 
+import backend.crawler.property.NftPriceFloorProperty;
 import backend.service.AnalystService;
 import backend.service.impl.AnalystServiceImpl;
 import com.google.inject.AbstractModule;
@@ -46,6 +47,7 @@ public class ConfigModule extends AbstractModule {
         bind(SeleniumProperty.class).toInstance(new SeleniumProperty());
         bind(TwitterProperty.class).toInstance(new TwitterProperty());
         bind(TweetProperty.class).toInstance(new TweetProperty());
+        bind(NftPriceFloorProperty.class).toInstance(new NftPriceFloorProperty());
         bind(DataProcessor.class).to(TweetDataProcessor.class);
         bind(SeleniumCrawler.class).to(TwitterCrawler.class);
         bind(APICrawler.class).to(NoAuthApiCrawler.class);

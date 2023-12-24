@@ -20,7 +20,7 @@ import java.util.Map;
 
 import static backend.crawler.helper.QueryMaker.addDayToString;
 import static backend.crawler.helper.WebDriverHelper.*;
-import static backend.env.FileProperty.accountFilePath;
+import static backend.env.FilePath.accountFilePath;
 
 public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
     private static final int DAY_GAP = 3;
@@ -69,9 +69,6 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
                     if(lastPosition.compareTo(FIRST_RELOAD_CONDITION * 1.0) < 0 && reloadButtonDetected(driver,twitterProperty.getReloadButton()))
                         break;
                     //if end of page detected, break
-//                    if (lastPosition.compareTo(FIRST_RELOAD_CONDITION * 1.0) < 0)
-//                        break;
-                    //if cant scroll down anymore, break
                     if(lastPosition.compareTo(0.0) < 0)
                         break;
                     if(noResultDetected(driver, twitterProperty.getNoResult()))
@@ -86,7 +83,6 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
                         if (TweetIdMap.get(post_id) != null && TweetIdMap.get(post_id).equals(1)) continue;
                         TweetIdMap.put(post_id, 1);
                         tweets.add(tweet);
-//                        System.out.println(tweet);
                     }
                 }
             } catch (Exception e) {
@@ -94,7 +90,6 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
                 e.printStackTrace();
             }
             System.out.println("last position: " + lastPosition);
-//            if(reloadButtonDetected(driver,twitterProperty.getReloadButton())){
 
             if(lastPosition.compareTo(LOADED_SOME_TWITTER) < 0 || noResultDetected(driver, twitterProperty.getNoResult()))
                 startDay = addDayToString(startDay, (DAY_GAP + 1));
@@ -105,13 +100,6 @@ public class TwitterCrawler implements SeleniumCrawler<Tweet, Iterable<Tweet>> {
             if (startDay.compareTo(endDay) > 0) break;
             System.out.println(startDay + " " + endDay);
             webInteraction.logout(driver);
-
-//                continue;
-
-//            }
-
-//            startDay = addDayToString(startDay, DAY_GAP + 1);
-//            System.out.println(startDay + " " + endDay);
         }
         driver.quit();
         return tweets;

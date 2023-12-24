@@ -8,6 +8,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import static backend.env.FilePath.twitterPropFilePath;
+
 @AllArgsConstructor
 @Data
 public class TwitterProperty {
@@ -30,7 +32,7 @@ public class TwitterProperty {
 
     private void loadProperties() {
         Properties properties = new Properties();
-        try (FileInputStream input = new FileInputStream("src/main/resources/twitter.properties")) {
+        try (FileInputStream input = new FileInputStream(twitterPropFilePath)) {
             properties.load(input);
 
             loginUrl = properties.getProperty("loginUrl");

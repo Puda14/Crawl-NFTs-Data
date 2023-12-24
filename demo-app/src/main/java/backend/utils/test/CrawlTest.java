@@ -1,5 +1,6 @@
-package backend;
+package backend.utils.test;
 
+import backend.ConfigModule;
 import backend.crawler.helper.QueryMaker;
 import com.google.inject.Guice;
 import com.google.inject.Injector;

@@ -8,6 +8,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import static backend.env.FilePath.tweetPropFilePath;
+
 @AllArgsConstructor
 @Data
 public class TweetProperty extends DataProperty {
@@ -24,7 +26,7 @@ public class TweetProperty extends DataProperty {
 
     private void loadProperties() {
         Properties properties = new Properties();
-        try (FileInputStream input = new FileInputStream("src/main/resources/twitter.properties")) {
+        try (FileInputStream input = new FileInputStream(tweetPropFilePath)) {
             properties.load(input);
 
             // Assign values from properties

@@ -22,7 +22,7 @@
                   <Button id="Button1" mnemonicParsing="false" onAction="#showNFT" prefHeight="55.0" prefWidth="124.0" text="NFT" />
                   <Button id="Button1" mnemonicParsing="false" onAction="#showCrawler" prefHeight="55.0" prefWidth="124.0" text="Crawler" />
                   <Button id="Button1" mnemonicParsing="false" onAction="#showAnalyst" prefHeight="55.0" prefWidth="124.0" text="Analyst" />
-                  <Button id="Button1" mnemonicParsing="false" onAction="#showHashtag" prefHeight="55.0" prefWidth="124.0" text="Hashtag" />
+                  <Button id="Button1" mnemonicParsing="false" onAction="#showHashtag" prefHeight="55.0" prefWidth="124.0" text="Top Trending" />
                </children>
             </VBox>
          </left>

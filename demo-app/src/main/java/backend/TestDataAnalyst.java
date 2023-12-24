@@ -7,8 +7,6 @@ import backend.controller.NFTController;
 import backend.controller.PostController;
 import backend.model.nft.NFT;
 import backend.model.post.Tweet;
-import lombok.Data;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -69,6 +67,8 @@ public class TestDataAnalyst {
         List<PriceHistory> priceHistory = nft.getPriceHistoryList(); // lấy lịch sử giá
         System.out.println(priceHistory.get(5).getTimestamps());
 
+        String start = "2021-08-01";
+        String end = "2021-07-30";
         List<TweetPrice> tweetPriceList = new ArrayList<>();
         //lấy list tweet
         List<Tweet> tweetList = postController.getAllPost();
@@ -86,6 +86,10 @@ public class TestDataAnalyst {
         for(TweetPrice tweetPrice : tweetPriceList) {
             System.out.println(tweetPrice.getTimestamp() + " : " + tweetPrice.getPrice() + " - " + tweetPrice.getTweetN());
         }
+
+
+        System.out.println(tweetPriceList);
+
 
         List<Double> variableX = new ArrayList<>();
         List<Double> variableY = new ArrayList<>() ;

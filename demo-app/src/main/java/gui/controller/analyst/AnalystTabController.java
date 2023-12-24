@@ -55,7 +55,7 @@ public class AnalystTabController {
             nftName = newValueNFT;
             System.out.println("NFT selected: " + nftName);
 
-            List<TweetPrice> tweetPriceList = analystController.getTweetAndPriceByTime(nftName,"2021-08-01", "2022-07-30");
+            tweetPriceList = analystController.getTweetAndPriceByTime(nftName,"2021-08-01", "2022-07-30");
             System.out.println(tweetPriceList);
             // Calculate the Pearson correlation coefficient
             double correlation = analystController.calculatePearsonCorrelation(tweetPriceList,"2021-08-01", "2022-07-30");
@@ -79,7 +79,7 @@ public class AnalystTabController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/analystLineChart.fxml"));
             Parent root;
             try {
-                System.out.println(tweetPriceList);
+                System.out.println("param: " + tweetPriceList);
                 root = loader.load();
                 DrawLineChartController chart = loader.getController();
                 chart.drawChart(tweetPriceList);
@@ -94,6 +94,5 @@ public class AnalystTabController {
                 e.printStackTrace();
             }
         });
-
     }
 }

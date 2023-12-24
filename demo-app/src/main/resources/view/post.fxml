@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 
 <AnchorPane prefHeight="604.0" prefWidth="873.0" stylesheets="@post-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.post.PostTabController">
-    <ListView fx:id="postListView" layoutX="302.0" layoutY="64.0" prefHeight="543.0" prefWidth="689.0" styleClass="styledListView" />
+    <ListView fx:id="postListView" layoutX="268.0" layoutY="65.0" prefHeight="534.0" prefWidth="722.0" styleClass="styledListView" />
     <Button id="Button1" fx:id="searchTweetButton" layoutX="26.0" layoutY="139.0" mnemonicParsing="false" text="Search" />
    <TextField fx:id="tweetTextField" layoutX="108.0" layoutY="143.0" />
    <Button id="Button1" fx:id="allTweetButton" layoutX="27.0" layoutY="187.0" mnemonicParsing="false" text="List All" />

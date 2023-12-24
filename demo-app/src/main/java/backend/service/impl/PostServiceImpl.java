@@ -22,4 +22,6 @@ public class PostServiceImpl implements PostService {
     public List<Tweet> getByKeyword(String keyword){
         return tweetRepository.findByKeyword(keyword);
     }
+    @Override
+    public List<Tweet> getByKeywordOrAccount(String keyword) {return tweetRepository.findByKeyWordOrAccount(keyword);}
 }

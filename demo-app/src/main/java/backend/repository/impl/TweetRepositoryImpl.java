@@ -45,5 +45,18 @@ public class TweetRepositoryImpl implements TweetRepository {
         return  results;
     }
 
+    @Override
+    public List<Tweet> findByKeyWordOrAccount(String keyword) {
+        List<Tweet> results = new ArrayList<>();
+        List<Tweet> tweets = fileReadAndWrite.readFromFile(new TypeToken<List<Tweet>>(){}.getType(),tweetFilePath);
+        for (Tweet tweet : tweets){
+            if (tweet.getTweetText().contains(keyword) || tweet.getAccount().contains(keyword)){
+                results.add(tweet);
+            }
+        }
+        if(results.size() == 0) return null;
+        return  results;
+    }
+
 
 }

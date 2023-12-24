@@ -49,6 +49,9 @@ public class TopTrending {
     private TableColumn<HashtagCount, Number> topHashtagColumn;
 
     @FXML
+    private TableColumn<HashtagCount, Number> topKeywordColumn;
+
+    @FXML
     private TableColumn<HashtagCount, String> nftColumn;
 
     @FXML

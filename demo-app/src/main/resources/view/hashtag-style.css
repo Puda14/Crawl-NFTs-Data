@@ -89,3 +89,15 @@
     -fx-border-radius: 15;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
 }
+
+#bottomPane {
+       -fx-border-color: #0F2167;
+       -fx-border-width: 0 0 2 0;
+}
+
+#headLabel{
+  -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-font-size: 16px;
+    -fx-text-fill: #0F2167;
+}

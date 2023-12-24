@@ -77,9 +77,6 @@ public class HashtagController {
                 tableView.setItems(data);
             }
         });
-
-
-
     }
 
     private void validateInputAndUpdateButtonState() {

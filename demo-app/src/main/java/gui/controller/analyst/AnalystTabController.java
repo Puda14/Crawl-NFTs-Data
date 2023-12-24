@@ -9,12 +9,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import static backend.env.NftSlugList.nftNames;
@@ -28,12 +30,12 @@ public class AnalystTabController {
     @FXML
     private Button analystButton ;
 
+    @FXML
+    private Label pearsonLabel;
+
     private String nftName;
 
     private List<TweetPrice> tweetPriceList = new ArrayList<>();
-
-    @FXML
-    private PieChart pieChart;
 
     public void initialize() {
 
@@ -59,17 +61,10 @@ public class AnalystTabController {
             double correlation = analystController.calculatePearsonCorrelation(tweetPriceList,"2021-08-01", "2022-07-30");
             System.out.println("Pearson correlation coefficient: " + correlation);
 
-            // PieChart
-            pieChart.getData().clear();
-
-            PieChart.Data slice1 = new PieChart.Data("Pearson correlation coefficient", correlation);
-
-            pieChart.getData().add(slice1);
-
-            pieChart.getData().forEach(data ->
-                    data.nameProperty().bind(data.pieValueProperty().asString("%.1f%%"))
-            );
-
+            BigDecimal bd = new BigDecimal(correlation);
+            bd = bd.setScale(2, RoundingMode.HALF_UP);
+            correlation = bd.doubleValue();
+            pearsonLabel.setText("Pearson correlation coefficient: " + correlation);
         });
 
         analystButton.setOnAction(event -> {
@@ -77,7 +72,6 @@ public class AnalystTabController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/analystLineChart.fxml"));
             Parent root;
             try {
-                System.out.println("param: " + tweetPriceList);
                 root = loader.load();
                 DrawLineChartController chart = loader.getController();
                 chart.drawChart(tweetPriceList);

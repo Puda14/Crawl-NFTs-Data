@@ -63,8 +63,8 @@ public class CsvFileReadAndWrite implements FileReadAndWrite<Tweet> {
              CSVPrinter csvPrinter = new CSVPrinter(writer, fileExists ? CSVFormat.DEFAULT : CSVFormat.DEFAULT.withHeader(HEADERS))) {
             for (Tweet tweet : data) {
                 csvPrinter.printRecord(
-                        tweet.getAccount(),
                         tweet.getLink(),
+                        tweet.getAccount(),
                         tweet.getTimeStamp(),
                         tweet.getTweetText(),
                         tweet.getReply(),

@@ -82,10 +82,10 @@ public class CrawlServiceImpl implements CrawlService {
         List<Tweet> tweets;
         if(isValidKeyword(keyword) && isValidDate(startDate) && isValidDate(endDate)) {
             tweets = seleniumCrawler.getWebsiteData(keyword, startDate, endDate);
-            String fileExtension = ".csv";
+            String fileExtension = "csv";
             String fileName = generateFileNameWithTimestamp("tweet", fileExtension);
             FileReadAndWrite<Tweet> fileReadAndWrite = new CsvFileReadAndWrite();
-            fileReadAndWrite.writeToFile(tweets, tweetFilePath);
+            fileReadAndWrite.writeToFile(tweets, fileName);
             return tweets;
         }
         return null;

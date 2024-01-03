@@ -52,7 +52,7 @@ public class CrawlServiceImpl implements CrawlService {
         }
 
         String filePath = "nft";
-        String fileExtension = ".json";
+        String fileExtension = "json";
         String fileName = generateFileNameWithTimestamp(filePath, fileExtension);
         FileReadAndWrite<NFT> fileReadAndWrite = new JsonFileReadAndWrite<>();
         fileReadAndWrite.writeToFile(nftList,fileName);

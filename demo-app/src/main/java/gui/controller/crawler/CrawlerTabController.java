@@ -103,6 +103,9 @@ public class CrawlerTabController {
                         // Reset crawling flag and enable input fields and button
                         isCrawling = false;
                         enableInputFieldsAndButton();
+                        keywordTextField.clear();
+                        startDateTextField.clear();
+                        endDateTextField.clear();
                     });
                 });
             } else {
@@ -110,6 +113,7 @@ public class CrawlerTabController {
                 // Reset crawling flag and enable input fields and button
                 isCrawling = false;
                 enableInputFieldsAndButton();
+
             }
         });
 

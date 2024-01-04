@@ -9,6 +9,8 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+
+
 public class TweetPrice {
     Date timestamp;
     Double tweetNumber;

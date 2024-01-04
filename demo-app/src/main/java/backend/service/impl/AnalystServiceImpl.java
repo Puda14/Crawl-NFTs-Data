@@ -10,11 +10,13 @@ import backend.repository.TweetRepository;
 import backend.service.AnalystService;
 import backend.utils.algorithm.ValueComparator;
 import com.google.inject.Inject;
+import javafx.util.Pair;
 
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static backend.crawler.helper.QueryMaker.addDayToString;
 import static backend.utils.DataAnalyst.countPostsInLastNDays;
 import static backend.utils.DatetimeFormat.toDate;
 import static backend.utils.algorithm.PearsonCorrelation.calculatePearsonCorrelation;
@@ -68,16 +70,26 @@ public class AnalystServiceImpl implements AnalystService {
 
     @Override
     public List<TweetPrice> getTweetAndPriceByTime(String nftName, String startDate, String endDate) {
+        String tempStartDate = startDate;
         startDate = startDate + "T00:00:00.000Z";
         endDate = endDate + "T23:59:59.999Z";
         List<Tweet> tweets = tweetRepository.findAll();
         NFT nft = nftRepository.getOneByName(nftName);
         List<PriceHistory> priceHistory = nft.getPriceHistoryList();
         List<TweetPrice> tweetPriceList = new ArrayList<>();
+        int lastPos = 0;
         for (PriceHistory entry : priceHistory) {
             if(entry.getTimestamps().before(toDate(endDate)) && entry.getTimestamps().after(toDate(startDate))) {
                 Date timestamp = entry.getTimestamps();
-                int numberOfPostsInLast3Days = countPostsInLastNDays(tweets, timestamp, 3);
+//                System.out.println(timestamp);
+//                int numberOfPostsInLast3Days = countPostsInLastNDays(tweets, timestamp, 3, lastPos);
+                Pair<Integer, Integer> pair = countPostsInLastNDays(tweets, tempStartDate, 3, lastPos);
+//                System.out.println(timestamp);
+                lastPos = pair.getKey();
+                int numberOfPostsInLast3Days = pair.getValue();
+//                System.out.println(tempStartDate + " " + numberOfPostsInLast3Days + " " + lastPos);
+                tempStartDate = addDayToString(tempStartDate, 3);
+//                int numberOfPostsInLast3Days = 1;
                 if(numberOfPostsInLast3Days > 0) {
                     TweetPrice tweetPrice = new TweetPrice();
                     tweetPrice.setPrice(entry.getFloorUsd());

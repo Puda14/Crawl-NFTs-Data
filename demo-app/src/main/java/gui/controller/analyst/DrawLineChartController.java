@@ -5,7 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.SimpleTimeZone;
 
 public class DrawLineChartController {
 
@@ -20,7 +22,7 @@ public class DrawLineChartController {
         // Line Chart
         lineChartPrice.getData().clear();
         lineChartPost.getData().clear();
-
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         int MAX = 1000;
 
         if (lineChartPrice != null) {
@@ -28,7 +30,8 @@ public class DrawLineChartController {
             int index = 0;
             for (TweetPrice item : tweetPriceList) {
                 if(item.getTimestamp() != null && ++index <= MAX){
-                    series.getData().add(new XYChart.Data<>(item.getTimestamp().toString(), item.getPrice()));
+                    String strDate = sdf.format(item.getTimestamp());
+                    series.getData().add(new XYChart.Data<>(strDate, item.getPrice()));
                 }
             }
 
@@ -42,7 +45,8 @@ public class DrawLineChartController {
             int index = 0;
             for (TweetPrice item : tweetPriceList) {
                 if (item.getTimestamp() != null && ++index <= MAX) {
-                    series.getData().add(new XYChart.Data<>(item.getTimestamp().toString(), item.getTweetNumber()));
+                    String strDate = sdf.format(item.getTimestamp());
+                    series.getData().add(new XYChart.Data<>(strDate, item.getTweetNumber()));
                 }
             }
 

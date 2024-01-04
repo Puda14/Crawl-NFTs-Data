@@ -7,7 +7,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <AnchorPane prefHeight="604.0" prefWidth="873.0" stylesheets="@post-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.post.PostTabController">
+    <ComboBox fx:id="sourceComboBox" layoutX="26.0" layoutY="95.0" prefWidth="150.0" promptText="Select Source">
+        <!-- Thêm các mục menu chọn nguồn post -->
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Twitter" />
+                <String fx:value="Reddit" />
+                <!-- Thêm các nguồn post khác nếu cần -->
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <Button fx:id="openSourceSelectionButton" text="Open Source Selection" onAction="#showSourceSelectionScene" />
     <ListView fx:id="postListView" layoutX="268.0" layoutY="65.0" prefHeight="534.0" prefWidth="722.0" styleClass="styledListView" />
     <Button id="Button1" fx:id="searchTweetButton" layoutX="26.0" layoutY="139.0" mnemonicParsing="false" text="Search" />
    <TextField fx:id="tweetTextField" layoutX="108.0" layoutY="143.0" />

@@ -6,9 +6,14 @@ import backend.model.post.Tweet;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 
 import java.awt.*;
@@ -31,6 +36,8 @@ public class PostTabController {
 
     @FXML
     private Button allTweetButton;
+    @FXML
+    private ComboBox<String> sourceComboBox;
 
     public void initialize() {
 
@@ -38,6 +45,7 @@ public class PostTabController {
         PostController postController = injector.getInstance(PostController.class);
         List<Tweet> tweets = postController.getAllPost();
 
+        sourceComboBox.setOnAction(event -> handleSourceSelection());
         postListView.setCellFactory(new Callback<ListView<Tweet>, ListCell<Tweet>>() {
             @Override
             public ListCell<Tweet> call(ListView<Tweet> param) {
@@ -103,6 +111,41 @@ public class PostTabController {
         // Populate the ListView with NFTs
         postListView.getItems().addAll(tweets);
     }
+
+    private void handleSourceSelection() {
+        String selectedSource = sourceComboBox.getValue();
+        if (selectedSource != null) {
+            // Mở cửa sổ mới để chọn nguồn post
+            showSourceSelectionScene(selectedSource);
+        }
+    }
+    @FXML
+    private void showSourceSelectionScene(String selectedSource) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/path/to/SourceSelection.fxml"));
+            Parent root = loader.load();
+
+            SourceSelectionController sourceSelectionController = loader.getController();
+            sourceSelectionController.setSelectedSource(selectedSource);
+
+            Stage sourceSelectionStage = new Stage();
+            sourceSelectionStage.setTitle("Select Source");
+            sourceSelectionStage.setScene(new Scene(root));
+
+            sourceSelectionStage.initModality(Modality.APPLICATION_MODAL);
+            sourceSelectionStage.initOwner(searchTweetButton.getScene().getWindow());
+
+            sourceSelectionStage.showAndWait();
+
+            // Xử lý nguồn post được chọn từ SourceSelectionController nếu cần
+            String selectedSourceFromController = sourceSelectionController.getSelectedSource();
+            System.out.println("Selected Source: " + selectedSourceFromController);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     private void openURL(String url) {
         try {

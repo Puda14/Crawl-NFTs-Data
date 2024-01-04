@@ -87,7 +87,7 @@ public class AnalystServiceImpl implements AnalystService {
 //                System.out.println(timestamp);
                 lastPos = pair.getKey();
                 int numberOfPostsInLast3Days = pair.getValue();
-                System.out.println(tempStartDate + " " + numberOfPostsInLast3Days + " " + lastPos);
+//                System.out.println(tempStartDate + " " + numberOfPostsInLast3Days + " " + lastPos);
                 tempStartDate = addDayToString(tempStartDate, 3);
 //                int numberOfPostsInLast3Days = 1;
                 if(numberOfPostsInLast3Days > 0) {

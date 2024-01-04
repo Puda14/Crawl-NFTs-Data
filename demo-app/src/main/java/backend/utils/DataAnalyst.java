@@ -13,7 +13,7 @@ public class DataAnalyst {
     public static Pair<Integer,Integer> countPostsInLastNDays(List<Tweet> tweetList, String startDate, int n, int lastPos) {
         int count = 0;
         String endDate = addDayToString(startDate, n);
-        System.out.println("lastPos: " + lastPos);
+//        System.out.println("lastPos: " + lastPos);
         for(int i = lastPos; i <= tweetList.size() - 1; i++) {
             String date = tweetList.get(i).getTimeStamp();
 //            System.out.printf("date: %s, startDate: %s, endDate: %s\n", date, startDate, endDate);

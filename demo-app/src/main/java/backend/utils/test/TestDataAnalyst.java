@@ -10,8 +10,6 @@ import backend.model.post.Tweet;
 import java.util.List;
 
 public class TestDataAnalyst {
-
-    //hàm đếm số post theo ngày
     public static int countZ(List<Tweet> tweets, String date){
         int count =0;
         for (Tweet tweet : tweets){
@@ -33,10 +31,9 @@ public class TestDataAnalyst {
         String end = "2022-07-30";
         String name = "Bored Ape Yacht Club";
         List<TweetPrice> tweetPriceList = analystController.getTweetAndPriceByTime(name, start,end);
-        for (TweetPrice tweetPrice : tweetPriceList){
-            if(tweetPrice.getTweetNumber() == 0) System.out.println(tweetPrice);
-
-        }    }
-
-
+//        for (TweetPrice tweetPrice : tweetPriceList){
+//            if(tweetPrice.getTweetNumber() == 0) System.out.println(tweetPrice);
+//
+//        }
+    }
 }

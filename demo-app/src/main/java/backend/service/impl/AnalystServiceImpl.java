@@ -77,16 +77,14 @@ public class AnalystServiceImpl implements AnalystService {
         NFT nft = nftRepository.getOneByName(nftName);
         List<PriceHistory> priceHistory = nft.getPriceHistoryList();
         List<TweetPrice> tweetPriceList = new ArrayList<>();
-        int lastPos = 0;
         for (PriceHistory entry : priceHistory) {
             if(entry.getTimestamps().before(toDate(endDate)) && entry.getTimestamps().after(toDate(startDate))) {
                 Date timestamp = entry.getTimestamps();
 //                System.out.println(timestamp);
 //                int numberOfPostsInLast3Days = countPostsInLastNDays(tweets, timestamp, 3, lastPos);
-                Pair<Integer, Integer> pair = countPostsInLastNDays(tweets, tempStartDate, 3, lastPos);
+                Pair<Integer, Integer> pair = countPostsInLastNDays(tweets, tempStartDate, 3);
 //                System.out.println(timestamp);
-                lastPos = pair.getKey();
-                int numberOfPostsInLast3Days = pair.getValue();
+                int numberOfPostsInLast3Days = pair.getKey();
 //                System.out.println(tempStartDate + " " + numberOfPostsInLast3Days + " " + lastPos);
                 tempStartDate = addDayToString(tempStartDate, 3);
 //                int numberOfPostsInLast3Days = 1;

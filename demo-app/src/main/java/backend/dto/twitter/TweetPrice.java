@@ -15,4 +15,5 @@ public class TweetPrice {
     Date timestamp;
     Double tweetNumber;
     Double price;
+    Double like;
 }

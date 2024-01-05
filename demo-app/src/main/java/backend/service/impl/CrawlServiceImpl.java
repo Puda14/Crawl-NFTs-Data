@@ -1,5 +1,6 @@
 package backend.service.impl;
 
+import backend.dto.nftpricefloorapi.TopNFT;
 import com.google.inject.Inject;
 import backend.crawler.APICrawler;
 import backend.crawler.SeleniumCrawler;
@@ -14,10 +15,12 @@ import backend.model.nft.NFT;
 import backend.service.CrawlService;
 import backend.utils.mapper.NftDetailMapper;
 import backend.utils.mapper.PriceHistoryMapper;
+import com.google.inject.name.Named;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static backend.env.FilePath.nftFilePath;
 import static backend.env.FilePath.tweetFilePath;
 import static backend.env.NftSlugList.slugList;
 import static backend.utils.file.FileManager.generateFileNameWithTimestamp;
@@ -27,16 +30,19 @@ import static backend.utils.validate.Validator.isValidKeyword;
 public class CrawlServiceImpl implements CrawlService {
 
     private  final APICrawler apiCrawler;
-    private final SeleniumCrawler seleniumCrawler;
+    private final SeleniumCrawler nftCrawler;
+    private final SeleniumCrawler twitterCrawler;
 
     @Inject
-    public CrawlServiceImpl(APICrawler apiCrawler, SeleniumCrawler seleniumCrawler) {
+    public CrawlServiceImpl(APICrawler apiCrawler, @Named("NFTCrawler") SeleniumCrawler nftCrawler,
+                            @Named("TwitterCrawler") SeleniumCrawler twitterCrawler) {
         this.apiCrawler = apiCrawler;
-        this.seleniumCrawler = seleniumCrawler;
+        this.nftCrawler = nftCrawler;
+        this.twitterCrawler = twitterCrawler;
     }
 
     @Override
-    public void nftCrawlByListOfNft(){
+    public List<NFT> nftCrawlByListOfNft(){
         List<NFT> nftList = new ArrayList<>();
         for(String slug : slugList) {
             String apiUrl = "https://api-bff.nftpricefloor.com/projects/"+ slug + "/charts/all";
@@ -49,13 +55,15 @@ public class CrawlServiceImpl implements CrawlService {
             JsonPriceHistory jsonObject = apiCrawler.getApiData(apiUrl, JsonPriceHistory.class);
             nft.setPriceHistoryList(PriceHistoryMapper.map(jsonObject));
             nftList.add(nft);
+            System.out.println("Crawl xong" + slug);
         }
 
         String filePath = "nft";
         String fileExtension = "json";
         String fileName = generateFileNameWithTimestamp(filePath, fileExtension);
         FileReadAndWrite<NFT> fileReadAndWrite = new JsonFileReadAndWrite<>();
-        fileReadAndWrite.writeToFile(nftList,fileName);
+        fileReadAndWrite.writeToFile(nftList,nftFilePath);
+        return nftList;
     }
 
     @Override
@@ -77,11 +85,16 @@ public class CrawlServiceImpl implements CrawlService {
     }
 
     @Override
+    public List<TopNFT> crawlTopListNft(String param, String startDate, String endDate) {
+        return nftCrawler.getWebsiteData(param,startDate,endDate);
+    }
+
+    @Override
     public List<Tweet>  postCrawl(String keyword, String startDate, String endDate) {
 
         List<Tweet> tweets;
         if(isValidKeyword(keyword) && isValidDate(startDate) && isValidDate(endDate)) {
-            tweets = seleniumCrawler.getWebsiteData(keyword, startDate, endDate);
+            tweets = twitterCrawler.getWebsiteData(keyword, startDate, endDate);
             String fileExtension = "csv";
             String fileName = generateFileNameWithTimestamp("tweet", fileExtension);
             FileReadAndWrite<Tweet> fileReadAndWrite = new CsvFileReadAndWrite();

@@ -1,5 +1,6 @@
 package backend.env;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -25,5 +26,5 @@ public class NftSlugList {
             "Otherdeed" ,
             "Mutant Ape Yacht Club" ,
             "Cryptopunks"};
-    public static final List<String> slugList = Arrays.asList(slugs);
+    public static List<String> slugList = new ArrayList<>(Arrays.asList(slugs));
 }

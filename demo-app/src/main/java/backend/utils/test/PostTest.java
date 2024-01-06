@@ -19,7 +19,7 @@ public class PostTest {
         System.out.println(tweets.get(0).getLink());
         System.out.println(tweets.get(0).getAccount());
         System.out.println("Search By keyword");
-        System.out.println(postController.getByKeyword("nft").size());
+        System.out.println(postController.getByKeyword("meebits").size());
 
     }
 }

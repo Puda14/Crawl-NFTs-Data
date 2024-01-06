@@ -15,11 +15,16 @@ import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
 public class PostTabController {
 
+    @FXML
+    private ComboBox<String> sourceComboBox;
+    private List<String> sourceName = new ArrayList<>(Arrays.asList("Twitter", "Reddit"));
     @FXML
     private ListView<Tweet> postListView;
 
@@ -34,10 +39,25 @@ public class PostTabController {
 
     public void initialize() {
 
+        sourceComboBox.getItems().addAll(sourceName);
+
+        sourceComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                if (newValue.equals("Twitter")) {
+                    showTwitterPosts();
+                } else if (newValue.equals("Reddit")) {
+
+                    showRedditPosts();
+                }
+            }
+        });
+
+    }
+
+    private void showTwitterPosts(){
         Injector injector = Guice.createInjector(new ConfigModule());
         PostController postController = injector.getInstance(PostController.class);
         List<Tweet> tweets = postController.getAllPost();
-
         postListView.setCellFactory(new Callback<ListView<Tweet>, ListCell<Tweet>>() {
             @Override
             public ListCell<Tweet> call(ListView<Tweet> param) {
@@ -102,6 +122,10 @@ public class PostTabController {
 
         // Populate the ListView with NFTs
         postListView.getItems().addAll(tweets);
+    }
+
+    private void showRedditPosts(){
+
     }
 
     private void openURL(String url) {

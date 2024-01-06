@@ -18,7 +18,7 @@ public class NFTTest {
         NFTController nftController = injector.getInstance(NFTController.class);
         List<NFT> nftList = nftController.getAll();
         System.out.println(nftList.get(2));
-        System.out.println(nftController.getByName("Azuki"));
+        System.out.println(nftController.getByName("MATR1X KUKU").getDetail().getSocialMedia());
 
 
     }

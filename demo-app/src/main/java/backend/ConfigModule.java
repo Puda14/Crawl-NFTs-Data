@@ -1,5 +1,6 @@
 package backend;
 
+import backend.crawler.impl.NftPriceFloorCrawler;
 import backend.crawler.property.NftPriceFloorProperty;
 import backend.service.AnalystService;
 import backend.service.impl.AnalystServiceImpl;
@@ -31,6 +32,7 @@ import backend.service.impl.PostServiceImpl;
 import backend.utils.fileio.FileReadAndWrite;
 import backend.utils.fileio.impl.CsvFileReadAndWrite;
 import backend.utils.fileio.impl.JsonFileReadAndWrite;
+import com.google.inject.name.Names;
 
 public class ConfigModule extends AbstractModule {
     @Override
@@ -49,7 +51,8 @@ public class ConfigModule extends AbstractModule {
         bind(TweetProperty.class).toInstance(new TweetProperty());
         bind(NftPriceFloorProperty.class).toInstance(new NftPriceFloorProperty());
         bind(DataProcessor.class).to(TweetDataProcessor.class);
-        bind(SeleniumCrawler.class).to(TwitterCrawler.class);
+        bind(SeleniumCrawler.class).annotatedWith(Names.named("NFTCrawler")).to(NftPriceFloorCrawler.class); // Thay thế với triển khai thực tế của bạn
+        bind(SeleniumCrawler.class).annotatedWith(Names.named("TwitterCrawler")).to(TwitterCrawler.class); // Thay thế với triển khai thực tế của bạn
         bind(APICrawler.class).to(NoAuthApiCrawler.class);
         bind(TwitterInteraction.class).toInstance(new TwitterInteraction());
 

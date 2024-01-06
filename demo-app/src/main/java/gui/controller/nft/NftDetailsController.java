@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
@@ -19,34 +20,28 @@ import java.awt.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class NftDetailsController {
 
     @FXML
     private Text contractText;
-
     @FXML
     private Label nameLabel;
-
     @FXML
     private Label releaseDateLabel;
-
     @FXML
     private Label blockchainLabel;
-
     @FXML
     private Label totalSupplyLabel;
-
     @FXML
     private ListView<SocialMedia> socialMediaListView;
-
     @FXML
     private ListView<Marketplace> marketplacesListView;
-
     @FXML
-    private Pane chartPane;
-
+    private ScrollPane scrollPane;
+    @FXML
     private LineChart<String, Number> lineChart;
 
     public void setNFTDetails(NFT nft) {
@@ -72,7 +67,11 @@ public class NftDetailsController {
             }
         });
 
+        if(nftDetails.getSocialMedia() == null) {
+            socialMediaListView.getItems().clear();
+        }else {
         socialMediaListView.getItems().setAll(nftDetails.getSocialMedia());
+        }
 
         // Set up Marketplaces ListView with anonymous class
         marketplacesListView.setCellFactory(param -> new ListCell<Marketplace>() {
@@ -92,20 +91,23 @@ public class NftDetailsController {
 
 
         List<PriceHistory> priceHistoryList = nft.getPriceHistoryList();
-
-        lineChart = (LineChart<String, Number>) chartPane.lookup(".chart");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         if (lineChart != null) {
             XYChart.Series<String, Number> series = new XYChart.Series<>();
 
             for (PriceHistory item : priceHistoryList) {
                 if (item.getTimestamps() != null) {
-                    series.getData().add(new XYChart.Data<>(item.getTimestamps().toString(), item.getFloorUsd()));
+                    String strDate = sdf.format(item.getTimestamps());
+                    series.getData().add(new XYChart.Data<>(strDate, item.getFloorUsd()));
                 }
             }
             lineChart.setTitle("Price History");
             lineChart.getData().add(series);
         }
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+
     }
 
     private void openURL(String url) {

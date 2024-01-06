@@ -4,6 +4,7 @@ import backend.dto.twitter.TweetPrice;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.ScrollPane;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -16,6 +17,10 @@ public class DrawLineChartController {
 
     @FXML
     private LineChart<String, Number> lineChartPost;
+    @FXML
+    private ScrollPane scrollPaneForPrice;
+    @FXML
+    private ScrollPane scrollPaneForPost;
 
     public void drawChart(List<TweetPrice> tweetPriceList){
 

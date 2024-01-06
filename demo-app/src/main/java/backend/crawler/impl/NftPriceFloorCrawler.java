@@ -33,8 +33,8 @@ public class NftPriceFloorCrawler implements SeleniumCrawler<TopNFT,List<TopNFT>
         String timeParam = "24h";
         LocalDate inputEndDate = LocalDate.parse(endDay, DateTimeFormatter.ISO_DATE);
 
-        LocalDate currentDate = LocalDate.now();
-        long daysDifference = ChronoUnit.DAYS.between(inputEndDate, currentDate);
+        LocalDate inputStartDate = LocalDate.parse(startDay, DateTimeFormatter.ISO_DATE);
+        long daysDifference = ChronoUnit.DAYS.between(inputStartDate,inputEndDate);
         if(daysDifference > 30){
             timeParam = "90d";
         }else if(daysDifference > 7){
@@ -56,7 +56,8 @@ public class NftPriceFloorCrawler implements SeleniumCrawler<TopNFT,List<TopNFT>
             String slug = nameElement.getAttribute("href");
             String[] parts = slug.split("/");
             slug = parts[parts.length - 1];
-            topNFTList.add(new TopNFT(name,slug,cnt++));
+            if(cnt < 31) topNFTList.add(new TopNFT(name,slug,cnt++));
+            else break;
         }
         driver.quit();
         return topNFTList;

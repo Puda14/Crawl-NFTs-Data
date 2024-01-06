@@ -19,6 +19,7 @@ import java.awt.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class NftDetailsController {
@@ -94,13 +95,15 @@ public class NftDetailsController {
         List<PriceHistory> priceHistoryList = nft.getPriceHistoryList();
 
         lineChart = (LineChart<String, Number>) chartPane.lookup(".chart");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         if (lineChart != null) {
             XYChart.Series<String, Number> series = new XYChart.Series<>();
 
             for (PriceHistory item : priceHistoryList) {
                 if (item.getTimestamps() != null) {
-                    series.getData().add(new XYChart.Data<>(item.getTimestamps().toString(), item.getFloorUsd()));
+                    String strDate = sdf.format(item.getTimestamps());
+                    series.getData().add(new XYChart.Data<>(strDate, item.getFloorUsd()));
                 }
             }
             lineChart.setTitle("Price History");

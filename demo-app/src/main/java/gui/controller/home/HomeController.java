@@ -30,11 +30,10 @@ public class HomeController {
             }
             // Set crawling flag to true
             isCrawling = true;
-            // Use Guice to inject dependencies and create CrawlController
+            // Use Guice to inject dependencies and create UpdateController
             Injector injector = Guice.createInjector(new ConfigModule());
             UpdateController updateController = injector.getInstance(UpdateController.class);
 
-            // Asynchronously crawl tweet data
             CompletableFuture<List<NFT>> crawlFuture = CompletableFuture.supplyAsync(() ->
                     updateController.updateNftData() );
 

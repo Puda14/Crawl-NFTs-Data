@@ -31,7 +31,6 @@ public class UpdateController {
         for (TopNFT topNFT : topNFTList){
             slugList.add(topNFT.getSlug());
         }
-        System.out.println(slugList);
         return crawlService.nftCrawlByListOfNft();
 
     }

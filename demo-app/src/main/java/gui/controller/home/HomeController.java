@@ -30,8 +30,8 @@ public class HomeController {
     private Text nftSize;
     public void initialize() {
 
+        // Use Guice to inject dependencies and create UpdateController
         Injector injector = Guice.createInjector(new ConfigModule());
-
         PostController postController = injector.getInstance(PostController.class);
         NFTController nftController = injector.getInstance(NFTController.class);
 
@@ -43,16 +43,13 @@ public class HomeController {
         updateButton.setOnAction(event -> {
             // Check if crawling is already in progress
             if (isCrawling) {
-                updateButton.setDisable(true);
-                updateButton.setText("Updating");
                 return;
             }
             // Set crawling flag to true
             isCrawling = true;
-            // Use Guice to inject dependencies and create UpdateController
-
+            updateButton.setDisable(true);
+            updateButton.setText("Updating");
             UpdateController updateController = injector.getInstance(UpdateController.class);
-
             CompletableFuture<List<NFT>> crawlFuture = CompletableFuture.supplyAsync(() ->
                     updateController.updateNftData() );
 
@@ -66,6 +63,7 @@ public class HomeController {
                     // Reset crawling flag and enable input fields and button
                     isCrawling = false;
                     updateButton.setDisable(false);
+                    updateButton.setText("Update NFT Data");
                 });
             });
 

@@ -66,13 +66,14 @@ public class CrawlerTabController {
         crawlPostButton.setOnAction(event -> {
             // Check if crawling is already in progress
             if (isCrawling) {
-                crawlPostButton.setDisable(true);
+
                 return;
             }
 
             // Set crawling flag to true
             isCrawling = true;
-
+            crawlPostButton.setText("Crawling");
+            crawlPostButton.setDisable(true);
             // Get input values
             String keyword = keywordTextField.getText();
             String startDate = startDateTextField.getText();
@@ -102,6 +103,7 @@ public class CrawlerTabController {
 
                         // Reset crawling flag and enable input fields and button
                         isCrawling = false;
+                        crawlPostButton.setText("Crawl Post");
                         enableInputFieldsAndButton();
                         keywordTextField.clear();
                         startDateTextField.clear();
@@ -135,7 +137,7 @@ public class CrawlerTabController {
         crawlNFTButton.setOnAction(event -> {
             if (!isCrawling) {
                 // Crawl NFT
-
+                crawlNFTButton.setText("Crawling");
                 // Use Guice to inject dependencies and create CrawlController
                 Injector injector = Guice.createInjector(new ConfigModule());
                 CrawlController crawlController = injector.getInstance(CrawlController.class);
@@ -154,6 +156,7 @@ public class CrawlerTabController {
 
                         // Reset crawling flag and enable input fields and button
                         isCrawling = false;
+                        crawlNFTButton.setText("Crawl NFT");
                         enableInputFieldsAndButton();
                     });
                 });

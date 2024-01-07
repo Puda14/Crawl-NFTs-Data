@@ -19,9 +19,10 @@ public class CrawlTest {
         NFTController nftController = injector.getInstance(NFTController.class);
         CrawlController crawlController = injector.getInstance(CrawlController.class);
         String since = "2023-01-29";
+        String path = "demo-app";
         while (since.compareTo("2023-12-31") <= 0) {
             String until = QueryMaker.addDayToString(since, 1);
-            List<Tweet> tweetList = crawlController.crawlTweetDataByKeyword("boredapeyc", since, until);
+            List<Tweet> tweetList = crawlController.crawlTweetDataByKeyword("boredapeyc", since, until,path);
             since = until;
         }
 

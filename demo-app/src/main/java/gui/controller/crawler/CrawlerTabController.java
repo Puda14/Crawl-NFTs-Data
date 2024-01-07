@@ -6,13 +6,18 @@ import backend.model.nft.NFT;
 import backend.model.post.Tweet;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import gui.MainApplication;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 
+import java.io.File;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -42,6 +47,8 @@ public class CrawlerTabController {
     private ComboBox<String> nftComboBox;
 
     private String nftSlugName;
+    private String selectedDirectory;
+
 
     /**
      * Initializes the controller. Configures listeners for input fields and sets up the crawl button.
@@ -61,6 +68,9 @@ public class CrawlerTabController {
         endDateTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             validateInputAndUpdateButtonState();
         });
+
+        // Gọi showDirectoryChooser ở đây
+        Platform.runLater(this::showDirectoryChooser);
 
         // Action event for the crawlButton
         crawlPostButton.setOnAction(event -> {
@@ -90,7 +100,7 @@ public class CrawlerTabController {
 
                 // Asynchronously crawl tweet data
                 CompletableFuture<List<Tweet>> crawlFuture = CompletableFuture.supplyAsync(() ->
-                        crawlPostController.crawlTweetDataByKeyword(keyword, startDate, endDate));
+                        crawlPostController.crawlTweetDataByKeyword(keyword, startDate, endDate, selectedDirectory));
 
                 // Handle the completion of the crawlFuture
                 crawlFuture.thenAccept(tweets -> {
@@ -144,7 +154,7 @@ public class CrawlerTabController {
 
                 // Asynchronously crawl tweet data
                 CompletableFuture<NFT> nftCrawlFuture = CompletableFuture.supplyAsync(() ->
-                        crawlController.crawlNftBySlug(nftSlugName));
+                        crawlController.crawlNftBySlug(nftSlugName, selectedDirectory));
 
                 nftCrawlFuture.thenAccept(nft -> {
                     System.out.println(nft);
@@ -221,4 +231,23 @@ public class CrawlerTabController {
         alert.setContentText("Crawl complete");
         alert.showAndWait();
     }
+
+    private void showDirectoryChooser() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Notification");
+        alert.setHeaderText(null);
+        alert.setContentText("You need to choose an address for the crawl data file!");
+        alert.showAndWait();
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        Stage stage = MainApplication.getPrimaryStage();
+        directoryChooser.setTitle("Choose Directory");
+        File selectedDirectory = directoryChooser.showDialog(stage.getScene().getWindow());
+        if (selectedDirectory != null) {
+            System.out.println("Path: " + selectedDirectory.getAbsolutePath());
+            this.selectedDirectory = selectedDirectory.getAbsolutePath();
+        } else {
+            System.out.println("No path");
+        }
+    }
+
 }

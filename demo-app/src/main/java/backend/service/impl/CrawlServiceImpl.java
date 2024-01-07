@@ -17,6 +17,7 @@ import backend.utils.mapper.NftDetailMapper;
 import backend.utils.mapper.PriceHistoryMapper;
 import com.google.inject.name.Named;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,7 +68,7 @@ public class CrawlServiceImpl implements CrawlService {
     }
 
     @Override
-    public NFT crawlNftBySlugName(String slug) {
+    public NFT crawlNftBySlugName(String slug, String path) {
         NFT nft = new NFT();
         String apiUrl = "https://api-bff.nftpricefloor.com/projects/"+ slug + "/charts/all";
         String detailApi = "https://api-bff.nftpricefloor.com/projects/" + slug;
@@ -78,7 +79,13 @@ public class CrawlServiceImpl implements CrawlService {
         JsonPriceHistory jsonObject = apiCrawler.getApiData(apiUrl, JsonPriceHistory.class);
         nft.setPriceHistoryList(PriceHistoryMapper.map(jsonObject));
         String fileExtension = ".json";
-        String fileName = generateFileNameWithTimestamp(slug, fileExtension);
+        String fileName;
+        if(path == null) {
+            path = "";
+            fileName = path + generateFileNameWithTimestamp(slug, fileExtension);
+        }else {
+            fileName = path + File.separator + generateFileNameWithTimestamp(slug, fileExtension);
+        }
         FileReadAndWrite<NFT> fileReadAndWrite = new JsonFileReadAndWrite<>();
         fileReadAndWrite.writeObjectToFile(nft,fileName);
         return nft;
@@ -90,13 +97,13 @@ public class CrawlServiceImpl implements CrawlService {
     }
 
     @Override
-    public List<Tweet>  postCrawl(String keyword, String startDate, String endDate) {
+    public List<Tweet>  postCrawl(String keyword, String startDate, String endDate, String path) {
 
         List<Tweet> tweets;
         if(isValidKeyword(keyword) && isValidDate(startDate) && isValidDate(endDate)) {
             tweets = twitterCrawler.getWebsiteData(keyword, startDate, endDate);
             String fileExtension = "csv";
-            String fileName = generateFileNameWithTimestamp("tweet", fileExtension);
+            String fileName = path + File.separator + generateFileNameWithTimestamp("tweet", fileExtension);
             FileReadAndWrite<Tweet> fileReadAndWrite = new CsvFileReadAndWrite();
             fileReadAndWrite.writeToFile(tweets, fileName);
             return tweets;

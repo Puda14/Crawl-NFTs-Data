@@ -18,11 +18,11 @@ public class CrawlController {
     public void crawlNftData(){
         crawlService.nftCrawlByListOfNft();
     }
-    public NFT crawlNftBySlug(String slug){
-        return crawlService.crawlNftBySlugName(slug);
+    public NFT crawlNftBySlug(String slug, String path){
+        return crawlService.crawlNftBySlugName(slug, path);
     }
 
-    public List<Tweet> crawlTweetDataByKeyword(String keyword, String startDate, String endDate){
-        return crawlService.postCrawl(keyword,startDate,endDate);
+    public List<Tweet> crawlTweetDataByKeyword(String keyword, String startDate, String endDate, String path){
+        return crawlService.postCrawl(keyword, startDate, endDate, path);
     }
 }

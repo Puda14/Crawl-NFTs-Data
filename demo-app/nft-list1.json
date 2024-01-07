@@ -2418,16 +2418,16 @@
         "floorEth": 26.15,
         "floorUsd": 58276.68,
         "salesCount": 137,
-        "volumeEth": 3637.1638999999977,
-        "volumeUsd": 8383239.569060002
+        "volumeEth": 3637.1638999999996,
+        "volumeUsd": 8383239.569060007
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 26.47,
-        "floorUsd": 59637.1747,
-        "salesCount": 16,
-        "volumeEth": 417.04,
-        "volumeUsd": 945567.24427
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 26.1,
+        "floorUsd": 58704.119999999995,
+        "salesCount": 49,
+        "volumeEth": 1308.6299000000001,
+        "volumeUsd": 2966879.14704
       }
     ]
   },
@@ -4762,16 +4762,16 @@
         "floorEth": 4.91,
         "floorUsd": 10856.84877,
         "salesCount": 1055,
-        "volumeEth": 5302.100760000018,
-        "volumeUsd": 1.1983973214860028E7
+        "volumeEth": 5302.100760000008,
+        "volumeUsd": 1.1983973214860052E7
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 5.034,
-        "floorUsd": 11341.65234,
-        "salesCount": 229,
-        "volumeEth": 1140.8538900000024,
-        "volumeUsd": 2586869.9526000037
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 5.0205,
+        "floorUsd": 11292.1086,
+        "salesCount": 502,
+        "volumeEth": 2516.343360000015,
+        "volumeUsd": 5702398.603099965
       }
     ]
   },
@@ -7098,16 +7098,16 @@
         "floorEth": 10.589,
         "floorUsd": 23416.29907,
         "salesCount": 767,
-        "volumeEth": 8328.843129999968,
-        "volumeUsd": 1.897850541195999E7
+        "volumeEth": 8328.843129999976,
+        "volumeUsd": 1.8978505411959965E7
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 11.049,
-        "floorUsd": 24893.50749,
-        "salesCount": 181,
-        "volumeEth": 1973.4050200000004,
-        "volumeUsd": 4475192.446090002
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 10.9687,
+        "floorUsd": 24670.80004,
+        "salesCount": 282,
+        "volumeEth": 3115.6310200000044,
+        "volumeUsd": 7063045.031670017
       }
     ]
   },
@@ -9030,16 +9030,16 @@
         "floorEth": 6.01,
         "floorUsd": 13386.42819,
         "salesCount": 1190,
-        "volumeEth": 7416.138430000035,
-        "volumeUsd": 1.6824916115639944E7
+        "volumeEth": 7416.138430000028,
+        "volumeUsd": 1.6824916115639962E7
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 8.0,
-        "floorUsd": 18024.08,
-        "salesCount": 644,
-        "volumeEth": 4718.037080000001,
-        "volumeUsd": 1.0696391660579992E7
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 7.438,
+        "floorUsd": 16729.5496,
+        "salesCount": 977,
+        "volumeEth": 7257.58098,
+        "volumeUsd": 1.6449995197410006E7
       }
     ]
   },
@@ -9842,16 +9842,16 @@
         "floorEth": 3.21,
         "floorUsd": 7294.96512,
         "salesCount": 892,
-        "volumeEth": 3007.260960000013,
-        "volumeUsd": 6840331.608040004
+        "volumeEth": 3007.260960000004,
+        "volumeUsd": 6840331.608040008
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 3.672,
-        "floorUsd": 8273.052720000002,
-        "salesCount": 235,
-        "volumeEth": 829.6950500000005,
-        "volumeUsd": 1881031.5794700002
+        "timestamps": "Jan 7, 2024, 8:30:46 PM",
+        "floorEth": 3.34999,
+        "floorUsd": 7594.7189,
+        "salesCount": 502,
+        "volumeEth": 1767.7431899999954,
+        "volumeUsd": 4006114.3520500096
       }
     ]
   },
@@ -12270,16 +12270,16 @@
         "floorEth": 55.65,
         "floorUsd": 119581.27649999999,
         "salesCount": 7,
-        "volumeEth": 416.44557999999995,
+        "volumeEth": 416.44558,
         "volumeUsd": 952566.2280899999
       },
       {
-        "timestamps": "Jan 7, 2024, 2:00:17 AM",
-        "floorEth": 55.69,
-        "floorUsd": 125470.1269,
-        "salesCount": 2,
-        "volumeEth": 113.99000000000001,
-        "volumeUsd": 257416.29716000002
+        "timestamps": "Jan 7, 2024, 8:30:35 PM",
+        "floorEth": 53.99,
+        "floorUsd": 121434.30799999999,
+        "salesCount": 3,
+        "volumeEth": 168.49,
+        "volumeUsd": 380868.76612000004
       }
     ]
   },
@@ -13310,9 +13310,9 @@
         "volumeUsd": 790551.0067999996
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 4.089,
-        "floorUsd": 9212.557890000002,
+        "timestamps": "Jan 7, 2024, 8:30:27 PM",
+        "floorEth": 3.94,
+        "floorUsd": 8932.32292,
         "salesCount": 8,
         "volumeEth": 32.468999999999994,
         "volumeUsd": 73610.04892999999
@@ -15046,16 +15046,16 @@
         "floorEth": 1.26,
         "floorUsd": 2782.08,
         "salesCount": 262,
-        "volumeEth": 338.22661999999946,
-        "volumeUsd": 767490.4289200007
+        "volumeEth": 338.2266199999998,
+        "volumeUsd": 767490.4289200003
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 1.262,
-        "floorUsd": 2843.2986200000005,
-        "salesCount": 56,
-        "volumeEth": 70.02900000000002,
-        "volumeUsd": 158786.26930999992
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 1.25,
+        "floorUsd": 2811.5,
+        "salesCount": 137,
+        "volumeEth": 172.44387999999998,
+        "volumeUsd": 390837.7177000002
       }
     ]
   },
@@ -16786,16 +16786,16 @@
         "floorEth": 2.4,
         "floorUsd": 5306.80999,
         "salesCount": 177,
-        "volumeEth": 462.2337600000002,
-        "volumeUsd": 1041306.0657700003
+        "volumeEth": 462.2337600000001,
+        "volumeUsd": 1041306.06577
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 2.64897,
-        "floorUsd": 5968.1558997,
-        "salesCount": 23,
-        "volumeEth": 60.8167,
-        "volumeUsd": 137917.41168999998
+        "timestamps": "Jan 7, 2024, 8:30:46 PM",
+        "floorEth": 2.5199,
+        "floorUsd": 5712.83262,
+        "salesCount": 32,
+        "volumeEth": 84.27627999999999,
+        "volumeUsd": 191096.02715
       }
     ]
   },
@@ -18854,16 +18854,126 @@
         "floorEth": 1.2357,
         "floorUsd": 2731.8822744,
         "salesCount": 248,
-        "volumeEth": 334.47031999999996,
-        "volumeUsd": 757103.8624500011
+        "volumeEth": 334.47032000000013,
+        "volumeUsd": 757103.8624500002
       },
       {
-        "timestamps": "Jan 7, 2024, 2:02:05 AM",
-        "floorEth": 1.26472,
-        "floorUsd": 2867.23031,
-        "salesCount": 54,
-        "volumeEth": 70.36569,
-        "volumeUsd": 159578.45033
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 1.2494,
+        "floorUsd": 2810.15048,
+        "salesCount": 109,
+        "volumeEth": 143.34626000000003,
+        "volumeUsd": 324997.3700900003
+      }
+    ]
+  },
+  {
+    "detail": {
+      "name": "MATR1X KUKU",
+      "slug": "matr1x-kuku",
+      "blockchain": "ethereum",
+      "releaseDate": "2023-12-11",
+      "totalSupply": 6666,
+      "contract": "0x596a5cd859ad53fec23cd3fcd77522f0b407920d",
+      "marketplaces": [
+        {
+          "name": "opensea-pro",
+          "url": "https://pro.opensea.io/collection/0x596a5cd859ad53fec23cd3fcd77522f0b407920d"
+        },
+        {
+          "name": "blur",
+          "url": "https://blur.io/collection/0x596a5cd859ad53fec23cd3fcd77522f0b407920d"
+        },
+        {
+          "name": "opensea",
+          "url": "https://opensea.io/collection/matr1x-kuku?search[sortAscending]\u003dtrue\u0026search[sortBy]\u003dUNIT_PRICE\u0026search[toggles][0]\u003dBUY_NOW"
+        },
+        {
+          "name": "looksrare",
+          "url": "https://looksrare.org/collections/0x596a5cd859ad53fec23cd3fcd77522f0b407920d?filters\u003d%7B\"withAskOnly\"%3Atrue%7D"
+        },
+        {
+          "name": "uniswap",
+          "url": "https://app.uniswap.org/#/nfts/collection/0x596a5cd859ad53fec23cd3fcd77522f0b407920d"
+        },
+        {
+          "name": "x2y2",
+          "url": "https://x2y2.io/collection/0x596a5cd859ad53fec23cd3fcd77522f0b407920d"
+        }
+      ]
+    },
+    "priceHistoryList": [
+      {
+        "timestamps": "Dec 13, 2023, 7:00:00 AM",
+        "floorEth": 1.0,
+        "floorUsd": 2222.34684,
+        "salesCount": 5027,
+        "volumeEth": 3780.1398200001677,
+        "volumeUsd": 8426579.893291876
+      },
+      {
+        "timestamps": "Dec 16, 2023, 7:00:00 AM",
+        "floorEth": 2.42899,
+        "floorUsd": 5271.3698081,
+        "salesCount": 848,
+        "volumeEth": 2436.0925199999942,
+        "volumeUsd": 5453383.45013001
+      },
+      {
+        "timestamps": "Dec 19, 2023, 7:00:00 AM",
+        "floorEth": 2.81,
+        "floorUsd": 6230.5568,
+        "salesCount": 548,
+        "volumeEth": 1634.4269599999977,
+        "volumeUsd": 3680617.4071000037
+      },
+      {
+        "timestamps": "Dec 22, 2023, 7:00:00 AM",
+        "floorEth": 2.945,
+        "floorUsd": 6410.79207,
+        "salesCount": 533,
+        "volumeEth": 1685.958579999998,
+        "volumeUsd": 3695108.599260008
+      },
+      {
+        "timestamps": "Dec 25, 2023, 7:00:00 AM",
+        "floorEth": 2.34,
+        "floorUsd": 5561.64472,
+        "salesCount": 466,
+        "volumeEth": 1451.8076999999982,
+        "volumeUsd": 3292770.782440007
+      },
+      {
+        "timestamps": "Dec 28, 2023, 7:00:00 AM",
+        "floorEth": 3.05,
+        "floorUsd": 6804.17236,
+        "salesCount": 113,
+        "volumeEth": 358.34450000000004,
+        "volumeUsd": 816087.4395700002
+      },
+      {
+        "timestamps": "Dec 31, 2023, 7:00:00 AM",
+        "floorEth": 2.858,
+        "floorUsd": 6539.814855,
+        "salesCount": 258,
+        "volumeEth": 762.3527999999992,
+        "volumeUsd": 1782796.3798699984
+      },
+      {
+        "timestamps": "Jan 3, 2024, 7:00:00 AM",
+        "floorEth": 2.71,
+        "floorUsd": 6178.64013,
+        "salesCount": 233,
+        "volumeEth": 656.1767999999996,
+        "volumeUsd": 1508405.6080400015
+      },
+      {
+        "timestamps": "Jan 7, 2024, 8:31:06 PM",
+        "floorEth": 2.92,
+        "floorUsd": 6567.664,
+        "salesCount": 158,
+        "volumeEth": 446.9724000000003,
+        "volumeUsd": 1008942.3972999997
       }
     ]
   },
@@ -20718,122 +20828,12 @@
         "volumeUsd": 1553403.245530002
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 1.007,
-        "floorUsd": 2268.78107,
+        "timestamps": "Jan 7, 2024, 8:30:46 PM",
+        "floorEth": 0.9685,
+        "floorUsd": 2195.67153,
         "salesCount": 112,
         "volumeEth": 113.73087,
         "volumeUsd": 257851.24975000016
-      }
-    ]
-  },
-  {
-    "detail": {
-      "name": "MATR1X KUKU",
-      "slug": "matr1x-kuku",
-      "blockchain": "ethereum",
-      "releaseDate": "2023-12-11",
-      "totalSupply": 6666,
-      "contract": "0x596a5cd859ad53fec23cd3fcd77522f0b407920d",
-      "marketplaces": [
-        {
-          "name": "opensea-pro",
-          "url": "https://pro.opensea.io/collection/0x596a5cd859ad53fec23cd3fcd77522f0b407920d"
-        },
-        {
-          "name": "blur",
-          "url": "https://blur.io/collection/0x596a5cd859ad53fec23cd3fcd77522f0b407920d"
-        },
-        {
-          "name": "opensea",
-          "url": "https://opensea.io/collection/matr1x-kuku?search[sortAscending]\u003dtrue\u0026search[sortBy]\u003dUNIT_PRICE\u0026search[toggles][0]\u003dBUY_NOW"
-        },
-        {
-          "name": "looksrare",
-          "url": "https://looksrare.org/collections/0x596a5cd859ad53fec23cd3fcd77522f0b407920d?filters\u003d%7B\"withAskOnly\"%3Atrue%7D"
-        },
-        {
-          "name": "uniswap",
-          "url": "https://app.uniswap.org/#/nfts/collection/0x596a5cd859ad53fec23cd3fcd77522f0b407920d"
-        },
-        {
-          "name": "x2y2",
-          "url": "https://x2y2.io/collection/0x596a5cd859ad53fec23cd3fcd77522f0b407920d"
-        }
-      ]
-    },
-    "priceHistoryList": [
-      {
-        "timestamps": "Dec 13, 2023, 7:00:00 AM",
-        "floorEth": 1.0,
-        "floorUsd": 2222.34684,
-        "salesCount": 5027,
-        "volumeEth": 3780.1398200001677,
-        "volumeUsd": 8426579.893291876
-      },
-      {
-        "timestamps": "Dec 16, 2023, 7:00:00 AM",
-        "floorEth": 2.42899,
-        "floorUsd": 5271.3698081,
-        "salesCount": 848,
-        "volumeEth": 2436.0925199999942,
-        "volumeUsd": 5453383.45013001
-      },
-      {
-        "timestamps": "Dec 19, 2023, 7:00:00 AM",
-        "floorEth": 2.81,
-        "floorUsd": 6230.5568,
-        "salesCount": 548,
-        "volumeEth": 1634.4269599999977,
-        "volumeUsd": 3680617.4071000037
-      },
-      {
-        "timestamps": "Dec 22, 2023, 7:00:00 AM",
-        "floorEth": 2.945,
-        "floorUsd": 6410.79207,
-        "salesCount": 533,
-        "volumeEth": 1685.958579999998,
-        "volumeUsd": 3695108.599260008
-      },
-      {
-        "timestamps": "Dec 25, 2023, 7:00:00 AM",
-        "floorEth": 2.34,
-        "floorUsd": 5561.64472,
-        "salesCount": 466,
-        "volumeEth": 1451.8076999999982,
-        "volumeUsd": 3292770.782440007
-      },
-      {
-        "timestamps": "Dec 28, 2023, 7:00:00 AM",
-        "floorEth": 3.05,
-        "floorUsd": 6804.17236,
-        "salesCount": 113,
-        "volumeEth": 358.34450000000004,
-        "volumeUsd": 816087.4395700002
-      },
-      {
-        "timestamps": "Dec 31, 2023, 7:00:00 AM",
-        "floorEth": 2.858,
-        "floorUsd": 6539.814855,
-        "salesCount": 258,
-        "volumeEth": 762.3527999999992,
-        "volumeUsd": 1782796.3798699984
-      },
-      {
-        "timestamps": "Jan 3, 2024, 7:00:00 AM",
-        "floorEth": 2.71,
-        "floorUsd": 6178.64013,
-        "salesCount": 233,
-        "volumeEth": 656.1767999999996,
-        "volumeUsd": 1508405.6080400015
-      },
-      {
-        "timestamps": "Jan 7, 2024, 2:02:10 AM",
-        "floorEth": 2.895,
-        "floorUsd": 6522.46395,
-        "salesCount": 158,
-        "volumeEth": 446.9724000000003,
-        "volumeUsd": 1008942.3972999997
       }
     ]
   },
@@ -23257,15 +23257,15 @@
         "floorUsd": 3172.177392,
         "salesCount": 89,
         "volumeEth": 128.75385000000003,
-        "volumeUsd": 293817.78961
+        "volumeUsd": 293817.78961000004
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 1.43799,
-        "floorUsd": 3239.8058499000003,
-        "salesCount": 51,
-        "volumeEth": 72.63350000000007,
-        "volumeUsd": 164732.58490999998
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 1.4372,
+        "floorUsd": 3232.55024,
+        "salesCount": 86,
+        "volumeEth": 123.72418000000022,
+        "volumeUsd": 280514.14166999975
       }
     ]
   },
@@ -23836,9 +23836,9 @@
         "volumeUsd": 940147.7764699967
       },
       {
-        "timestamps": "Jan 7, 2024, 2:03:26 AM",
-        "floorEth": 0.78,
-        "floorUsd": 1768.32789,
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 0.66498,
+        "floorUsd": 1495.673016,
         "salesCount": 1628,
         "volumeEth": 1215.5779099999938,
         "volumeUsd": 2755907.09007998
@@ -24420,8 +24420,8 @@
         "floorEth": 7.0,
         "floorUsd": 10718.61,
         "salesCount": 137,
-        "volumeEth": 1217.7105506956873,
-        "volumeUsd": 1852505.1941058994
+        "volumeEth": 1217.710550695688,
+        "volumeUsd": 1852505.1941058992
       },
       {
         "timestamps": "Jun 18, 2022, 7:00:00 AM",
@@ -24429,47 +24429,47 @@
         "floorUsd": 11112.68,
         "salesCount": 75,
         "volumeEth": 895.944099,
-        "volumeUsd": 1086017.8511704204
+        "volumeUsd": 1086017.8511704202
       },
       {
         "timestamps": "Jun 21, 2022, 7:00:00 AM",
         "floorEth": 10.35,
         "floorUsd": 11044.1745,
         "salesCount": 79,
-        "volumeEth": 993.48069,
-        "volumeUsd": 1023145.4213116007
+        "volumeEth": 993.4806900000001,
+        "volumeUsd": 1023145.4213116005
       },
       {
         "timestamps": "Jun 24, 2022, 7:00:00 AM",
         "floorEth": 12.899,
         "floorUsd": 14536.78603,
         "salesCount": 215,
-        "volumeEth": 3500.1403999000004,
-        "volumeUsd": 3943765.029811302
+        "volumeEth": 3500.1403999000013,
+        "volumeUsd": 3943765.0298112994
       },
       {
         "timestamps": "Jun 27, 2022, 7:00:00 AM",
         "floorEth": 12.39,
         "floorUsd": 14685.02,
         "salesCount": 52,
-        "volumeEth": 874.5960000000001,
-        "volumeUsd": 982252.1263100003
+        "volumeEth": 874.5960000000003,
+        "volumeUsd": 982252.1263100002
       },
       {
         "timestamps": "Jun 30, 2022, 7:00:00 AM",
         "floorEth": 11.99,
         "floorUsd": 14603.277999999998,
         "salesCount": 59,
-        "volumeEth": 1157.987,
-        "volumeUsd": 1394837.69103
+        "volumeEth": 1157.9870000000003,
+        "volumeUsd": 1394837.6910300003
       },
       {
         "timestamps": "Jul 3, 2022, 7:00:00 AM",
         "floorEth": 12.65,
         "floorUsd": 13804.032,
         "salesCount": 50,
-        "volumeEth": 705.1510000000001,
-        "volumeUsd": 786433.1703310002
+        "volumeEth": 705.1510000000002,
+        "volumeUsd": 786433.1703310001
       },
       {
         "timestamps": "Jul 6, 2022, 7:00:00 AM",
@@ -24485,14 +24485,14 @@
         "floorUsd": 14591.964000000002,
         "salesCount": 28,
         "volumeEth": 519.31,
-        "volumeUsd": 600047.7504000001
+        "volumeUsd": 600047.7504
       },
       {
         "timestamps": "Jul 12, 2022, 7:00:00 AM",
         "floorEth": 12.4,
         "floorUsd": 15345.619999999999,
         "salesCount": 33,
-        "volumeEth": 483.6751500000001,
+        "volumeEth": 483.67515000000003,
         "volumeUsd": 589425.8766795001
       },
       {
@@ -24501,46 +24501,46 @@
         "floorUsd": 13519.954920083446,
         "salesCount": 25,
         "volumeEth": 372.82300000000004,
-        "volumeUsd": 412413.7954047049
+        "volumeUsd": 412413.795404705
       },
       {
         "timestamps": "Jul 18, 2022, 7:00:00 AM",
         "floorEth": 12.5,
         "floorUsd": 15124.593436910076,
         "salesCount": 20,
-        "volumeEth": 277.71153725,
-        "volumeUsd": 330955.26190015016
+        "volumeEth": 277.71153725000005,
+        "volumeUsd": 330955.2619001502
       },
       {
         "timestamps": "Jul 21, 2022, 7:00:00 AM",
         "floorEth": 10.61,
         "floorUsd": 15519.756000000001,
         "salesCount": 35,
-        "volumeEth": 505.7066,
-        "volumeUsd": 751875.4864360003
+        "volumeEth": 505.70660000000004,
+        "volumeUsd": 751875.4864360001
       },
       {
         "timestamps": "Jul 24, 2022, 7:00:00 AM",
         "floorEth": 10.5,
         "floorUsd": 15978.27,
         "salesCount": 31,
-        "volumeEth": 349.69019999999995,
-        "volumeUsd": 539557.670108
+        "volumeEth": 349.6902,
+        "volumeUsd": 539557.6701079999
       },
       {
         "timestamps": "Jul 27, 2022, 7:00:00 AM",
         "floorEth": 9.65,
         "floorUsd": 14943.411,
         "salesCount": 20,
-        "volumeEth": 203.55250000000004,
-        "volumeUsd": 318112.1547500001
+        "volumeEth": 203.5525,
+        "volumeUsd": 318112.15475000005
       },
       {
         "timestamps": "Jul 30, 2022, 7:00:00 AM",
         "floorEth": 9.85,
         "floorUsd": 14181.242,
         "salesCount": 40,
-        "volumeEth": 423.25836000000004,
+        "volumeEth": 423.2583599999999,
         "volumeUsd": 626134.2522157001
       },
       {
@@ -24548,8 +24548,8 @@
         "floorEth": 9.65,
         "floorUsd": 16374.506,
         "salesCount": 16,
-        "volumeEth": 178.5623,
-        "volumeUsd": 304819.778961
+        "volumeEth": 178.56230000000002,
+        "volumeUsd": 304819.77896100003
       },
       {
         "timestamps": "Aug 5, 2022, 7:00:00 AM",
@@ -24564,8 +24564,8 @@
         "floorEth": 8.44,
         "floorUsd": 14276.9976,
         "salesCount": 26,
-        "volumeEth": 261.435,
-        "volumeUsd": 428327.02943000005
+        "volumeEth": 261.43500000000006,
+        "volumeUsd": 428327.02943
       },
       {
         "timestamps": "Aug 11, 2022, 7:00:00 AM",
@@ -24573,14 +24573,14 @@
         "floorUsd": 13604.96,
         "salesCount": 29,
         "volumeEth": 252.55004999000005,
-        "volumeUsd": 429158.09840759507
+        "volumeUsd": 429158.0984075951
       },
       {
         "timestamps": "Aug 14, 2022, 7:00:00 AM",
         "floorEth": 7.5,
         "floorUsd": 14699.550000000001,
         "salesCount": 29,
-        "volumeEth": 247.80859909521698,
+        "volumeEth": 247.80859909521703,
         "volumeUsd": 470737.1096001523
       },
       {
@@ -24588,7 +24588,7 @@
         "floorEth": 6.4,
         "floorUsd": 12153.92,
         "salesCount": 66,
-        "volumeEth": 484.3048999999999,
+        "volumeEth": 484.3049,
         "volumeUsd": 935169.1378729998
       },
       {
@@ -24597,14 +24597,14 @@
         "floorUsd": 11919.330999999998,
         "salesCount": 56,
         "volumeEth": 464.1219,
-        "volumeUsd": 865720.4423140001
+        "volumeUsd": 865720.4423140002
       },
       {
         "timestamps": "Aug 23, 2022, 7:00:00 AM",
         "floorEth": 6.2,
         "floorUsd": 9769.712,
         "salesCount": 44,
-        "volumeEth": 327.793321,
+        "volumeEth": 327.79332100000005,
         "volumeUsd": 527935.3365176165
       },
       {
@@ -24612,8 +24612,8 @@
         "floorEth": 6.8,
         "floorUsd": 11130.4965,
         "salesCount": 30,
-        "volumeEth": 245.16899999999998,
-        "volumeUsd": 404682.08316
+        "volumeEth": 245.16900000000004,
+        "volumeUsd": 404682.0831600001
       },
       {
         "timestamps": "Aug 29, 2022, 7:00:00 AM",
@@ -24621,14 +24621,14 @@
         "floorUsd": 10771.59935478305,
         "salesCount": 21,
         "volumeEth": 171.2548356,
-        "volumeUsd": 268473.18361753825
+        "volumeUsd": 268473.1836175383
       },
       {
         "timestamps": "Sep 1, 2022, 7:00:00 AM",
         "floorEth": 7.5,
         "floorUsd": 10790.602877458587,
         "salesCount": 24,
-        "volumeEth": 199.4062,
+        "volumeEth": 199.40619999999998,
         "volumeUsd": 300992.583335193
       },
       {
@@ -24644,7 +24644,7 @@
         "floorEth": 7.3,
         "floorUsd": 11689.574999999999,
         "salesCount": 15,
-        "volumeEth": 122.39599999999999,
+        "volumeEth": 122.396,
         "volumeUsd": 197409.54933
       },
       {
@@ -24653,7 +24653,7 @@
         "floorUsd": 10748.889000000001,
         "salesCount": 19,
         "volumeEth": 166.379,
-        "volumeUsd": 266830.84092999995
+        "volumeUsd": 266830.84093
       },
       {
         "timestamps": "Sep 13, 2022, 7:00:00 AM",
@@ -24661,15 +24661,15 @@
         "floorUsd": 11845.851,
         "salesCount": 20,
         "volumeEth": 159.6311,
-        "volumeUsd": 278734.202396
+        "volumeUsd": 278734.2023960001
       },
       {
         "timestamps": "Sep 16, 2022, 7:00:00 AM",
         "floorEth": 6.79,
         "floorUsd": 10718.1508,
         "salesCount": 126,
-        "volumeEth": 1067.40309999,
-        "volumeUsd": 1815473.3020295876
+        "volumeEth": 1067.4030999900003,
+        "volumeUsd": 1815473.3020295852
       },
       {
         "timestamps": "Sep 19, 2022, 7:00:00 AM",
@@ -24684,24 +24684,24 @@
         "floorEth": 7.85,
         "floorUsd": 10383.509,
         "salesCount": 27,
-        "volumeEth": 234.70498999999998,
-        "volumeUsd": 318129.2685027
+        "volumeEth": 234.70499,
+        "volumeUsd": 318129.26850269997
       },
       {
         "timestamps": "Sep 25, 2022, 7:00:00 AM",
         "floorEth": 7.398,
         "floorUsd": 9645.9578,
         "salesCount": 34,
-        "volumeEth": 326.1121399999999,
-        "volumeUsd": 420199.9084471999
+        "volumeEth": 326.11213999999995,
+        "volumeUsd": 420199.9084472
       },
       {
         "timestamps": "Sep 28, 2022, 7:00:00 AM",
         "floorEth": 7.1999,
         "floorUsd": 9439.046,
         "salesCount": 32,
-        "volumeEth": 285.36885000000007,
-        "volumeUsd": 374354.595264
+        "volumeEth": 285.36885,
+        "volumeUsd": 374354.59526400006
       },
       {
         "timestamps": "Oct 1, 2022, 7:00:00 AM",
@@ -24709,22 +24709,22 @@
         "floorUsd": 9123.14872,
         "salesCount": 38,
         "volumeEth": 336.74199999999996,
-        "volumeUsd": 449568.87888000003
+        "volumeUsd": 449568.87887999986
       },
       {
         "timestamps": "Oct 4, 2022, 7:00:00 AM",
         "floorEth": 7.84,
         "floorUsd": 10150.0035,
         "salesCount": 35,
-        "volumeEth": 315.7985399999999,
-        "volumeUsd": 416985.85243160004
+        "volumeEth": 315.79853999999995,
+        "volumeUsd": 416985.8524316
       },
       {
         "timestamps": "Oct 7, 2022, 7:00:00 AM",
         "floorEth": 7.6899,
         "floorUsd": 10399.590063,
         "salesCount": 22,
-        "volumeEth": 187.5785,
+        "volumeEth": 187.57850000000002,
         "volumeUsd": 252691.43170000004
       },
       {
@@ -24733,14 +24733,14 @@
         "floorUsd": 9974.8824,
         "salesCount": 46,
         "volumeEth": 399.60590999999994,
-        "volumeUsd": 531463.9445277001
+        "volumeUsd": 531463.9445277
       },
       {
         "timestamps": "Oct 13, 2022, 7:00:00 AM",
         "floorEth": 7.79,
         "floorUsd": 9965.8249,
         "salesCount": 23,
-        "volumeEth": 223.04930000000002,
+        "volumeEth": 223.04930000000004,
         "volumeUsd": 291191.20992500003
       },
       {
@@ -24748,8 +24748,8 @@
         "floorEth": 7.29,
         "floorUsd": 9451.2042,
         "salesCount": 39,
-        "volumeEth": 318.7562,
-        "volumeUsd": 410792.8368170001
+        "volumeEth": 318.7562000000001,
+        "volumeUsd": 410792.8368170002
       },
       {
         "timestamps": "Oct 19, 2022, 7:00:00 AM",
@@ -24757,14 +24757,14 @@
         "floorUsd": 9457.3836,
         "salesCount": 22,
         "volumeEth": 211.36,
-        "volumeUsd": 276990.48915
+        "volumeUsd": 276990.48915000004
       },
       {
         "timestamps": "Oct 22, 2022, 7:00:00 AM",
         "floorEth": 7.46,
         "floorUsd": 9671.181,
         "salesCount": 21,
-        "volumeEth": 177.22930000000002,
+        "volumeEth": 177.22929999999997,
         "volumeUsd": 229537.861995
       },
       {
@@ -24772,7 +24772,7 @@
         "floorEth": 6.96,
         "floorUsd": 9489.562,
         "salesCount": 23,
-        "volumeEth": 187.17288000000005,
+        "volumeEth": 187.17288000000002,
         "volumeUsd": 247623.93706759997
       },
       {
@@ -24780,15 +24780,15 @@
         "floorEth": 6.397,
         "floorUsd": 9071.1225,
         "salesCount": 40,
-        "volumeEth": 287.4632000000001,
-        "volumeUsd": 406723.4616540001
+        "volumeEth": 287.46320000000003,
+        "volumeUsd": 406723.461654
       },
       {
         "timestamps": "Oct 31, 2022, 7:00:00 AM",
         "floorEth": 6.45,
         "floorUsd": 9762.655499999999,
         "salesCount": 47,
-        "volumeEth": 352.60197,
+        "volumeEth": 352.6019700000001,
         "volumeUsd": 547903.5137652999
       },
       {
@@ -24796,8 +24796,8 @@
         "floorEth": 6.035,
         "floorUsd": 9530.532350000001,
         "salesCount": 38,
-        "volumeEth": 265.13924,
-        "volumeUsd": 419344.1534097999
+        "volumeEth": 265.13924000000003,
+        "volumeUsd": 419344.15340979985
       },
       {
         "timestamps": "Nov 6, 2022, 7:00:00 AM",
@@ -24805,30 +24805,30 @@
         "floorUsd": 9385.0716,
         "salesCount": 32,
         "volumeEth": 215.27121,
-        "volumeUsd": 335130.3710481001
+        "volumeUsd": 335130.37104810006
       },
       {
         "timestamps": "Nov 9, 2022, 7:00:00 AM",
         "floorEth": 5.99,
         "floorUsd": 9296.1805,
         "salesCount": 37,
-        "volumeEth": 246.37460000000002,
-        "volumeUsd": 391285.62086399994
+        "volumeEth": 246.3746,
+        "volumeUsd": 391285.620864
       },
       {
         "timestamps": "Nov 12, 2022, 7:00:00 AM",
         "floorEth": 5.8,
         "floorUsd": 6437.1888,
         "salesCount": 59,
-        "volumeEth": 415.20533,
-        "volumeUsd": 521031.4591995002
+        "volumeEth": 415.20532999999995,
+        "volumeUsd": 521031.4591995001
       },
       {
         "timestamps": "Nov 15, 2022, 7:00:00 AM",
         "floorEth": 5.65,
         "floorUsd": 6866.3885,
         "salesCount": 54,
-        "volumeEth": 357.329,
+        "volumeEth": 357.32899999999995,
         "volumeUsd": 445208.691027
       },
       {
@@ -24836,16 +24836,16 @@
         "floorEth": 5.5,
         "floorUsd": 6815.090099999999,
         "salesCount": 54,
-        "volumeEth": 333.93481,
-        "volumeUsd": 413967.25695799984
+        "volumeEth": 333.93480999999997,
+        "volumeUsd": 413967.25695800007
       },
       {
         "timestamps": "Nov 21, 2022, 7:00:00 AM",
         "floorEth": 5.74,
         "floorUsd": 6885.933600000001,
         "salesCount": 66,
-        "volumeEth": 407.3392,
-        "volumeUsd": 492531.61728600005
+        "volumeEth": 407.33920000000006,
+        "volumeUsd": 492531.61728600017
       },
       {
         "timestamps": "Nov 24, 2022, 7:00:00 AM",
@@ -24853,15 +24853,15 @@
         "floorUsd": 7063.07247,
         "salesCount": 41,
         "volumeEth": 337.7256,
-        "volumeUsd": 382807.9279259999
+        "volumeUsd": 382807.927926
       },
       {
         "timestamps": "Nov 27, 2022, 7:00:00 AM",
         "floorEth": 6.3,
         "floorUsd": 7608.258000000001,
         "salesCount": 29,
-        "volumeEth": 198.82113999999999,
-        "volumeUsd": 238378.97390960006
+        "volumeEth": 198.82114,
+        "volumeUsd": 238378.97390960008
       },
       {
         "timestamps": "Nov 30, 2022, 7:00:00 AM",
@@ -24877,7 +24877,7 @@
         "floorUsd": 8503.8942,
         "salesCount": 31,
         "volumeEth": 237.71790000000001,
-        "volumeUsd": 302476.86838900007
+        "volumeUsd": 302476.86838899995
       },
       {
         "timestamps": "Dec 6, 2022, 7:00:00 AM",
@@ -24892,7 +24892,7 @@
         "floorEth": 6.6224,
         "floorUsd": 8245.020448,
         "salesCount": 63,
-        "volumeEth": 485.0778800000001,
+        "volumeEth": 485.07788,
         "volumeUsd": 609455.5451029999
       },
       {
@@ -24900,48 +24900,48 @@
         "floorEth": 6.34,
         "floorUsd": 8058.583799999999,
         "salesCount": 245,
-        "volumeEth": 1793.1295600000005,
-        "volumeUsd": 2282259.9903659998
+        "volumeEth": 1793.1295599999994,
+        "volumeUsd": 2282259.990365999
       },
       {
         "timestamps": "Dec 15, 2022, 7:00:00 AM",
         "floorEth": 6.0,
         "floorUsd": 7832.76,
         "salesCount": 187,
-        "volumeEth": 1229.3205400000008,
-        "volumeUsd": 1572867.5391317005
+        "volumeEth": 1229.3205400000013,
+        "volumeUsd": 1572867.5391317
       },
       {
         "timestamps": "Dec 18, 2022, 7:00:00 AM",
         "floorEth": 6.2,
         "floorUsd": 7849.572,
         "salesCount": 531,
-        "volumeEth": 3631.00501000001,
-        "volumeUsd": 4502891.043720399
+        "volumeEth": 3631.0050100000058,
+        "volumeUsd": 4502891.043720397
       },
       {
         "timestamps": "Dec 21, 2022, 7:00:00 AM",
         "floorEth": 6.5,
         "floorUsd": 7585.24,
         "salesCount": 539,
-        "volumeEth": 3856.0663700000014,
-        "volumeUsd": 4557122.349840196
+        "volumeEth": 3856.0663699999973,
+        "volumeUsd": 4557122.3498402005
       },
       {
         "timestamps": "Dec 24, 2022, 7:00:00 AM",
         "floorEth": 6.501,
         "floorUsd": 7913.60229,
         "salesCount": 564,
-        "volumeEth": 3635.4999000000003,
-        "volumeUsd": 4378359.571310994
+        "volumeEth": 3635.499899999997,
+        "volumeUsd": 4378359.571310995
       },
       {
         "timestamps": "Dec 27, 2022, 7:00:00 AM",
         "floorEth": 6.339,
         "floorUsd": 7733.516610000001,
         "salesCount": 373,
-        "volumeEth": 2449.324970000003,
-        "volumeUsd": 2985889.1955907904
+        "volumeEth": 2449.3249700000083,
+        "volumeUsd": 2985889.1955907946
       },
       {
         "timestamps": "Dec 30, 2022, 7:00:00 AM",
@@ -24949,38 +24949,38 @@
         "floorUsd": 7518.437,
         "salesCount": 223,
         "volumeEth": 1540.687220000002,
-        "volumeUsd": 1870947.9703278015
+        "volumeUsd": 1870947.9703278006
       },
       {
         "timestamps": "Jan 2, 2023, 7:00:00 AM",
         "floorEth": 6.29,
         "floorUsd": 7505.6683,
         "salesCount": 94,
-        "volumeEth": 605.3006699999999,
-        "volumeUsd": 726816.9122000001
+        "volumeEth": 605.3006700000001,
+        "volumeUsd": 726816.9122000003
       },
       {
         "timestamps": "Jan 5, 2023, 7:00:00 AM",
         "floorEth": 6.3673,
         "floorUsd": 7607.1406560000005,
         "salesCount": 120,
-        "volumeEth": 800.5588000000001,
-        "volumeUsd": 963091.8929399997
+        "volumeEth": 800.5587999999991,
+        "volumeUsd": 963091.8929399999
       },
       {
         "timestamps": "Jan 8, 2023, 7:00:00 AM",
         "floorEth": 6.7,
         "floorUsd": 8050.33881,
         "salesCount": 180,
-        "volumeEth": 1333.906639999999,
-        "volumeUsd": 1659122.9710300001
+        "volumeEth": 1333.9066400000008,
+        "volumeUsd": 1659122.971029998
       },
       {
         "timestamps": "Jan 11, 2023, 7:00:00 AM",
         "floorEth": 6.5306,
         "floorUsd": 8389.04813,
         "salesCount": 113,
-        "volumeEth": 811.7044,
+        "volumeEth": 811.7044000000002,
         "volumeUsd": 1043660.6915200003
       },
       {
@@ -24988,16 +24988,16 @@
         "floorEth": 7.022,
         "floorUsd": 9280.81288,
         "salesCount": 119,
-        "volumeEth": 905.3666899999998,
-        "volumeUsd": 1222966.2710100005
+        "volumeEth": 905.3666900000003,
+        "volumeUsd": 1222966.2710099996
       },
       {
         "timestamps": "Jan 17, 2023, 7:00:00 AM",
         "floorEth": 7.2,
         "floorUsd": 9766.2848,
         "salesCount": 68,
-        "volumeEth": 562.1165999999998,
-        "volumeUsd": 827930.2914400002
+        "volumeEth": 562.1166000000002,
+        "volumeUsd": 827930.2914400003
       },
       {
         "timestamps": "Jan 20, 2023, 7:00:00 AM",
@@ -25005,287 +25005,287 @@
         "floorUsd": 10843.75837,
         "salesCount": 73,
         "volumeEth": 573.0545499999998,
-        "volumeUsd": 895894.2027300001
+        "volumeUsd": 895894.2027300005
       },
       {
         "timestamps": "Jan 23, 2023, 7:00:00 AM",
         "floorEth": 6.98,
         "floorUsd": 10838.05713,
         "salesCount": 74,
-        "volumeEth": 544.08333,
-        "volumeUsd": 875875.6713700002
+        "volumeEth": 544.0833299999999,
+        "volumeUsd": 875875.6713700003
       },
       {
         "timestamps": "Jan 26, 2023, 7:00:00 AM",
         "floorEth": 6.98,
         "floorUsd": 9754.29074,
         "salesCount": 221,
-        "volumeEth": 1720.3058200000003,
-        "volumeUsd": 2752898.3795600003
+        "volumeEth": 1720.3058200000012,
+        "volumeUsd": 2752898.37956
       },
       {
         "timestamps": "Jan 29, 2023, 7:00:00 AM",
         "floorEth": 6.6,
         "floorUsd": 10499.874,
         "salesCount": 527,
-        "volumeEth": 3586.217529999995,
-        "volumeUsd": 5693241.3187900195
+        "volumeEth": 3586.2175300000094,
+        "volumeUsd": 5693241.3187899925
       },
       {
         "timestamps": "Feb 1, 2023, 7:00:00 AM",
         "floorEth": 6.3878,
         "floorUsd": 10140.4076,
         "salesCount": 429,
-        "volumeEth": 2811.946489999998,
-        "volumeUsd": 4492570.291299999
+        "volumeEth": 2811.946490000001,
+        "volumeUsd": 4492570.291299992
       },
       {
         "timestamps": "Feb 4, 2023, 7:00:00 AM",
         "floorEth": 5.8163,
         "floorUsd": 9550.015622,
         "salesCount": 685,
-        "volumeEth": 4282.334410000017,
-        "volumeUsd": 6947729.941830039
+        "volumeEth": 4282.334409999998,
+        "volumeUsd": 6947729.941830014
       },
       {
         "timestamps": "Feb 7, 2023, 7:00:00 AM",
         "floorEth": 5.49,
         "floorUsd": 9143.19901,
         "salesCount": 818,
-        "volumeEth": 4940.561769999983,
-        "volumeUsd": 8187055.185520017
+        "volumeEth": 4940.561770000008,
+        "volumeUsd": 8187055.185520004
       },
       {
         "timestamps": "Feb 10, 2023, 7:00:00 AM",
         "floorEth": 5.449,
         "floorUsd": 8677.5114,
         "salesCount": 415,
-        "volumeEth": 2430.682999999991,
-        "volumeUsd": 4001907.6822599964
+        "volumeEth": 2430.68299999999,
+        "volumeUsd": 4001907.6822599997
       },
       {
         "timestamps": "Feb 13, 2023, 7:00:00 AM",
         "floorEth": 4.0,
         "floorUsd": 6185.53508,
         "salesCount": 480,
-        "volumeEth": 2546.0058100000024,
-        "volumeUsd": 3916188.1928500026
+        "volumeEth": 2546.0058099999997,
+        "volumeUsd": 3916188.1928500053
       },
       {
         "timestamps": "Feb 16, 2023, 7:00:00 AM",
         "floorEth": 4.529,
         "floorUsd": 6821.80625,
         "salesCount": 530,
-        "volumeEth": 2898.176590000001,
-        "volumeUsd": 4447955.651900003
+        "volumeEth": 2898.1765899999923,
+        "volumeUsd": 4447955.651900002
       },
       {
         "timestamps": "Feb 19, 2023, 7:00:00 AM",
         "floorEth": 4.949,
         "floorUsd": 8146.76419,
         "salesCount": 1388,
-        "volumeEth": 7838.857230000006,
-        "volumeUsd": 1.3067429216910027E7
+        "volumeEth": 7838.857230000011,
+        "volumeUsd": 1.3067429216909999E7
       },
       {
         "timestamps": "Feb 22, 2023, 7:00:00 AM",
         "floorEth": 5.6,
         "floorUsd": 9410.12064,
         "salesCount": 1380,
-        "volumeEth": 8231.158360000058,
-        "volumeUsd": 1.3933914286199983E7
+        "volumeEth": 8231.15836000007,
+        "volumeUsd": 1.3933914286199963E7
       },
       {
         "timestamps": "Feb 25, 2023, 7:00:00 AM",
         "floorEth": 5.15,
         "floorUsd": 8502.186500000002,
         "salesCount": 515,
-        "volumeEth": 2903.4191599999963,
-        "volumeUsd": 4786766.374170009
+        "volumeEth": 2903.4191599999917,
+        "volumeUsd": 4786766.374169998
       },
       {
         "timestamps": "Feb 28, 2023, 7:00:00 AM",
         "floorEth": 5.05,
         "floorUsd": 8120.5515,
         "salesCount": 873,
-        "volumeEth": 4726.525760000003,
-        "volumeUsd": 7801014.420049999
+        "volumeEth": 4726.525760000008,
+        "volumeUsd": 7801014.420049987
       },
       {
         "timestamps": "Mar 3, 2023, 7:00:00 AM",
         "floorEth": 5.299,
         "floorUsd": 8515.15299,
         "salesCount": 1170,
-        "volumeEth": 6344.826890000017,
-        "volumeUsd": 1.0320566769220024E7
+        "volumeEth": 6344.826889999994,
+        "volumeUsd": 1.0320566769220013E7
       },
       {
         "timestamps": "Mar 6, 2023, 7:00:00 AM",
         "floorEth": 5.14,
         "floorUsd": 8068.823399999999,
         "salesCount": 1272,
-        "volumeEth": 6774.397529999991,
-        "volumeUsd": 1.0923756356100094E7
+        "volumeEth": 6774.397530000035,
+        "volumeUsd": 1.0923756356100084E7
       },
       {
         "timestamps": "Mar 9, 2023, 7:00:00 AM",
         "floorEth": 5.0,
         "floorUsd": 7819.06591,
         "salesCount": 629,
-        "volumeEth": 3239.667300000001,
-        "volumeUsd": 5071615.321620002
+        "volumeEth": 3239.667299999991,
+        "volumeUsd": 5071615.32162
       },
       {
         "timestamps": "Mar 12, 2023, 7:00:00 AM",
         "floorEth": 4.189,
         "floorUsd": 5988.60767,
         "salesCount": 658,
-        "volumeEth": 3132.819400000006,
-        "volumeUsd": 4598618.566419991
+        "volumeEth": 3132.8193999999935,
+        "volumeUsd": 4598618.566420009
       },
       {
         "timestamps": "Mar 15, 2023, 7:00:00 AM",
         "floorEth": 4.06995,
         "floorUsd": 5990.03728,
         "salesCount": 336,
-        "volumeEth": 1462.3411499999984,
-        "volumeUsd": 2261431.5262399996
+        "volumeEth": 1462.3411499999993,
+        "volumeUsd": 2261431.5262399986
       },
       {
         "timestamps": "Mar 18, 2023, 7:00:00 AM",
         "floorEth": 3.4,
         "floorUsd": 5631.114,
         "salesCount": 1045,
-        "volumeEth": 3863.627729999993,
-        "volumeUsd": 6443110.545560012
+        "volumeEth": 3863.627729999997,
+        "volumeUsd": 6443110.545560009
       },
       {
         "timestamps": "Mar 21, 2023, 7:00:00 AM",
         "floorEth": 3.5757,
         "floorUsd": 6149.04834,
         "salesCount": 889,
-        "volumeEth": 3353.8528500000098,
-        "volumeUsd": 5999955.408520005
+        "volumeEth": 3353.8528500000148,
+        "volumeUsd": 5999955.4085200215
       },
       {
         "timestamps": "Mar 24, 2023, 7:00:00 AM",
         "floorEth": 3.2899,
         "floorUsd": 5722.419161,
         "salesCount": 834,
-        "volumeEth": 3064.7813099999967,
-        "volumeUsd": 5427990.126650017
+        "volumeEth": 3064.781310000003,
+        "volumeUsd": 5427990.126650016
       },
       {
         "timestamps": "Mar 27, 2023, 7:00:00 AM",
         "floorEth": 3.1005,
         "floorUsd": 5463.808929,
         "salesCount": 975,
-        "volumeEth": 3252.2710800000054,
-        "volumeUsd": 5924987.909320025
+        "volumeEth": 3252.2710799999995,
+        "volumeUsd": 5924987.909320027
       },
       {
         "timestamps": "Mar 30, 2023, 7:00:00 AM",
         "floorEth": 3.1,
         "floorUsd": 5449.60007,
         "salesCount": 344,
-        "volumeEth": 1147.0487200000046,
-        "volumeUsd": 2036802.5805399956
+        "volumeEth": 1147.048720000004,
+        "volumeUsd": 2036802.580539997
       },
       {
         "timestamps": "Apr 2, 2023, 7:00:00 AM",
         "floorEth": 3.1489,
         "floorUsd": 5587.30566,
         "salesCount": 250,
-        "volumeEth": 804.2499700000016,
-        "volumeUsd": 1454560.2644299997
+        "volumeEth": 804.2499700000012,
+        "volumeUsd": 1454560.2644299993
       },
       {
         "timestamps": "Apr 5, 2023, 7:00:00 AM",
         "floorEth": 3.07,
         "floorUsd": 5558.1314,
         "salesCount": 547,
-        "volumeEth": 1731.7909900000063,
-        "volumeUsd": 3140648.5972499917
+        "volumeEth": 1731.79099000001,
+        "volumeUsd": 3140648.5972500006
       },
       {
         "timestamps": "Apr 8, 2023, 7:00:00 AM",
         "floorEth": 2.7,
         "floorUsd": 5073.78851,
         "salesCount": 791,
-        "volumeEth": 2248.9523199999853,
-        "volumeUsd": 4239149.638349993
+        "volumeEth": 2248.9523199999962,
+        "volumeUsd": 4239149.638349988
       },
       {
         "timestamps": "Apr 11, 2023, 7:00:00 AM",
         "floorEth": 2.6769,
         "floorUsd": 4978.043547,
         "salesCount": 386,
-        "volumeEth": 1108.0530699999983,
-        "volumeUsd": 2067863.1511899957
+        "volumeEth": 1108.0530699999981,
+        "volumeUsd": 2067863.1511899978
       },
       {
         "timestamps": "Apr 14, 2023, 7:00:00 AM",
         "floorEth": 2.61,
         "floorUsd": 4978.50243,
         "salesCount": 170,
-        "volumeEth": 465.91178000000014,
-        "volumeUsd": 888045.4108600004
+        "volumeEth": 465.91178000000025,
+        "volumeUsd": 888045.4108600009
       },
       {
         "timestamps": "Apr 17, 2023, 7:00:00 AM",
         "floorEth": 2.3499,
         "floorUsd": 4917.118751999999,
         "salesCount": 247,
-        "volumeEth": 629.6369400000008,
-        "volumeUsd": 1287754.4877499999
+        "volumeEth": 629.6369399999988,
+        "volumeUsd": 1287754.4877499996
       },
       {
         "timestamps": "Apr 20, 2023, 7:00:00 AM",
         "floorEth": 2.3,
         "floorUsd": 4837.54127,
         "salesCount": 112,
-        "volumeEth": 290.5429099999999,
-        "volumeUsd": 610504.84374
+        "volumeEth": 290.54291000000006,
+        "volumeUsd": 610504.8437399997
       },
       {
         "timestamps": "Apr 23, 2023, 7:00:00 AM",
         "floorEth": 2.0,
         "floorUsd": 3871.7485500000003,
         "salesCount": 281,
-        "volumeEth": 636.6840199999994,
-        "volumeUsd": 1233873.4693700003
+        "volumeEth": 636.6840199999997,
+        "volumeUsd": 1233873.4693699998
       },
       {
         "timestamps": "Apr 26, 2023, 7:00:00 AM",
         "floorEth": 2.1,
         "floorUsd": 3913.6422,
         "salesCount": 237,
-        "volumeEth": 564.93666,
-        "volumeUsd": 1049689.7852500002
+        "volumeEth": 564.9366600000001,
+        "volumeUsd": 1049689.7852500004
       },
       {
         "timestamps": "Apr 29, 2023, 7:00:00 AM",
         "floorEth": 2.249,
         "floorUsd": 4086.5893373,
         "salesCount": 146,
-        "volumeEth": 353.54472999999996,
-        "volumeUsd": 668384.2556100003
+        "volumeEth": 353.5447299999999,
+        "volumeUsd": 668384.25561
       },
       {
         "timestamps": "May 2, 2023, 7:00:00 AM",
         "floorEth": 2.5,
         "floorUsd": 4776.14195,
         "salesCount": 676,
-        "volumeEth": 1921.8117499999867,
-        "volumeUsd": 3644777.882530039
+        "volumeEth": 1921.8117499999837,
+        "volumeUsd": 3644777.882530019
       },
       {
         "timestamps": "May 5, 2023, 7:00:00 AM",
         "floorEth": 2.69,
         "floorUsd": 4936.93228,
         "salesCount": 92,
-        "volumeEth": 265.6951199999999,
-        "volumeUsd": 498076.90867
+        "volumeEth": 265.6951200000001,
+        "volumeUsd": 498076.9086699999
       },
       {
         "timestamps": "May 8, 2023, 7:00:00 AM",
@@ -25293,15 +25293,15 @@
         "floorUsd": 4557.346,
         "salesCount": 82,
         "volumeEth": 239.98830999999996,
-        "volumeUsd": 461495.1930999998
+        "volumeUsd": 461495.19309999986
       },
       {
         "timestamps": "May 11, 2023, 7:00:00 AM",
         "floorEth": 2.32,
         "floorUsd": 4266.1956,
         "salesCount": 68,
-        "volumeEth": 201.53202000000007,
-        "volumeUsd": 375249.8905099998
+        "volumeEth": 201.53202000000002,
+        "volumeUsd": 375249.89051000006
       },
       {
         "timestamps": "May 14, 2023, 7:00:00 AM",
@@ -25309,22 +25309,22 @@
         "floorUsd": 3839.67125,
         "salesCount": 42,
         "volumeEth": 119.31640999999996,
-        "volumeUsd": 215968.1191
+        "volumeUsd": 215968.11909999998
       },
       {
         "timestamps": "May 17, 2023, 7:00:00 AM",
         "floorEth": 2.2,
         "floorUsd": 3957.81905,
         "salesCount": 51,
-        "volumeEth": 122.72782000000001,
-        "volumeUsd": 221515.83556999997
+        "volumeEth": 122.72782,
+        "volumeUsd": 221515.83557000002
       },
       {
         "timestamps": "May 20, 2023, 7:00:00 AM",
         "floorEth": 2.2889,
         "floorUsd": 4105.02393,
         "salesCount": 46,
-        "volumeEth": 107.18038000000001,
+        "volumeEth": 107.18038000000004,
         "volumeUsd": 194887.10412
       },
       {
@@ -25332,7 +25332,7 @@
         "floorEth": 2.0499,
         "floorUsd": 3714.68878,
         "salesCount": 1079,
-        "volumeEth": 2456.538470000011,
+        "volumeEth": 2456.5384699999972,
         "volumeUsd": 4454721.730189982
       },
       {
@@ -25340,32 +25340,32 @@
         "floorEth": 2.17998,
         "floorUsd": 3923.3754054,
         "salesCount": 106,
-        "volumeEth": 243.06226999999993,
-        "volumeUsd": 443143.5092400004
+        "volumeEth": 243.06226999999973,
+        "volumeUsd": 443143.5092400002
       },
       {
         "timestamps": "May 29, 2023, 7:00:00 AM",
         "floorEth": 2.1399,
         "floorUsd": 3882.48238,
         "salesCount": 91,
-        "volumeEth": 200.76050000000018,
-        "volumeUsd": 366119.3818099997
+        "volumeEth": 200.76050000000012,
+        "volumeUsd": 366119.38181
       },
       {
         "timestamps": "Jun 1, 2023, 7:00:00 AM",
         "floorEth": 1.985,
         "floorUsd": 3697.21943,
         "salesCount": 224,
-        "volumeEth": 451.5616999999997,
-        "volumeUsd": 858919.7495299983
+        "volumeEth": 451.56170000000026,
+        "volumeUsd": 858919.7495299998
       },
       {
         "timestamps": "Jun 4, 2023, 7:00:00 AM",
         "floorEth": 2.04635,
         "floorUsd": 3830.5421015,
         "salesCount": 212,
-        "volumeEth": 508.3225000000004,
-        "volumeUsd": 949027.5665300004
+        "volumeEth": 508.32250000000033,
+        "volumeUsd": 949027.5665299997
       },
       {
         "timestamps": "Jun 7, 2023, 7:00:00 AM",
@@ -25380,63 +25380,63 @@
         "floorEth": 2.18,
         "floorUsd": 3998.12312,
         "salesCount": 61,
-        "volumeEth": 138.05338999999998,
-        "volumeUsd": 254716.50564
+        "volumeEth": 138.05339000000004,
+        "volumeUsd": 254716.50564000005
       },
       {
         "timestamps": "Jun 13, 2023, 7:00:00 AM",
         "floorEth": 2.08,
         "floorUsd": 3711.54084,
         "salesCount": 38,
-        "volumeEth": 82.19009999999999,
-        "volumeUsd": 150389.67438
+        "volumeEth": 82.1901,
+        "volumeUsd": 150389.67438000004
       },
       {
         "timestamps": "Jun 16, 2023, 7:00:00 AM",
         "floorEth": 2.02,
         "floorUsd": 3347.47764,
         "salesCount": 72,
-        "volumeEth": 146.14397,
-        "volumeUsd": 248291.11223999993
+        "volumeEth": 146.14396999999994,
+        "volumeUsd": 248291.1122399999
       },
       {
         "timestamps": "Jun 19, 2023, 7:00:00 AM",
         "floorEth": 1.9,
         "floorUsd": 3280.10834,
         "salesCount": 130,
-        "volumeEth": 263.3288999999996,
-        "volumeUsd": 445784.5595299992
+        "volumeEth": 263.3289,
+        "volumeUsd": 445784.55952999956
       },
       {
         "timestamps": "Jun 22, 2023, 7:00:00 AM",
         "floorEth": 1.635,
         "floorUsd": 2926.96137,
         "salesCount": 194,
-        "volumeEth": 354.1995499999996,
-        "volumeUsd": 622631.4496299995
+        "volumeEth": 354.19955,
+        "volumeUsd": 622631.4496299997
       },
       {
         "timestamps": "Jun 25, 2023, 7:00:00 AM",
         "floorEth": 1.569,
         "floorUsd": 2914.60906,
         "salesCount": 131,
-        "volumeEth": 211.67799000000002,
-        "volumeUsd": 398285.09501000016
+        "volumeEth": 211.67798999999988,
+        "volumeUsd": 398285.09500999964
       },
       {
         "timestamps": "Jun 28, 2023, 7:00:00 AM",
         "floorEth": 1.48,
         "floorUsd": 2752.50758,
         "salesCount": 112,
-        "volumeEth": 178.83868000000012,
-        "volumeUsd": 336556.74831
+        "volumeEth": 178.83868,
+        "volumeUsd": 336556.7483099998
       },
       {
         "timestamps": "Jul 1, 2023, 7:00:00 AM",
         "floorEth": 1.299,
         "floorUsd": 2405.7220199999997,
         "salesCount": 195,
-        "volumeEth": 288.5652500000002,
+        "volumeEth": 288.56524999999993,
         "volumeUsd": 532984.5343799995
       },
       {
@@ -25445,22 +25445,22 @@
         "floorUsd": 2407.62537,
         "salesCount": 192,
         "volumeEth": 273.3537100000002,
-        "volumeUsd": 528439.9189100001
+        "volumeUsd": 528439.9189099995
       },
       {
         "timestamps": "Jul 7, 2023, 7:00:00 AM",
         "floorEth": 1.43771,
         "floorUsd": 2809.75705,
         "salesCount": 165,
-        "volumeEth": 293.83979999999997,
-        "volumeUsd": 570767.4786800001
+        "volumeEth": 293.8398000000001,
+        "volumeUsd": 570767.4786799998
       },
       {
         "timestamps": "Jul 10, 2023, 7:00:00 AM",
         "floorEth": 1.645,
         "floorUsd": 3067.70883,
         "salesCount": 83,
-        "volumeEth": 141.2323,
+        "volumeEth": 141.23230000000004,
         "volumeUsd": 263237.7498
       },
       {
@@ -25476,31 +25476,31 @@
         "floorEth": 1.48999,
         "floorUsd": 2789.2651,
         "salesCount": 70,
-        "volumeEth": 116.01241000000005,
-        "volumeUsd": 222745.97726999992
+        "volumeEth": 116.01241000000003,
+        "volumeUsd": 222745.9772700001
       },
       {
         "timestamps": "Jul 19, 2023, 7:00:00 AM",
         "floorEth": 1.52,
         "floorUsd": 2906.1032,
         "salesCount": 63,
-        "volumeEth": 104.81678999999998,
-        "volumeUsd": 201589.51908
+        "volumeEth": 104.81679,
+        "volumeUsd": 201589.51908000006
       },
       {
         "timestamps": "Jul 22, 2023, 7:00:00 AM",
         "floorEth": 1.5299,
         "floorUsd": 2902.52492,
         "salesCount": 37,
-        "volumeEth": 65.81649,
-        "volumeUsd": 124554.48101999999
+        "volumeEth": 65.81648999999999,
+        "volumeUsd": 124554.48102000002
       },
       {
         "timestamps": "Jul 25, 2023, 7:00:00 AM",
         "floorEth": 1.5578,
         "floorUsd": 2894.87718,
         "salesCount": 23,
-        "volumeEth": 38.297069999999984,
+        "volumeEth": 38.29707,
         "volumeUsd": 71627.28053
       },
       {
@@ -25509,31 +25509,31 @@
         "floorUsd": 2848.9076,
         "salesCount": 71,
         "volumeEth": 121.22170000000003,
-        "volumeUsd": 225761.4936199999
+        "volumeUsd": 225761.49361999988
       },
       {
         "timestamps": "Jul 31, 2023, 7:00:00 AM",
         "floorEth": 1.51,
         "floorUsd": 2820.664,
         "salesCount": 58,
-        "volumeEth": 92.34860000000002,
-        "volumeUsd": 172392.96428
+        "volumeEth": 92.34860000000005,
+        "volumeUsd": 172392.9642799999
       },
       {
         "timestamps": "Aug 3, 2023, 7:00:00 AM",
         "floorEth": 1.36,
         "floorUsd": 2542.85335,
         "salesCount": 73,
-        "volumeEth": 109.35468999999999,
-        "volumeUsd": 204009.12284
+        "volumeEth": 109.35469,
+        "volumeUsd": 204009.12283999997
       },
       {
         "timestamps": "Aug 6, 2023, 7:00:00 AM",
         "floorEth": 1.357,
         "floorUsd": 2488.9705740000004,
         "salesCount": 146,
-        "volumeEth": 222.43261000000015,
-        "volumeUsd": 408689.47571000014
+        "volumeEth": 222.43261000000018,
+        "volumeUsd": 408689.47571
       },
       {
         "timestamps": "Aug 9, 2023, 7:00:00 AM",
@@ -25541,23 +25541,23 @@
         "floorUsd": 2719.648678,
         "salesCount": 52,
         "volumeEth": 84.98121,
-        "volumeUsd": 155392.11380000005
+        "volumeUsd": 155392.11379999996
       },
       {
         "timestamps": "Aug 12, 2023, 7:00:00 AM",
         "floorEth": 1.41,
         "floorUsd": 2609.1063,
         "salesCount": 179,
-        "volumeEth": 290.58117,
-        "volumeUsd": 538551.9019399998
+        "volumeEth": 290.5811699999999,
+        "volumeUsd": 538551.90194
       },
       {
         "timestamps": "Aug 15, 2023, 7:00:00 AM",
         "floorEth": 1.426,
         "floorUsd": 2632.34283,
         "salesCount": 65,
-        "volumeEth": 106.3952,
-        "volumeUsd": 196504.3028599999
+        "volumeEth": 106.39520000000002,
+        "volumeUsd": 196504.30285999994
       },
       {
         "timestamps": "Aug 18, 2023, 7:00:00 AM",
@@ -25565,22 +25565,22 @@
         "floorUsd": 2564.1082,
         "salesCount": 48,
         "volumeEth": 71.59315000000001,
-        "volumeUsd": 130761.82272
+        "volumeUsd": 130761.82271999997
       },
       {
         "timestamps": "Aug 21, 2023, 7:00:00 AM",
         "floorEth": 1.35,
         "floorUsd": 2253.46516,
         "salesCount": 56,
-        "volumeEth": 104.52049999999998,
-        "volumeUsd": 175916.74019000004
+        "volumeEth": 104.52050000000003,
+        "volumeUsd": 175916.74018999992
       },
       {
         "timestamps": "Aug 24, 2023, 7:00:00 AM",
         "floorEth": 1.2,
         "floorUsd": 1960.9887600000002,
         "salesCount": 63,
-        "volumeEth": 83.82423000000001,
+        "volumeEth": 83.82422999999999,
         "volumeUsd": 139753.23360000004
       },
       {
@@ -25589,38 +25589,38 @@
         "floorUsd": 2022.56648,
         "salesCount": 47,
         "volumeEth": 63.72508999999999,
-        "volumeUsd": 105776.65387999998
+        "volumeUsd": 105776.65388
       },
       {
         "timestamps": "Aug 30, 2023, 7:00:00 AM",
         "floorEth": 1.2599,
         "floorUsd": 2078.5211999999997,
         "salesCount": 85,
-        "volumeEth": 118.15109999999999,
-        "volumeUsd": 195263.3274
+        "volumeEth": 118.1511,
+        "volumeUsd": 195263.32739999995
       },
       {
         "timestamps": "Sep 2, 2023, 7:00:00 AM",
         "floorEth": 1.26999,
         "floorUsd": 2107.82817,
         "salesCount": 96,
-        "volumeEth": 136.9189900000001,
-        "volumeUsd": 233776.05382999996
+        "volumeEth": 136.91899000000004,
+        "volumeUsd": 233776.05382999987
       },
       {
         "timestamps": "Sep 5, 2023, 7:00:00 AM",
         "floorEth": 1.349,
         "floorUsd": 2184.08496,
         "salesCount": 41,
-        "volumeEth": 57.88641000000003,
-        "volumeUsd": 94654.25338999995
+        "volumeEth": 57.88641000000002,
+        "volumeUsd": 94654.25338999998
       },
       {
         "timestamps": "Sep 8, 2023, 7:00:00 AM",
         "floorEth": 1.3378,
         "floorUsd": 2161.017518,
         "salesCount": 56,
-        "volumeEth": 81.6832,
+        "volumeEth": 81.68319999999999,
         "volumeUsd": 133386.94164999996
       },
       {
@@ -25628,8 +25628,8 @@
         "floorEth": 1.338,
         "floorUsd": 2180.1130000000003,
         "salesCount": 114,
-        "volumeEth": 157.41180000000006,
-        "volumeUsd": 258674.9769700001
+        "volumeEth": 157.4118000000001,
+        "volumeUsd": 258674.97696999976
       },
       {
         "timestamps": "Sep 14, 2023, 7:00:00 AM",
@@ -25644,8 +25644,8 @@
         "floorEth": 1.209,
         "floorUsd": 1943.75367,
         "salesCount": 31,
-        "volumeEth": 38.65304000000002,
-        "volumeUsd": 62413.04871000002
+        "volumeEth": 38.65304000000001,
+        "volumeUsd": 62413.04871000001
       },
       {
         "timestamps": "Sep 20, 2023, 7:00:00 AM",
@@ -25661,111 +25661,111 @@
         "floorUsd": 1876.03982,
         "salesCount": 97,
         "volumeEth": 110.92908999999995,
-        "volumeUsd": 179784.31228
+        "volumeUsd": 179784.31228000013
       },
       {
         "timestamps": "Sep 26, 2023, 7:00:00 AM",
         "floorEth": 1.1833,
         "floorUsd": 1874.13923,
         "salesCount": 41,
-        "volumeEth": 34.93021,
-        "volumeUsd": 55467.29223
+        "volumeEth": 34.93020999999999,
+        "volumeUsd": 55467.29223000002
       },
       {
         "timestamps": "Sep 29, 2023, 7:00:00 AM",
         "floorEth": 1.18,
         "floorUsd": 1884.932,
         "salesCount": 51,
-        "volumeEth": 63.882860000000015,
-        "volumeUsd": 101604.84556000002
+        "volumeEth": 63.88286000000001,
+        "volumeUsd": 101604.84555999997
       },
       {
         "timestamps": "Oct 2, 2023, 7:00:00 AM",
         "floorEth": 1.1879,
         "floorUsd": 1897.73117,
         "salesCount": 112,
-        "volumeEth": 135.47933,
-        "volumeUsd": 224333.55041999984
+        "volumeEth": 135.47932999999998,
+        "volumeUsd": 224333.55041999993
       },
       {
         "timestamps": "Oct 5, 2023, 7:00:00 AM",
         "floorEth": 1.2199,
         "floorUsd": 2028.7104392999997,
         "salesCount": 69,
-        "volumeEth": 87.04764999999998,
-        "volumeUsd": 147206.03854999997
+        "volumeEth": 87.04764999999999,
+        "volumeUsd": 147206.0385499999
       },
       {
         "timestamps": "Oct 8, 2023, 7:00:00 AM",
         "floorEth": 1.1999,
         "floorUsd": 1935.43257,
         "salesCount": 114,
-        "volumeEth": 141.56460999999996,
-        "volumeUsd": 230741.98027999979
+        "volumeEth": 141.56461,
+        "volumeUsd": 230741.98027999996
       },
       {
         "timestamps": "Oct 11, 2023, 7:00:00 AM",
         "floorEth": 1.1897,
         "floorUsd": 1867.3004,
         "salesCount": 88,
-        "volumeEth": 107.05606999999996,
-        "volumeUsd": 174232.77946000008
+        "volumeEth": 107.05606999999998,
+        "volumeUsd": 174232.7794600001
       },
       {
         "timestamps": "Oct 14, 2023, 7:00:00 AM",
         "floorEth": 1.17,
         "floorUsd": 1790.2136205,
         "salesCount": 127,
-        "volumeEth": 155.74455000000003,
-        "volumeUsd": 243506.0749099998
+        "volumeEth": 155.74455000000017,
+        "volumeUsd": 243506.07490999997
       },
       {
         "timestamps": "Oct 17, 2023, 7:00:00 AM",
         "floorEth": 1.16,
         "floorUsd": 1798.07098,
         "salesCount": 161,
-        "volumeEth": 190.98184000000012,
-        "volumeUsd": 295594.57196999993
+        "volumeEth": 190.98184,
+        "volumeUsd": 295594.5719699997
       },
       {
         "timestamps": "Oct 20, 2023, 7:00:00 AM",
         "floorEth": 1.169,
         "floorUsd": 1820.05395,
         "salesCount": 51,
-        "volumeEth": 60.50374999999998,
-        "volumeUsd": 95232.82892000003
+        "volumeEth": 60.50374999999999,
+        "volumeUsd": 95232.82891999999
       },
       {
         "timestamps": "Oct 23, 2023, 7:00:00 AM",
         "floorEth": 1.16932,
         "floorUsd": 1827.8553645000002,
         "salesCount": 198,
-        "volumeEth": 254.12139999999954,
-        "volumeUsd": 401873.31206000026
+        "volumeEth": 254.12139999999982,
+        "volumeUsd": 401873.31206000043
       },
       {
         "timestamps": "Oct 26, 2023, 7:00:00 AM",
         "floorEth": 1.34,
         "floorUsd": 2183.25601,
         "salesCount": 146,
-        "volumeEth": 217.32927000000012,
-        "volumeUsd": 370305.68223000003
+        "volumeEth": 217.32927,
+        "volumeUsd": 370305.68223000015
       },
       {
         "timestamps": "Oct 29, 2023, 7:00:00 AM",
         "floorEth": 1.4656,
         "floorUsd": 2581.874521,
         "salesCount": 61,
-        "volumeEth": 94.29181999999999,
-        "volumeUsd": 168781.04061999996
+        "volumeEth": 94.29181999999997,
+        "volumeUsd": 168781.04062
       },
       {
         "timestamps": "Nov 1, 2023, 7:00:00 AM",
         "floorEth": 1.44,
         "floorUsd": 2589.3582,
         "salesCount": 86,
-        "volumeEth": 134.64578000000003,
-        "volumeUsd": 242451.81465999983
+        "volumeEth": 134.64578000000006,
+        "volumeUsd": 242451.81465999968
       },
       {
         "timestamps": "Nov 4, 2023, 7:00:00 AM",
@@ -25773,7 +25773,7 @@
         "floorUsd": 1846.48223,
         "salesCount": 69,
         "volumeEth": 103.26343999999997,
-        "volumeUsd": 188135.25916999992
+        "volumeUsd": 188135.25916999995
       },
       {
         "timestamps": "Nov 7, 2023, 7:00:00 AM",
@@ -25781,102 +25781,102 @@
         "floorUsd": 2504.09694,
         "salesCount": 157,
         "volumeEth": 301.3894300000002,
-        "volumeUsd": 564056.4305700003
+        "volumeUsd": 564056.4305700001
       },
       {
         "timestamps": "Nov 10, 2023, 7:00:00 AM",
         "floorEth": 1.8799,
         "floorUsd": 3543.4239999999995,
         "salesCount": 383,
-        "volumeEth": 930.8635699999996,
-        "volumeUsd": 1761836.7341100008
+        "volumeEth": 930.8635699999994,
+        "volumeUsd": 1761836.7341099984
       },
       {
         "timestamps": "Nov 13, 2023, 7:00:00 AM",
         "floorEth": 2.27997,
         "floorUsd": 4314.42844,
         "salesCount": 202,
-        "volumeEth": 509.43076000000025,
-        "volumeUsd": 1048659.25689
+        "volumeEth": 509.4307599999999,
+        "volumeUsd": 1048659.2568900003
       },
       {
         "timestamps": "Nov 16, 2023, 7:00:00 AM",
         "floorEth": 2.026,
         "floorUsd": 4010.40622,
         "salesCount": 175,
-        "volumeEth": 382.0348099999998,
-        "volumeUsd": 778434.5284200008
+        "volumeEth": 382.03481000000005,
+        "volumeUsd": 778434.5284200007
       },
       {
         "timestamps": "Nov 19, 2023, 7:00:00 AM",
         "floorEth": 1.918,
         "floorUsd": 3713.907865,
         "salesCount": 107,
-        "volumeEth": 211.35427999999996,
-        "volumeUsd": 426838.99435999984
+        "volumeEth": 211.35427999999985,
+        "volumeUsd": 426838.99435999966
       },
       {
         "timestamps": "Nov 22, 2023, 7:00:00 AM",
         "floorEth": 1.8,
         "floorUsd": 3591.585,
         "salesCount": 55,
-        "volumeEth": 106.97855,
-        "volumeUsd": 214008.90589999998
+        "volumeEth": 106.97855000000003,
+        "volumeUsd": 214008.90589999995
       },
       {
         "timestamps": "Nov 25, 2023, 7:00:00 AM",
         "floorEth": 1.8233,
         "floorUsd": 3531.2540820000004,
         "salesCount": 243,
-        "volumeEth": 512.5790999999999,
-        "volumeUsd": 1028517.3344200002
+        "volumeEth": 512.5791000000004,
+        "volumeUsd": 1028517.3344199996
       },
       {
         "timestamps": "Nov 28, 2023, 7:00:00 AM",
         "floorEth": 2.14995,
         "floorUsd": 4381.24085,
         "salesCount": 288,
-        "volumeEth": 642.6840100000021,
-        "volumeUsd": 1334521.4272900026
+        "volumeEth": 642.6840100000011,
+        "volumeUsd": 1334521.4272899998
       },
       {
         "timestamps": "Dec 1, 2023, 7:00:00 AM",
         "floorEth": 1.965,
         "floorUsd": 3980.96685,
         "salesCount": 240,
-        "volumeEth": 499.44558999999987,
-        "volumeUsd": 1020215.4491500005
+        "volumeEth": 499.44558999999936,
+        "volumeUsd": 1020215.4491500009
       },
       {
         "timestamps": "Dec 4, 2023, 7:00:00 AM",
         "floorEth": 1.96,
         "floorUsd": 3970.83716,
         "salesCount": 335,
-        "volumeEth": 702.8151299999982,
-        "volumeUsd": 1465854.19534
+        "volumeEth": 702.8151299999985,
+        "volumeUsd": 1465854.1953399992
       },
       {
         "timestamps": "Dec 7, 2023, 7:00:00 AM",
         "floorEth": 2.09,
         "floorUsd": 4644.29256,
         "salesCount": 128,
-        "volumeEth": 279.15972000000016,
-        "volumeUsd": 614224.09928
+        "volumeEth": 279.15971999999994,
+        "volumeUsd": 614224.0992800001
       },
       {
         "timestamps": "Dec 10, 2023, 7:00:00 AM",
         "floorEth": 1.994,
         "floorUsd": 4463.82768,
         "salesCount": 105,
-        "volumeEth": 222.64518999999999,
-        "volumeUsd": 514308.6031200003
+        "volumeEth": 222.64518999999996,
+        "volumeUsd": 514308.6031200002
       },
       {
         "timestamps": "Dec 13, 2023, 7:00:00 AM",
         "floorEth": 2.0298,
         "floorUsd": 4502.599179999999,
         "salesCount": 90,
-        "volumeEth": 189.71800999999994,
+        "volumeEth": 189.7180099999999,
         "volumeUsd": 442895.07761999994
       },
       {
@@ -25884,24 +25884,24 @@
         "floorEth": 1.985,
         "floorUsd": 4431.303045000001,
         "salesCount": 90,
-        "volumeEth": 178.66703,
-        "volumeUsd": 403960.9137900005
+        "volumeEth": 178.6670299999999,
+        "volumeUsd": 403960.9137900004
       },
       {
         "timestamps": "Dec 19, 2023, 7:00:00 AM",
         "floorEth": 1.677,
         "floorUsd": 3568.4376,
         "salesCount": 117,
-        "volumeEth": 217.26372,
-        "volumeUsd": 490123.91056
+        "volumeEth": 217.26372000000006,
+        "volumeUsd": 490123.9105600001
       },
       {
         "timestamps": "Dec 22, 2023, 7:00:00 AM",
         "floorEth": 1.78,
         "floorUsd": 3874.77416,
         "salesCount": 57,
-        "volumeEth": 111.75112000000004,
-        "volumeUsd": 245353.02657000007
+        "volumeEth": 111.75112000000003,
+        "volumeUsd": 245353.02657000002
       },
       {
         "timestamps": "Dec 25, 2023, 7:00:00 AM",
@@ -25909,7 +25909,7 @@
         "floorUsd": 3893.40431,
         "salesCount": 64,
         "volumeEth": 115.49411999999998,
-        "volumeUsd": 260537.48631999988
+        "volumeUsd": 260537.4863199999
       },
       {
         "timestamps": "Dec 28, 2023, 7:00:00 AM",
@@ -25917,39 +25917,39 @@
         "floorUsd": 3680.9457,
         "salesCount": 36,
         "volumeEth": 62.16617999999999,
-        "volumeUsd": 140905.59237999996
+        "volumeUsd": 140905.59238000002
       },
       {
         "timestamps": "Dec 31, 2023, 7:00:00 AM",
         "floorEth": 1.66,
         "floorUsd": 3861.53164,
         "salesCount": 41,
-        "volumeEth": 67.37915999999997,
-        "volumeUsd": 157570.90209999998
+        "volumeEth": 67.37915999999998,
+        "volumeUsd": 157570.90210000006
       },
       {
         "timestamps": "Jan 3, 2024, 7:00:00 AM",
         "floorEth": 1.619,
         "floorUsd": 3692.8013849999998,
         "salesCount": 43,
-        "volumeEth": 72.77139999999997,
-        "volumeUsd": 167241.82795
+        "volumeEth": 72.77139999999999,
+        "volumeUsd": 167241.82794999995
       },
       {
         "timestamps": "Jan 6, 2024, 7:00:00 AM",
         "floorEth": 1.65,
         "floorUsd": 3628.548,
         "salesCount": 185,
-        "volumeEth": 357.70074000000017,
-        "volumeUsd": 805853.6155600001
+        "volumeEth": 357.7007400000001,
+        "volumeUsd": 805853.61556
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 2.0199,
-        "floorUsd": 4550.854899,
-        "salesCount": 36,
-        "volumeEth": 73.80169000000001,
-        "volumeUsd": 167314.85514000006
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 1.965,
+        "floorUsd": 4419.678,
+        "salesCount": 94,
+        "volumeEth": 196.34859999999986,
+        "volumeUsd": 445025.6983199999
       }
     ]
   },
@@ -27800,16 +27800,16 @@
         "floorEth": 1.499,
         "floorUsd": 3316.75624,
         "salesCount": 491,
-        "volumeEth": 827.5486999999979,
-        "volumeUsd": 1872993.2590799972
+        "volumeEth": 827.5486999999999,
+        "volumeUsd": 1872993.2590800005
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 1.639,
-        "floorUsd": 3692.6833900000006,
-        "salesCount": 82,
-        "volumeEth": 151.54565000000005,
-        "volumeUsd": 343584.53127999965
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 1.5543,
+        "floorUsd": 3495.9315599999995,
+        "salesCount": 117,
+        "volumeEth": 209.50465000000023,
+        "volumeUsd": 474901.17396999954
       }
     ]
   },
@@ -28456,9 +28456,9 @@
         "volumeUsd": 271207.86124999996
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 1.2446,
-        "floorUsd": 2804.096246,
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 1.1499,
+        "floorUsd": 2586.35508,
         "salesCount": 10,
         "volumeEth": 11.908000000000001,
         "volumeUsd": 27001.85675
@@ -28964,9 +28964,9 @@
         "volumeUsd": 135461.11088
       },
       {
-        "timestamps": "Jan 7, 2024, 2:02:47 AM",
-        "floorEth": 6.6635,
-        "floorUsd": 15106.73446,
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 6.66319,
+        "floorUsd": 15106.03166,
         "salesCount": 1,
         "volumeEth": 6.52,
         "volumeUsd": 14545.31272
@@ -29033,14 +29033,14 @@
         "floorUsd": 3926.54241,
         "salesCount": 13,
         "volumeEth": 27.34877,
-        "volumeUsd": 44907.22233397674
+        "volumeUsd": 44907.22233397673
       },
       {
         "timestamps": "Mar 9, 2023, 7:00:00 AM",
         "floorEth": 1.85,
         "floorUsd": 3843.44098,
         "salesCount": 22,
-        "volumeEth": 42.576899999999995,
+        "volumeEth": 42.5769,
         "volumeUsd": 66614.20602008677
       },
       {
@@ -29049,15 +29049,15 @@
         "floorUsd": 3926.54241,
         "salesCount": 6,
         "volumeEth": 13.979,
-        "volumeUsd": 20788.33532467338
+        "volumeUsd": 20788.335324673382
       },
       {
         "timestamps": "Mar 15, 2023, 7:00:00 AM",
         "floorEth": 1.749,
         "floorUsd": 3633.60988,
         "salesCount": 43,
-        "volumeEth": 84.21020999999999,
-        "volumeUsd": 132231.488883
+        "volumeEth": 84.21020999999998,
+        "volumeUsd": 132231.48888300004
       },
       {
         "timestamps": "Mar 18, 2023, 7:00:00 AM",
@@ -29065,7 +29065,7 @@
         "floorUsd": 3479.87224,
         "salesCount": 15,
         "volumeEth": 25.94554,
-        "volumeUsd": 43902.93198759065
+        "volumeUsd": 43902.93198759066
       },
       {
         "timestamps": "Mar 21, 2023, 7:00:00 AM",
@@ -29080,8 +29080,8 @@
         "floorEth": 1.47,
         "floorUsd": 3053.97743,
         "salesCount": 23,
-        "volumeEth": 35.02888,
-        "volumeUsd": 62366.899315760835
+        "volumeEth": 35.028879999999994,
+        "volumeUsd": 62366.89931576084
       },
       {
         "timestamps": "Mar 27, 2023, 7:00:00 AM",
@@ -29089,15 +29089,15 @@
         "floorUsd": 2700.79636,
         "salesCount": 25,
         "volumeEth": 35.092,
-        "volumeUsd": 61257.88180023565
+        "volumeUsd": 61257.88180023564
       },
       {
         "timestamps": "Mar 30, 2023, 7:00:00 AM",
         "floorEth": 1.35,
         "floorUsd": 2804.67315,
         "salesCount": 23,
-        "volumeEth": 34.88256,
-        "volumeUsd": 61793.28182446982
+        "volumeEth": 34.88255999999999,
+        "volumeUsd": 61793.281824469836
       },
       {
         "timestamps": "Apr 2, 2023, 7:00:00 AM",
@@ -29105,14 +29105,14 @@
         "floorUsd": 2842.06879,
         "salesCount": 31,
         "volumeEth": 45.04775,
-        "volumeUsd": 81313.13692866177
+        "volumeUsd": 81313.13692866176
       },
       {
         "timestamps": "Apr 5, 2023, 7:00:00 AM",
         "floorEth": 1.35,
         "floorUsd": 2804.67315,
         "salesCount": 17,
-        "volumeEth": 26.45201,
+        "volumeEth": 26.452009999999998,
         "volumeUsd": 47938.392199051865
       },
       {
@@ -29121,7 +29121,7 @@
         "floorUsd": 2472.26744,
         "salesCount": 23,
         "volumeEth": 28.88436,
-        "volumeUsd": 54375.76682514969
+        "volumeUsd": 54375.76682514968
       },
       {
         "timestamps": "Apr 11, 2023, 7:00:00 AM",
@@ -29129,15 +29129,15 @@
         "floorUsd": 2387.08848,
         "salesCount": 13,
         "volumeEth": 15.160709999999998,
-        "volumeUsd": 28111.137543470446
+        "volumeUsd": 28111.13754347045
       },
       {
         "timestamps": "Apr 14, 2023, 7:00:00 AM",
         "floorEth": 1.0,
         "floorUsd": 2077.53566,
         "salesCount": 35,
-        "volumeEth": 40.696600000000004,
-        "volumeUsd": 77829.58710000002
+        "volumeEth": 40.6966,
+        "volumeUsd": 77829.5871
       },
       {
         "timestamps": "Apr 17, 2023, 7:00:00 AM",
@@ -29168,8 +29168,8 @@
         "floorEth": 1.1,
         "floorUsd": 2012.6631000000002,
         "salesCount": 26,
-        "volumeEth": 33.86688,
-        "volumeUsd": 62805.42767
+        "volumeEth": 33.86687999999999,
+        "volumeUsd": 62805.427670000005
       },
       {
         "timestamps": "Apr 29, 2023, 7:00:00 AM",
@@ -29177,7 +29177,7 @@
         "floorUsd": 2045.32018,
         "salesCount": 30,
         "volumeEth": 36.31056,
-        "volumeUsd": 67974.12458000002
+        "volumeUsd": 67974.12458
       },
       {
         "timestamps": "May 2, 2023, 7:00:00 AM",
@@ -29185,22 +29185,22 @@
         "floorUsd": 1979.4945,
         "salesCount": 16,
         "volumeEth": 17.683999999999997,
-        "volumeUsd": 33532.91572
+        "volumeUsd": 33532.915720000005
       },
       {
         "timestamps": "May 5, 2023, 7:00:00 AM",
         "floorEth": 0.94,
         "floorUsd": 1721.9296,
         "salesCount": 25,
-        "volumeEth": 27.58884,
-        "volumeUsd": 51595.60229999999
+        "volumeEth": 27.588839999999998,
+        "volumeUsd": 51595.602299999984
       },
       {
         "timestamps": "May 8, 2023, 7:00:00 AM",
         "floorEth": 0.949,
         "floorUsd": 1778.0199999999998,
         "salesCount": 24,
-        "volumeEth": 24.014610000000005,
+        "volumeEth": 24.014609999999998,
         "volumeUsd": 46543.40436
       },
       {
@@ -29209,7 +29209,7 @@
         "floorUsd": 1753.76105,
         "salesCount": 20,
         "volumeEth": 21.08843,
-        "volumeUsd": 39572.50652
+        "volumeUsd": 39572.50652000001
       },
       {
         "timestamps": "May 14, 2023, 7:00:00 AM",
@@ -29217,15 +29217,15 @@
         "floorUsd": 1725.1093,
         "salesCount": 16,
         "volumeEth": 17.20311,
-        "volumeUsd": 31107.14326
+        "volumeUsd": 31107.143259999997
       },
       {
         "timestamps": "May 17, 2023, 7:00:00 AM",
         "floorEth": 1.049,
         "floorUsd": 1883.9730000000002,
         "salesCount": 23,
-        "volumeEth": 26.76714,
-        "volumeUsd": 48380.957559999995
+        "volumeEth": 26.767140000000005,
+        "volumeUsd": 48380.95755999999
       },
       {
         "timestamps": "May 20, 2023, 7:00:00 AM",
@@ -29233,7 +29233,7 @@
         "floorUsd": 1940.9085000000002,
         "salesCount": 44,
         "volumeEth": 55.7363,
-        "volumeUsd": 101373.61287000003
+        "volumeUsd": 101373.61287
       },
       {
         "timestamps": "May 23, 2023, 7:00:00 AM",
@@ -29241,15 +29241,15 @@
         "floorUsd": 2165.91488,
         "salesCount": 14,
         "volumeEth": 19.1515,
-        "volumeUsd": 34670.93988
+        "volumeUsd": 34670.939880000005
       },
       {
         "timestamps": "May 26, 2023, 7:00:00 AM",
         "floorEth": 1.1,
         "floorUsd": 2000.24161,
         "salesCount": 17,
-        "volumeEth": 21.397400000000005,
-        "volumeUsd": 38974.505979999994
+        "volumeEth": 21.3974,
+        "volumeUsd": 38974.50598
       },
       {
         "timestamps": "May 29, 2023, 7:00:00 AM",
@@ -29273,22 +29273,22 @@
         "floorUsd": 2206.7598,
         "salesCount": 12,
         "volumeEth": 17.03,
-        "volumeUsd": 31968.4193
+        "volumeUsd": 31968.419299999998
       },
       {
         "timestamps": "Jun 7, 2023, 7:00:00 AM",
         "floorEth": 1.1,
         "floorUsd": 1982.9700000000003,
         "salesCount": 14,
-        "volumeEth": 17.398590000000002,
-        "volumeUsd": 33007.23071999999
+        "volumeEth": 17.39859,
+        "volumeUsd": 33007.23072
       },
       {
         "timestamps": "Jun 10, 2023, 7:00:00 AM",
         "floorEth": 1.1,
         "floorUsd": 1995.04982,
         "salesCount": 10,
-        "volumeEth": 12.2449,
+        "volumeEth": 12.244900000000001,
         "volumeUsd": 22830.77609
       },
       {
@@ -29297,14 +29297,14 @@
         "floorUsd": 1908.85429,
         "salesCount": 23,
         "volumeEth": 27.2572,
-        "volumeUsd": 49038.87812999999
+        "volumeUsd": 49038.87813
       },
       {
         "timestamps": "Jun 16, 2023, 7:00:00 AM",
         "floorEth": 0.9999,
         "floorUsd": 1650.5116,
         "salesCount": 38,
-        "volumeEth": 39.56700000000001,
+        "volumeEth": 39.567000000000014,
         "volumeUsd": 67255.67047999999
       },
       {
@@ -29321,7 +29321,7 @@
         "floorUsd": 1734.7931,
         "salesCount": 20,
         "volumeEth": 22.409,
-        "volumeUsd": 38806.90669999999
+        "volumeUsd": 38806.90670000001
       },
       {
         "timestamps": "Jun 25, 2023, 7:00:00 AM",
@@ -29336,7 +29336,7 @@
         "floorEth": 0.9,
         "floorUsd": 1673.2710000000002,
         "salesCount": 19,
-        "volumeEth": 19.417599999999993,
+        "volumeEth": 19.4176,
         "volumeUsd": 36577.79042
       },
       {
@@ -29344,15 +29344,15 @@
         "floorEth": 0.9,
         "floorUsd": 1666.296,
         "salesCount": 83,
-        "volumeEth": 148.59619999999995,
-        "volumeUsd": 272600.87077000004
+        "volumeEth": 148.59619999999998,
+        "volumeUsd": 272600.87077
       },
       {
         "timestamps": "Jul 4, 2023, 7:00:00 AM",
         "floorEth": 0.938,
         "floorUsd": 1814.05437,
         "salesCount": 42,
-        "volumeEth": 48.86880000000001,
+        "volumeEth": 48.868800000000014,
         "volumeUsd": 94405.9953
       },
       {
@@ -29361,7 +29361,7 @@
         "floorUsd": 1872.241,
         "salesCount": 20,
         "volumeEth": 22.897999999999996,
-        "volumeUsd": 44177.11636
+        "volumeUsd": 44177.11635999999
       },
       {
         "timestamps": "Jul 10, 2023, 7:00:00 AM",
@@ -29376,7 +29376,7 @@
         "floorEth": 1.02,
         "floorUsd": 1901.87106,
         "salesCount": 16,
-        "volumeEth": 20.855400000000003,
+        "volumeEth": 20.855399999999996,
         "volumeUsd": 39159.93533000001
       },
       {
@@ -29384,15 +29384,15 @@
         "floorEth": 1.02,
         "floorUsd": 1965.5895,
         "salesCount": 11,
-        "volumeEth": 12.13005,
-        "volumeUsd": 23324.986269999998
+        "volumeEth": 12.130049999999999,
+        "volumeUsd": 23324.98627
       },
       {
         "timestamps": "Jul 19, 2023, 7:00:00 AM",
         "floorEth": 0.96,
         "floorUsd": 1835.4336,
         "salesCount": 7,
-        "volumeEth": 8.069899999999999,
+        "volumeEth": 8.0699,
         "volumeUsd": 15518.503659999998
       },
       {
@@ -29408,15 +29408,15 @@
         "floorEth": 1.013,
         "floorUsd": 1882.46924,
         "salesCount": 16,
-        "volumeEth": 18.348999999999997,
-        "volumeUsd": 34468.253039999996
+        "volumeEth": 18.349,
+        "volumeUsd": 34468.25304
       },
       {
         "timestamps": "Jul 28, 2023, 7:00:00 AM",
         "floorEth": 1.0,
         "floorUsd": 1849.94,
         "salesCount": 13,
-        "volumeEth": 14.6719,
+        "volumeEth": 14.671899999999999,
         "volumeUsd": 27291.31172
       },
       {
@@ -29424,7 +29424,7 @@
         "floorEth": 0.98,
         "floorUsd": 1818.586,
         "salesCount": 17,
-        "volumeEth": 17.839100000000002,
+        "volumeEth": 17.8391,
         "volumeUsd": 33328.53936
       },
       {
@@ -29432,7 +29432,7 @@
         "floorEth": 0.96,
         "floorUsd": 1795.8528,
         "salesCount": 15,
-        "volumeEth": 16.12918,
+        "volumeEth": 16.129179999999998,
         "volumeUsd": 30037.292589999997
       },
       {
@@ -29441,7 +29441,7 @@
         "floorUsd": 1773.60736,
         "salesCount": 19,
         "volumeEth": 20.717959999999998,
-        "volumeUsd": 38022.275910000004
+        "volumeUsd": 38022.27591
       },
       {
         "timestamps": "Aug 9, 2023, 7:00:00 AM",
@@ -29456,8 +29456,8 @@
         "floorEth": 0.8649,
         "floorUsd": 1603.282428,
         "salesCount": 21,
-        "volumeEth": 25.108600000000003,
-        "volumeUsd": 46556.49771
+        "volumeEth": 25.1086,
+        "volumeUsd": 46556.497709999996
       },
       {
         "timestamps": "Aug 15, 2023, 7:00:00 AM",
@@ -29465,7 +29465,7 @@
         "floorUsd": 1736.3398,
         "salesCount": 17,
         "volumeEth": 17.8603,
-        "volumeUsd": 32993.718380000006
+        "volumeUsd": 32993.71838
       },
       {
         "timestamps": "Aug 18, 2023, 7:00:00 AM",
@@ -29473,7 +29473,7 @@
         "floorUsd": 1718.98745,
         "salesCount": 7,
         "volumeEth": 7.9599,
-        "volumeUsd": 14568.42009
+        "volumeUsd": 14568.420090000003
       },
       {
         "timestamps": "Aug 21, 2023, 7:00:00 AM",
@@ -29488,7 +29488,7 @@
         "floorEth": 0.93,
         "floorUsd": 1517.4511200000002,
         "salesCount": 31,
-        "volumeEth": 34.2637,
+        "volumeEth": 34.26370000000001,
         "volumeUsd": 56820.25042
       },
       {
@@ -29497,15 +29497,15 @@
         "floorUsd": 1477.368,
         "salesCount": 16,
         "volumeEth": 15.198599999999999,
-        "volumeUsd": 25248.048300000002
+        "volumeUsd": 25248.0483
       },
       {
         "timestamps": "Aug 30, 2023, 7:00:00 AM",
         "floorEth": 0.9,
         "floorUsd": 1469.232,
         "salesCount": 10,
-        "volumeEth": 11.866000000000001,
-        "volumeUsd": 19635.46846
+        "volumeEth": 11.866,
+        "volumeUsd": 19635.468459999996
       },
       {
         "timestamps": "Sep 2, 2023, 7:00:00 AM",
@@ -29513,22 +29513,22 @@
         "floorUsd": 1393.46875,
         "salesCount": 9,
         "volumeEth": 8.41,
-        "volumeUsd": 14240.344229999999
+        "volumeUsd": 14240.34423
       },
       {
         "timestamps": "Sep 5, 2023, 7:00:00 AM",
         "floorEth": 0.8979,
         "floorUsd": 1455.193152,
         "salesCount": 18,
-        "volumeEth": 19.045199999999998,
-        "volumeUsd": 31175.05696
+        "volumeEth": 19.0452,
+        "volumeUsd": 31175.056959999998
       },
       {
         "timestamps": "Sep 8, 2023, 7:00:00 AM",
         "floorEth": 0.789,
         "floorUsd": 1286.45661,
         "salesCount": 29,
-        "volumeEth": 25.40329999999999,
+        "volumeEth": 25.403299999999987,
         "volumeUsd": 41460.817460000006
       },
       {
@@ -29537,14 +29537,14 @@
         "floorUsd": 1374.24108,
         "salesCount": 18,
         "volumeEth": 16.099700000000002,
-        "volumeUsd": 26445.180100000005
+        "volumeUsd": 26445.180099999998
       },
       {
         "timestamps": "Sep 14, 2023, 7:00:00 AM",
         "floorEth": 0.82999,
         "floorUsd": 1278.2995999999998,
         "salesCount": 19,
-        "volumeEth": 16.949199999999998,
+        "volumeEth": 16.9492,
         "volumeUsd": 27250.60415
       },
       {
@@ -29552,7 +29552,7 @@
         "floorEth": 0.8399,
         "floorUsd": 1350.33644,
         "salesCount": 25,
-        "volumeEth": 23.412,
+        "volumeEth": 23.412000000000003,
         "volumeUsd": 37843.8646
       },
       {
@@ -29560,16 +29560,16 @@
         "floorEth": 0.8499,
         "floorUsd": 1372.240041,
         "salesCount": 34,
-        "volumeEth": 30.5918,
-        "volumeUsd": 49920.15621
+        "volumeEth": 30.591800000000013,
+        "volumeUsd": 49920.15621000001
       },
       {
         "timestamps": "Sep 23, 2023, 7:00:00 AM",
         "floorEth": 0.79,
         "floorUsd": 1266.90101,
         "salesCount": 43,
-        "volumeEth": 38.7068,
-        "volumeUsd": 62889.5222
+        "volumeEth": 38.706799999999994,
+        "volumeUsd": 62889.52220000001
       },
       {
         "timestamps": "Sep 26, 2023, 7:00:00 AM",
@@ -29577,15 +29577,15 @@
         "floorUsd": 1217.461671,
         "salesCount": 19,
         "volumeEth": 16.373500000000003,
-        "volumeUsd": 26023.62782
+        "volumeUsd": 26023.627820000005
       },
       {
         "timestamps": "Sep 29, 2023, 7:00:00 AM",
         "floorEth": 0.72995,
         "floorUsd": 1159.50454,
         "salesCount": 31,
-        "volumeEth": 24.77208,
-        "volumeUsd": 39421.2257
+        "volumeEth": 24.772080000000006,
+        "volumeUsd": 39421.225699999995
       },
       {
         "timestamps": "Oct 2, 2023, 7:00:00 AM",
@@ -29593,22 +29593,22 @@
         "floorUsd": 1248.57746,
         "salesCount": 51,
         "volumeEth": 44.73548999999999,
-        "volumeUsd": 73109.01308000002
+        "volumeUsd": 73109.01307999999
       },
       {
         "timestamps": "Oct 5, 2023, 7:00:00 AM",
         "floorEth": 0.8297,
         "floorUsd": 1355.019225,
         "salesCount": 14,
-        "volumeEth": 12.5091,
-        "volumeUsd": 21058.03322
+        "volumeEth": 12.509100000000002,
+        "volumeUsd": 21058.033219999998
       },
       {
         "timestamps": "Oct 8, 2023, 7:00:00 AM",
         "floorEth": 0.82,
         "floorUsd": 1322.65581,
         "salesCount": 15,
-        "volumeEth": 11.8248,
+        "volumeEth": 11.824799999999998,
         "volumeUsd": 19429.740550000002
       },
       {
@@ -29616,7 +29616,7 @@
         "floorEth": 0.7299,
         "floorUsd": 1139.9242,
         "salesCount": 36,
-        "volumeEth": 27.383700000000008,
+        "volumeEth": 27.383700000000005,
         "volumeUsd": 44425.35175
       },
       {
@@ -29625,7 +29625,7 @@
         "floorUsd": 1111.475569,
         "salesCount": 58,
         "volumeEth": 47.34078000000001,
-        "volumeUsd": 73402.90924000002
+        "volumeUsd": 73402.90924
       },
       {
         "timestamps": "Oct 17, 2023, 7:00:00 AM",
@@ -29640,31 +29640,31 @@
         "floorEth": 0.8,
         "floorUsd": 1252.04847,
         "salesCount": 36,
-        "volumeEth": 32.8914,
-        "volumeUsd": 52129.05471
+        "volumeEth": 32.891400000000004,
+        "volumeUsd": 52129.054710000004
       },
       {
         "timestamps": "Oct 23, 2023, 7:00:00 AM",
         "floorEth": 0.7999,
         "floorUsd": 1270.38349,
         "salesCount": 35,
-        "volumeEth": 30.962899999999998,
-        "volumeUsd": 49236.531649999975
+        "volumeEth": 30.962899999999994,
+        "volumeUsd": 49236.53164999999
       },
       {
         "timestamps": "Oct 26, 2023, 7:00:00 AM",
         "floorEth": 0.71,
         "floorUsd": 1181.84515,
         "salesCount": 46,
-        "volumeEth": 37.0263,
-        "volumeUsd": 63053.34498000004
+        "volumeEth": 37.026300000000006,
+        "volumeUsd": 63053.344980000016
       },
       {
         "timestamps": "Oct 29, 2023, 7:00:00 AM",
         "floorEth": 0.74,
         "floorUsd": 1303.5321999999999,
         "salesCount": 28,
-        "volumeEth": 23.1114,
+        "volumeEth": 23.111400000000003,
         "volumeUsd": 41274.18696
       },
       {
@@ -29673,14 +29673,14 @@
         "floorUsd": 1509.04762,
         "salesCount": 60,
         "volumeEth": 59.536970000000025,
-        "volumeUsd": 106815.23288000003
+        "volumeUsd": 106815.23288000001
       },
       {
         "timestamps": "Nov 4, 2023, 7:00:00 AM",
         "floorEth": 0.78,
         "floorUsd": 1403.1732000000002,
         "salesCount": 33,
-        "volumeEth": 31.316769999999995,
+        "volumeEth": 31.31677,
         "volumeUsd": 56904.32458999999
       },
       {
@@ -29688,8 +29688,8 @@
         "floorEth": 0.83749,
         "floorUsd": 1508.24175,
         "salesCount": 110,
-        "volumeEth": 116.40809000000006,
-        "volumeUsd": 217466.28278
+        "volumeEth": 116.40808999999999,
+        "volumeUsd": 217466.28278000004
       },
       {
         "timestamps": "Nov 10, 2023, 7:00:00 AM",
@@ -29697,15 +29697,15 @@
         "floorUsd": 2073.28,
         "salesCount": 132,
         "volumeEth": 185.37759999999997,
-        "volumeUsd": 350747.79040999996
+        "volumeUsd": 350747.7904099999
       },
       {
         "timestamps": "Nov 13, 2023, 7:00:00 AM",
         "floorEth": 1.29,
         "floorUsd": 2440.02439,
         "salesCount": 39,
-        "volumeEth": 53.92565,
-        "volumeUsd": 112256.90489999998
+        "volumeEth": 53.92565000000001,
+        "volumeUsd": 112256.90489999996
       },
       {
         "timestamps": "Nov 16, 2023, 7:00:00 AM",
@@ -29713,31 +29713,31 @@
         "floorUsd": 2388.50161,
         "salesCount": 75,
         "volumeEth": 102.99529999999999,
-        "volumeUsd": 206727.67332999996
+        "volumeUsd": 206727.67333
       },
       {
         "timestamps": "Nov 19, 2023, 7:00:00 AM",
         "floorEth": 1.399,
         "floorUsd": 2701.0947,
         "salesCount": 71,
-        "volumeEth": 116.6601,
-        "volumeUsd": 233021.21906
+        "volumeEth": 116.66010000000001,
+        "volumeUsd": 233021.21906000003
       },
       {
         "timestamps": "Nov 22, 2023, 7:00:00 AM",
         "floorEth": 1.32,
         "floorUsd": 2669.55235,
         "salesCount": 39,
-        "volumeEth": 56.68559000000002,
-        "volumeUsd": 113329.8073
+        "volumeEth": 56.685590000000005,
+        "volumeUsd": 113329.80729999999
       },
       {
         "timestamps": "Nov 25, 2023, 7:00:00 AM",
         "floorEth": 1.279,
         "floorUsd": 2481.82891,
         "salesCount": 86,
-        "volumeEth": 133.74374999999998,
-        "volumeUsd": 272074.89656000014
+        "volumeEth": 133.74375,
+        "volumeUsd": 272074.8965600001
       },
       {
         "timestamps": "Nov 28, 2023, 7:00:00 AM",
@@ -29745,15 +29745,15 @@
         "floorUsd": 2954.93241,
         "salesCount": 267,
         "volumeEth": 557.3911600000001,
-        "volumeUsd": 1159474.9966499994
+        "volumeUsd": 1159474.9966500008
       },
       {
         "timestamps": "Dec 1, 2023, 7:00:00 AM",
         "floorEth": 2.09,
         "floorUsd": 4232.30225,
         "salesCount": 328,
-        "volumeEth": 864.3665100000006,
-        "volumeUsd": 1762185.8984000017
+        "volumeEth": 864.3665100000005,
+        "volumeUsd": 1762185.8984000022
       },
       {
         "timestamps": "Dec 4, 2023, 7:00:00 AM",
@@ -29761,14 +29761,14 @@
         "floorUsd": 4254.2658,
         "salesCount": 185,
         "volumeEth": 470.6425400000001,
-        "volumeUsd": 977408.6670299998
+        "volumeUsd": 977408.6670300004
       },
       {
         "timestamps": "Dec 7, 2023, 7:00:00 AM",
         "floorEth": 2.12,
         "floorUsd": 4863.48176,
         "salesCount": 204,
-        "volumeEth": 478.46205000000043,
+        "volumeEth": 478.4620500000004,
         "volumeUsd": 1064491.63893
       },
       {
@@ -29776,40 +29776,40 @@
         "floorEth": 2.0,
         "floorUsd": 4464.05088,
         "salesCount": 158,
-        "volumeEth": 379.75669000000045,
-        "volumeUsd": 868992.5990999996
+        "volumeEth": 379.75669000000016,
+        "volumeUsd": 868992.5990999995
       },
       {
         "timestamps": "Dec 13, 2023, 7:00:00 AM",
         "floorEth": 2.3,
         "floorUsd": 5427.74483,
         "salesCount": 309,
-        "volumeEth": 952.3868400000006,
-        "volumeUsd": 2224358.916710001
+        "volumeEth": 952.3868400000003,
+        "volumeUsd": 2224358.9167100005
       },
       {
         "timestamps": "Dec 16, 2023, 7:00:00 AM",
         "floorEth": 2.94,
         "floorUsd": 6421.3487000000005,
         "salesCount": 214,
-        "volumeEth": 723.2420400000001,
-        "volumeUsd": 1619788.5121699995
+        "volumeEth": 723.2420400000007,
+        "volumeUsd": 1619788.5121699993
       },
       {
         "timestamps": "Dec 19, 2023, 7:00:00 AM",
         "floorEth": 2.29,
         "floorUsd": 5101.97446,
         "salesCount": 88,
-        "volumeEth": 294.0931,
-        "volumeUsd": 660159.50261
+        "volumeEth": 294.09310000000005,
+        "volumeUsd": 660159.5026099999
       },
       {
         "timestamps": "Dec 22, 2023, 7:00:00 AM",
         "floorEth": 2.7336,
         "floorUsd": 6009.60475,
         "salesCount": 106,
-        "volumeEth": 359.0478199999998,
-        "volumeUsd": 785798.39401
+        "volumeEth": 359.0478199999999,
+        "volumeUsd": 785798.3940099999
       },
       {
         "timestamps": "Dec 25, 2023, 7:00:00 AM",
@@ -29817,31 +29817,31 @@
         "floorUsd": 5708.06049,
         "salesCount": 99,
         "volumeEth": 267.35398999999995,
-        "volumeUsd": 611632.8655999999
+        "volumeUsd": 611632.8656000001
       },
       {
         "timestamps": "Dec 28, 2023, 7:00:00 AM",
         "floorEth": 2.48995,
         "floorUsd": 5661.23152,
         "salesCount": 45,
-        "volumeEth": 117.99166999999994,
-        "volumeUsd": 268148.8458300002
+        "volumeEth": 117.99166999999997,
+        "volumeUsd": 268148.8458300001
       },
       {
         "timestamps": "Dec 31, 2023, 7:00:00 AM",
         "floorEth": 2.495,
         "floorUsd": 5666.42551,
         "salesCount": 38,
-        "volumeEth": 106.42455,
-        "volumeUsd": 249017.30987000006
+        "volumeEth": 106.42454999999998,
+        "volumeUsd": 249017.30987000003
       },
       {
         "timestamps": "Jan 3, 2024, 7:00:00 AM",
         "floorEth": 2.67,
         "floorUsd": 6123.23115,
         "salesCount": 28,
-        "volumeEth": 79.9298,
-        "volumeUsd": 183895.59944
+        "volumeEth": 79.92980000000001,
+        "volumeUsd": 183895.59943999996
       },
       {
         "timestamps": "Jan 6, 2024, 7:00:00 AM",
@@ -29849,15 +29849,15 @@
         "floorUsd": 5219.642999999999,
         "salesCount": 54,
         "volumeEth": 137.76700000000002,
-        "volumeUsd": 312359.94224999985
+        "volumeUsd": 312359.9422499999
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 2.488,
-        "floorUsd": 5605.488880000001,
-        "salesCount": 3,
-        "volumeEth": 7.3999999999999995,
-        "volumeUsd": 16776.44407
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 2.47,
+        "floorUsd": 5555.524,
+        "salesCount": 21,
+        "volumeEth": 49.1749,
+        "volumeUsd": 111419.83772999998
       }
     ]
   },
@@ -29968,9 +29968,9 @@
         "volumeUsd": 1124558.00129
       },
       {
-        "timestamps": "Jan 7, 2024, 2:00:09 AM",
-        "floorEth": 1.91,
-        "floorUsd": 4303.2491,
+        "timestamps": "Jan 7, 2024, 8:31:07 PM",
+        "floorEth": 1.849,
+        "floorUsd": 4158.770799999999,
         "salesCount": 19,
         "volumeEth": 37.14979,
         "volumeUsd": 84337.24092000003
@@ -30033,63 +30033,63 @@
         "floorUsd": 1338.56221,
         "salesCount": 160,
         "volumeEth": 130.62220000000008,
-        "volumeUsd": 203002.57346400025
+        "volumeUsd": 203002.573464
       },
       {
         "timestamps": "Oct 20, 2023, 7:00:00 AM",
         "floorEth": 0.75,
         "floorUsd": 1338.58006,
         "salesCount": 283,
-        "volumeEth": 228.2066599999999,
-        "volumeUsd": 358983.57970630063
+        "volumeEth": 228.20665999999963,
+        "volumeUsd": 358983.5797063006
       },
       {
         "timestamps": "Oct 23, 2023, 7:00:00 AM",
         "floorEth": 0.759,
         "floorUsd": 1354.64302,
         "salesCount": 192,
-        "volumeEth": 163.20154999999986,
-        "volumeUsd": 259809.2682190796
+        "volumeEth": 163.20155000000014,
+        "volumeUsd": 259809.26821907953
       },
       {
         "timestamps": "Oct 26, 2023, 7:00:00 AM",
         "floorEth": 0.68,
         "floorUsd": 1213.64592,
         "salesCount": 277,
-        "volumeEth": 208.92072,
-        "volumeUsd": 364367.01900620066
+        "volumeEth": 208.92072000000024,
+        "volumeUsd": 364367.0190062
       },
       {
         "timestamps": "Oct 29, 2023, 7:00:00 AM",
         "floorEth": 0.595,
         "floorUsd": 1059.4394,
         "salesCount": 272,
-        "volumeEth": 181.14416000000026,
-        "volumeUsd": 324759.2151699996
+        "volumeEth": 181.14416000000037,
+        "volumeUsd": 324759.2151699999
       },
       {
         "timestamps": "Nov 1, 2023, 7:00:00 AM",
         "floorEth": 0.59,
         "floorUsd": 1067.68719,
         "salesCount": 155,
-        "volumeEth": 99.59568,
-        "volumeUsd": 178532.8966199999
+        "volumeEth": 99.59567999999993,
+        "volumeUsd": 178532.89662
       },
       {
         "timestamps": "Nov 4, 2023, 7:00:00 AM",
         "floorEth": 0.55,
         "floorUsd": 990.49895,
         "salesCount": 304,
-        "volumeEth": 184.38118000000009,
-        "volumeUsd": 335936.8147799996
+        "volumeEth": 184.38118000000003,
+        "volumeUsd": 335936.81478000025
       },
       {
         "timestamps": "Nov 7, 2023, 7:00:00 AM",
         "floorEth": 0.574,
         "floorUsd": 1033.71658,
         "salesCount": 230,
-        "volumeEth": 148.5228699999998,
-        "volumeUsd": 274446.42475999985
+        "volumeEth": 148.5228699999999,
+        "volumeUsd": 274446.4247600001
       },
       {
         "timestamps": "Nov 10, 2023, 7:00:00 AM",
@@ -30097,79 +30097,79 @@
         "floorUsd": 1177.0813,
         "salesCount": 253,
         "volumeEth": 173.32235999999992,
-        "volumeUsd": 328003.1972700003
+        "volumeUsd": 328003.19726999995
       },
       {
         "timestamps": "Nov 13, 2023, 7:00:00 AM",
         "floorEth": 0.61,
         "floorUsd": 1180.27195,
         "salesCount": 200,
-        "volumeEth": 128.39656,
-        "volumeUsd": 260140.2056899998
+        "volumeEth": 128.39656000000002,
+        "volumeUsd": 260140.20569000015
       },
       {
         "timestamps": "Nov 16, 2023, 7:00:00 AM",
         "floorEth": 0.6088,
         "floorUsd": 1205.49723,
         "salesCount": 173,
-        "volumeEth": 116.72297000000009,
-        "volumeUsd": 237208.14059999993
+        "volumeEth": 116.72297000000005,
+        "volumeUsd": 237208.14059999984
       },
       {
         "timestamps": "Nov 19, 2023, 7:00:00 AM",
         "floorEth": 0.5875,
         "floorUsd": 1137.524846,
         "salesCount": 90,
-        "volumeEth": 59.70712999999999,
-        "volumeUsd": 119968.05144000005
+        "volumeEth": 59.70712999999998,
+        "volumeUsd": 119968.05143999994
       },
       {
         "timestamps": "Nov 22, 2023, 7:00:00 AM",
         "floorEth": 0.5749,
         "floorUsd": 1134.78011,
         "salesCount": 158,
-        "volumeEth": 96.74115000000002,
-        "volumeUsd": 192741.57961999997
+        "volumeEth": 96.74114999999996,
+        "volumeUsd": 192741.57962
       },
       {
         "timestamps": "Nov 25, 2023, 7:00:00 AM",
         "floorEth": 0.5824,
         "floorUsd": 1126.349952,
         "salesCount": 387,
-        "volumeEth": 256.1675799999999,
-        "volumeUsd": 512134.62191999983
+        "volumeEth": 256.1675799999996,
+        "volumeUsd": 512134.62192000035
       },
       {
         "timestamps": "Nov 28, 2023, 7:00:00 AM",
         "floorEth": 0.664,
         "floorUsd": 1369.34698,
         "salesCount": 418,
-        "volumeEth": 309.00085999999936,
-        "volumeUsd": 641666.5431699993
+        "volumeEth": 309.0008599999998,
+        "volumeUsd": 641666.5431699991
       },
       {
         "timestamps": "Dec 1, 2023, 7:00:00 AM",
         "floorEth": 0.62999,
         "floorUsd": 1280.96604,
         "salesCount": 776,
-        "volumeEth": 547.5107599999984,
-        "volumeUsd": 1121398.4185100032
+        "volumeEth": 547.5107600000007,
+        "volumeUsd": 1121398.4185100002
       },
       {
         "timestamps": "Dec 4, 2023, 7:00:00 AM",
         "floorEth": 0.62,
         "floorUsd": 1266.21083,
         "salesCount": 267,
-        "volumeEth": 179.2506199999998,
-        "volumeUsd": 372264.84231
+        "volumeEth": 179.25061999999986,
+        "volumeUsd": 372264.8423100004
       },
       {
         "timestamps": "Dec 7, 2023, 7:00:00 AM",
         "floorEth": 0.59,
         "floorUsd": 1313.8827999999999,
         "salesCount": 346,
-        "volumeEth": 228.03225999999984,
-        "volumeUsd": 507332.57653999905
+        "volumeEth": 228.03225999999995,
+        "volumeUsd": 507332.5765400003
       },
       {
         "timestamps": "Dec 10, 2023, 7:00:00 AM",
@@ -30177,15 +30177,15 @@
         "floorUsd": 1316.2254,
         "salesCount": 367,
         "volumeEth": 224.56184000000005,
-        "volumeUsd": 517488.3006099986
+        "volumeUsd": 517488.30060999934
       },
       {
         "timestamps": "Dec 13, 2023, 7:00:00 AM",
         "floorEth": 0.535,
         "floorUsd": 1169.6650350000002,
         "salesCount": 551,
-        "volumeEth": 318.89628000000175,
-        "volumeUsd": 737395.4995999989
+        "volumeEth": 318.89628000000107,
+        "volumeUsd": 737395.4996000014
       },
       {
         "timestamps": "Dec 16, 2023, 7:00:00 AM",
@@ -30193,30 +30193,30 @@
         "floorUsd": 987.2644600000001,
         "salesCount": 298,
         "volumeEth": 153.52012,
-        "volumeUsd": 346402.7381199997
+        "volumeUsd": 346402.7381199992
       },
       {
         "timestamps": "Dec 19, 2023, 7:00:00 AM",
         "floorEth": 0.4033,
         "floorUsd": 874.781898,
         "salesCount": 247,
-        "volumeEth": 113.98579000000018,
-        "volumeUsd": 256925.65956000015
+        "volumeEth": 113.98579000000026,
+        "volumeUsd": 256925.6595600001
       },
       {
         "timestamps": "Dec 22, 2023, 7:00:00 AM",
         "floorEth": 0.4249,
         "floorUsd": 934.80235,
         "salesCount": 369,
-        "volumeEth": 200.50704000000022,
-        "volumeUsd": 441093.62564000103
+        "volumeEth": 200.50704000000007,
+        "volumeUsd": 441093.6256400011
       },
       {
         "timestamps": "Dec 25, 2023, 7:00:00 AM",
         "floorEth": 0.449,
         "floorUsd": 1044.84498,
         "salesCount": 231,
-        "volumeEth": 118.60924999999983,
+        "volumeEth": 118.60924999999993,
         "volumeUsd": 269695.25859000004
       },
       {
@@ -30224,16 +30224,16 @@
         "floorEth": 0.4999,
         "floorUsd": 1154.19872,
         "salesCount": 428,
-        "volumeEth": 243.10115000000002,
-        "volumeUsd": 549884.1484999998
+        "volumeEth": 243.10115,
+        "volumeUsd": 549884.1484999994
       },
       {
         "timestamps": "Dec 31, 2023, 7:00:00 AM",
         "floorEth": 0.0653,
         "floorUsd": 145.67621,
         "salesCount": 612,
-        "volumeEth": 335.2214700000009,
-        "volumeUsd": 779134.820999999
+        "volumeEth": 335.22146999999995,
+        "volumeUsd": 779134.8209999992
       },
       {
         "timestamps": "Jan 3, 2024, 7:00:00 AM",
@@ -30241,15 +30241,23 @@
         "floorUsd": 1273.57505,
         "salesCount": 557,
         "volumeEth": 324.3936400000006,
-        "volumeUsd": 743415.3841799982
+        "volumeUsd": 743415.3841799995
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 0.6039,
-        "floorUsd": 1360.5927390000002,
-        "salesCount": 939,
-        "volumeEth": 613.0734900000012,
-        "volumeUsd": 1394767.6518200072
+        "timestamps": "Jan 6, 2024, 7:00:00 AM",
+        "floorEth": 0.56,
+        "floorUsd": 1262.3039899999999,
+        "salesCount": 987,
+        "volumeEth": 640.2537900000007,
+        "volumeUsd": 1456564.1618199977
+      },
+      {
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 0.6001,
+        "floorUsd": 1349.7449199999999,
+        "salesCount": 174,
+        "volumeEth": 106.38705999999996,
+        "volumeUsd": 241160.09716999976
       }
     ]
   },
@@ -30576,9 +30584,9 @@
         "volumeUsd": 209272.14297000036
       },
       {
-        "timestamps": "Jan 7, 2024, 2:00:45 AM",
-        "floorEth": 0.34,
-        "floorUsd": 770.80959,
+        "timestamps": "Jan 7, 2024, 8:30:27 PM",
+        "floorEth": 0.324,
+        "floorUsd": 734.5362,
         "salesCount": 94,
         "volumeEth": 33.994600000000005,
         "volumeUsd": 77072.29362000008
@@ -32016,16 +32024,16 @@
         "floorEth": 1.6,
         "floorUsd": 3530.72,
         "salesCount": 44,
-        "volumeEth": 73.32200000000002,
-        "volumeUsd": 165539.65574
+        "volumeEth": 73.322,
+        "volumeUsd": 165539.65573999993
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 1.64,
-        "floorUsd": 3718.02274,
-        "salesCount": 13,
-        "volumeEth": 31.167200000000005,
-        "volumeUsd": 70658.75502000001
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 1.59,
+        "floorUsd": 3576.228,
+        "salesCount": 23,
+        "volumeEth": 47.36160000000001,
+        "volumeUsd": 107331.71320000003
       }
     ]
   },
@@ -33040,16 +33048,16 @@
         "floorEth": 0.32,
         "floorUsd": 707.236992,
         "salesCount": 496,
-        "volumeEth": 207.80167000000063,
-        "volumeUsd": 470634.1758799999
+        "volumeEth": 207.8016700000004,
+        "volumeUsd": 470634.1758799993
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 0.3275,
-        "floorUsd": 737.8607750000001,
-        "salesCount": 245,
-        "volumeEth": 89.78749999999988,
-        "volumeUsd": 203587.9113699995
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 0.32,
+        "floorUsd": 719.7439999999999,
+        "salesCount": 308,
+        "volumeEth": 110.80259999999937,
+        "volumeUsd": 251177.9655099988
       }
     ]
   },
@@ -33094,112 +33102,112 @@
         "floorEth": 0.3,
         "floorUsd": 614.56058,
         "salesCount": 2927,
-        "volumeEth": 1919.4573300000382,
-        "volumeUsd": 3952043.983166745
+        "volumeEth": 1919.4573300000789,
+        "volumeUsd": 3952043.983166679
       },
       {
         "timestamps": "Dec 4, 2023, 7:00:00 AM",
         "floorEth": 0.6298,
         "floorUsd": 1324.42735,
         "salesCount": 1837,
-        "volumeEth": 1235.4434100000178,
-        "volumeUsd": 2577067.90500001
+        "volumeEth": 1235.4434100000115,
+        "volumeUsd": 2577067.9049999826
       },
       {
         "timestamps": "Dec 7, 2023, 7:00:00 AM",
         "floorEth": 0.374,
         "floorUsd": 850.42738,
         "salesCount": 1627,
-        "volumeEth": 896.6004400000018,
-        "volumeUsd": 2003721.9212100122
+        "volumeEth": 896.6004399999985,
+        "volumeUsd": 2003721.921210022
       },
       {
         "timestamps": "Dec 10, 2023, 7:00:00 AM",
         "floorEth": 0.36,
         "floorUsd": 803.8691999999999,
         "salesCount": 636,
-        "volumeEth": 280.3206599999995,
-        "volumeUsd": 638653.5834600012
+        "volumeEth": 280.3206599999996,
+        "volumeUsd": 638653.5834600008
       },
       {
         "timestamps": "Dec 13, 2023, 7:00:00 AM",
         "floorEth": 0.3899,
         "floorUsd": 886.71639,
         "salesCount": 307,
-        "volumeEth": 151.99217000000004,
-        "volumeUsd": 353515.10216
+        "volumeEth": 151.99217000000024,
+        "volumeUsd": 353515.1021600001
       },
       {
         "timestamps": "Dec 16, 2023, 7:00:00 AM",
         "floorEth": 0.41,
         "floorUsd": 880.5098499999999,
         "salesCount": 210,
-        "volumeEth": 101.44877999999997,
-        "volumeUsd": 227929.34894000017
+        "volumeEth": 101.44877999999987,
+        "volumeUsd": 227929.34894000023
       },
       {
         "timestamps": "Dec 19, 2023, 7:00:00 AM",
         "floorEth": 0.41,
         "floorUsd": 910.0073,
         "salesCount": 74,
-        "volumeEth": 36.056400000000004,
-        "volumeUsd": 80692.01490999998
+        "volumeEth": 36.05640000000002,
+        "volumeUsd": 80692.01490999995
       },
       {
         "timestamps": "Dec 22, 2023, 7:00:00 AM",
         "floorEth": 0.425,
         "floorUsd": 925.15675,
         "salesCount": 403,
-        "volumeEth": 222.36806000000078,
-        "volumeUsd": 488044.5192200009
+        "volumeEth": 222.36806000000027,
+        "volumeUsd": 488044.51922000153
       },
       {
         "timestamps": "Dec 25, 2023, 7:00:00 AM",
         "floorEth": 0.5189,
         "floorUsd": 1198.13966,
         "salesCount": 91,
-        "volumeEth": 56.16300000000002,
-        "volumeUsd": 126699.52905
+        "volumeEth": 56.16300000000004,
+        "volumeUsd": 126699.52904999998
       },
       {
         "timestamps": "Dec 28, 2023, 7:00:00 AM",
         "floorEth": 0.50778,
         "floorUsd": 1132.79431,
         "salesCount": 58,
-        "volumeEth": 35.309450000000005,
-        "volumeUsd": 80074.71458
+        "volumeEth": 35.30945000000001,
+        "volumeUsd": 80074.71458000001
       },
       {
         "timestamps": "Dec 31, 2023, 7:00:00 AM",
         "floorEth": 0.4988,
         "floorUsd": 1131.535134,
         "salesCount": 46,
-        "volumeEth": 29.140689999999978,
-        "volumeUsd": 68343.55319000002
+        "volumeEth": 29.140689999999974,
+        "volumeUsd": 68343.55319000005
       },
       {
         "timestamps": "Jan 3, 2024, 7:00:00 AM",
         "floorEth": 0.41,
         "floorUsd": 940.68104,
         "salesCount": 83,
-        "volumeEth": 38.95150000000001,
-        "volumeUsd": 89385.24133000002
+        "volumeEth": 38.95150000000002,
+        "volumeUsd": 89385.24133000003
       },
       {
         "timestamps": "Jan 6, 2024, 7:00:00 AM",
         "floorEth": 0.3899,
         "floorUsd": 883.69442,
         "salesCount": 60,
-        "volumeEth": 26.8102,
-        "volumeUsd": 61025.338759999984
+        "volumeEth": 26.810199999999995,
+        "volumeUsd": 61025.33876
       },
       {
-        "timestamps": "Jan 7, 2024, 2:02:09 AM",
-        "floorEth": 0.3847,
-        "floorUsd": 866.7329470000001,
-        "salesCount": 10,
-        "volumeEth": 3.7981999999999996,
-        "volumeUsd": 8610.386250000001
+        "timestamps": "Jan 7, 2024, 8:31:06 PM",
+        "floorEth": 0.3689,
+        "floorUsd": 829.72988,
+        "salesCount": 17,
+        "volumeEth": 6.501199999999999,
+        "volumeUsd": 14738.317960000002
       }
     ]
   },
@@ -33578,16 +33586,16 @@
         "floorEth": 0.6799,
         "floorUsd": 1481.389614,
         "salesCount": 165,
-        "volumeEth": 130.93569000000008,
-        "volumeUsd": 300942.36956000014
+        "volumeEth": 130.9356900000001,
+        "volumeUsd": 300942.36956
       },
       {
-        "timestamps": "Jan 7, 2024, 2:02:09 AM",
-        "floorEth": 0.629,
-        "floorUsd": 1425.99774,
-        "salesCount": 69,
-        "volumeEth": 47.47009999999995,
-        "volumeUsd": 107648.3397600001
+        "timestamps": "Jan 7, 2024, 8:31:06 PM",
+        "floorEth": 0.6299,
+        "floorUsd": 1416.77108,
+        "salesCount": 103,
+        "volumeEth": 72.29698999999995,
+        "volumeUsd": 163933.05991000013
       }
     ]
   },
@@ -34494,16 +34502,182 @@
         "floorEth": 2.117,
         "floorUsd": 4680.03073,
         "salesCount": 51,
-        "volumeEth": 125.30787000000004,
-        "volumeUsd": 279912.3897100001
+        "volumeEth": 125.30786999999998,
+        "volumeUsd": 279912.38971000013
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 2.29,
-        "floorUsd": 5159.392900000001,
-        "salesCount": 15,
-        "volumeEth": 33.71430000000001,
-        "volumeUsd": 76441.99572999998
+        "timestamps": "Jan 7, 2024, 8:30:27 PM",
+        "floorEth": 2.2288,
+        "floorUsd": 5052.88358,
+        "salesCount": 27,
+        "volumeEth": 60.49930000000001,
+        "volumeUsd": 137165.92191999996
+      }
+    ]
+  },
+  {
+    "detail": {
+      "name": "Trademark by Jack Butcher",
+      "slug": "trademark-by-jack-butcher",
+      "blockchain": "ethereum",
+      "releaseDate": "2023-09-15",
+      "totalSupply": 10000,
+      "contract": "0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c",
+      "marketplaces": [
+        {
+          "name": "opensea-pro",
+          "url": "https://pro.opensea.io/collection/0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c"
+        },
+        {
+          "name": "blur",
+          "url": "https://blur.io/collection/0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c"
+        },
+        {
+          "name": "opensea",
+          "url": "https://opensea.io/collection/trademark-by-jack-butcher?search[sortAscending]\u003dtrue\u0026search[sortBy]\u003dUNIT_PRICE\u0026search[toggles][0]\u003dBUY_NOW"
+        },
+        {
+          "name": "looksrare",
+          "url": "https://looksrare.org/collections/0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c?filters\u003d%7B\"withAskOnly\"%3Atrue%7D"
+        },
+        {
+          "name": "uniswap",
+          "url": "https://app.uniswap.org/#/nfts/collection/0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c"
+        },
+        {
+          "name": "x2y2",
+          "url": "https://x2y2.io/collection/0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c"
+        }
+      ]
+    },
+    "priceHistoryList": [
+      {
+        "timestamps": "Nov 25, 2023, 7:00:00 AM",
+        "floorEth": 0.0158,
+        "floorUsd": 30.65903,
+        "salesCount": 17825,
+        "volumeEth": 2285.722389999833,
+        "volumeUsd": 4581900.174518714
+      },
+      {
+        "timestamps": "Nov 28, 2023, 7:00:00 AM",
+        "floorEth": 0.039,
+        "floorUsd": 80.49889,
+        "salesCount": 3596,
+        "volumeEth": 1205.4143299999985,
+        "volumeUsd": 2500983.85037001
+      },
+      {
+        "timestamps": "Dec 1, 2023, 7:00:00 AM",
+        "floorEth": 0.178,
+        "floorUsd": 360.61684,
+        "salesCount": 1330,
+        "volumeEth": 339.5161999999993,
+        "volumeUsd": 692595.3368899997
+      },
+      {
+        "timestamps": "Dec 4, 2023, 7:00:00 AM",
+        "floorEth": 0.0679,
+        "floorUsd": 139.31428,
+        "salesCount": 684,
+        "volumeEth": 156.9381399999999,
+        "volumeUsd": 325516.6687899992
+      },
+      {
+        "timestamps": "Dec 7, 2023, 7:00:00 AM",
+        "floorEth": 0.17,
+        "floorUsd": 372.41969,
+        "salesCount": 1190,
+        "volumeEth": 302.77214000000015,
+        "volumeUsd": 672811.7598399983
+      },
+      {
+        "timestamps": "Dec 10, 2023, 7:00:00 AM",
+        "floorEth": 0.178,
+        "floorUsd": 412.92471,
+        "salesCount": 673,
+        "volumeEth": 141.71817,
+        "volumeUsd": 324892.08985000075
+      },
+      {
+        "timestamps": "Dec 13, 2023, 7:00:00 AM",
+        "floorEth": 0.175,
+        "floorUsd": 387.99906,
+        "salesCount": 449,
+        "volumeEth": 99.09510000000026,
+        "volumeUsd": 230294.07506000006
+      },
+      {
+        "timestamps": "Dec 16, 2023, 7:00:00 AM",
+        "floorEth": 0.0357,
+        "floorUsd": 80.7135,
+        "salesCount": 423,
+        "volumeEth": 71.32247999999996,
+        "volumeUsd": 160970.23959
+      },
+      {
+        "timestamps": "Dec 19, 2023, 7:00:00 AM",
+        "floorEth": 0.119,
+        "floorUsd": 267.11573,
+        "salesCount": 335,
+        "volumeEth": 50.79320000000002,
+        "volumeUsd": 115761.23762999997
+      },
+      {
+        "timestamps": "Dec 22, 2023, 7:00:00 AM",
+        "floorEth": 0.1,
+        "floorUsd": 217.68394,
+        "salesCount": 158,
+        "volumeEth": 26.722560000000005,
+        "volumeUsd": 58688.61080000004
+      },
+      {
+        "timestamps": "Dec 25, 2023, 7:00:00 AM",
+        "floorEth": 0.1139,
+        "floorUsd": 263.81057,
+        "salesCount": 159,
+        "volumeEth": 23.162959999999995,
+        "volumeUsd": 52695.04997000001
+      },
+      {
+        "timestamps": "Dec 28, 2023, 7:00:00 AM",
+        "floorEth": 0.0129,
+        "floorUsd": 29.32986,
+        "salesCount": 162,
+        "volumeEth": 20.80263,
+        "volumeUsd": 47251.654119999956
+      },
+      {
+        "timestamps": "Dec 31, 2023, 7:00:00 AM",
+        "floorEth": 0.0888,
+        "floorUsd": 203.029212,
+        "salesCount": 232,
+        "volumeEth": 28.016200000000058,
+        "volumeUsd": 65501.16013999999
+      },
+      {
+        "timestamps": "Jan 3, 2024, 7:00:00 AM",
+        "floorEth": 0.095,
+        "floorUsd": 218.45345000000003,
+        "salesCount": 173,
+        "volumeEth": 23.785259999999997,
+        "volumeUsd": 54603.22791999999
+      },
+      {
+        "timestamps": "Jan 6, 2024, 7:00:00 AM",
+        "floorEth": 0.095,
+        "floorUsd": 209.76,
+        "salesCount": 141,
+        "volumeEth": 23.723939999999995,
+        "volumeUsd": 53603.68557999996
+      },
+      {
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 0.1053,
+        "floorUsd": 236.84076,
+        "salesCount": 78,
+        "volumeEth": 9.459099999999994,
+        "volumeUsd": 21458.744359999975
       }
     ]
   },
@@ -36918,182 +37092,16 @@
         "floorEth": 1.0099,
         "floorUsd": 2232.575831,
         "salesCount": 172,
-        "volumeEth": 184.41467999999992,
+        "volumeEth": 184.41468000000006,
         "volumeUsd": 425343.19287999975
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 1.0449,
-        "floorUsd": 2354.170149,
-        "salesCount": 16,
-        "volumeEth": 17.30046,
-        "volumeUsd": 39252.01277
-      }
-    ]
-  },
-  {
-    "detail": {
-      "name": "Trademark by Jack Butcher",
-      "slug": "trademark-by-jack-butcher",
-      "blockchain": "ethereum",
-      "releaseDate": "2023-09-15",
-      "totalSupply": 10000,
-      "contract": "0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c",
-      "marketplaces": [
-        {
-          "name": "opensea-pro",
-          "url": "https://pro.opensea.io/collection/0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c"
-        },
-        {
-          "name": "blur",
-          "url": "https://blur.io/collection/0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c"
-        },
-        {
-          "name": "opensea",
-          "url": "https://opensea.io/collection/trademark-by-jack-butcher?search[sortAscending]\u003dtrue\u0026search[sortBy]\u003dUNIT_PRICE\u0026search[toggles][0]\u003dBUY_NOW"
-        },
-        {
-          "name": "looksrare",
-          "url": "https://looksrare.org/collections/0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c?filters\u003d%7B\"withAskOnly\"%3Atrue%7D"
-        },
-        {
-          "name": "uniswap",
-          "url": "https://app.uniswap.org/#/nfts/collection/0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c"
-        },
-        {
-          "name": "x2y2",
-          "url": "https://x2y2.io/collection/0x8cdbd7010bd197848e95c1fd7f6e870aac9b0d3c"
-        }
-      ]
-    },
-    "priceHistoryList": [
-      {
-        "timestamps": "Nov 25, 2023, 7:00:00 AM",
-        "floorEth": 0.0158,
-        "floorUsd": 30.65903,
-        "salesCount": 17825,
-        "volumeEth": 2285.722389999833,
-        "volumeUsd": 4581900.174518714
-      },
-      {
-        "timestamps": "Nov 28, 2023, 7:00:00 AM",
-        "floorEth": 0.039,
-        "floorUsd": 80.49889,
-        "salesCount": 3596,
-        "volumeEth": 1205.4143299999985,
-        "volumeUsd": 2500983.85037001
-      },
-      {
-        "timestamps": "Dec 1, 2023, 7:00:00 AM",
-        "floorEth": 0.178,
-        "floorUsd": 360.61684,
-        "salesCount": 1330,
-        "volumeEth": 339.5161999999993,
-        "volumeUsd": 692595.3368899997
-      },
-      {
-        "timestamps": "Dec 4, 2023, 7:00:00 AM",
-        "floorEth": 0.0679,
-        "floorUsd": 139.31428,
-        "salesCount": 684,
-        "volumeEth": 156.9381399999999,
-        "volumeUsd": 325516.6687899992
-      },
-      {
-        "timestamps": "Dec 7, 2023, 7:00:00 AM",
-        "floorEth": 0.17,
-        "floorUsd": 372.41969,
-        "salesCount": 1190,
-        "volumeEth": 302.77214000000015,
-        "volumeUsd": 672811.7598399983
-      },
-      {
-        "timestamps": "Dec 10, 2023, 7:00:00 AM",
-        "floorEth": 0.178,
-        "floorUsd": 412.92471,
-        "salesCount": 673,
-        "volumeEth": 141.71817,
-        "volumeUsd": 324892.08985000075
-      },
-      {
-        "timestamps": "Dec 13, 2023, 7:00:00 AM",
-        "floorEth": 0.175,
-        "floorUsd": 387.99906,
-        "salesCount": 449,
-        "volumeEth": 99.09510000000026,
-        "volumeUsd": 230294.07506000006
-      },
-      {
-        "timestamps": "Dec 16, 2023, 7:00:00 AM",
-        "floorEth": 0.0357,
-        "floorUsd": 80.7135,
-        "salesCount": 423,
-        "volumeEth": 71.32247999999996,
-        "volumeUsd": 160970.23959
-      },
-      {
-        "timestamps": "Dec 19, 2023, 7:00:00 AM",
-        "floorEth": 0.119,
-        "floorUsd": 267.11573,
-        "salesCount": 335,
-        "volumeEth": 50.79320000000002,
-        "volumeUsd": 115761.23762999997
-      },
-      {
-        "timestamps": "Dec 22, 2023, 7:00:00 AM",
-        "floorEth": 0.1,
-        "floorUsd": 217.68394,
-        "salesCount": 158,
-        "volumeEth": 26.722560000000005,
-        "volumeUsd": 58688.61080000004
-      },
-      {
-        "timestamps": "Dec 25, 2023, 7:00:00 AM",
-        "floorEth": 0.1139,
-        "floorUsd": 263.81057,
-        "salesCount": 159,
-        "volumeEth": 23.162959999999995,
-        "volumeUsd": 52695.04997000001
-      },
-      {
-        "timestamps": "Dec 28, 2023, 7:00:00 AM",
-        "floorEth": 0.0129,
-        "floorUsd": 29.32986,
-        "salesCount": 162,
-        "volumeEth": 20.80263,
-        "volumeUsd": 47251.654119999956
-      },
-      {
-        "timestamps": "Dec 31, 2023, 7:00:00 AM",
-        "floorEth": 0.0888,
-        "floorUsd": 203.029212,
-        "salesCount": 232,
-        "volumeEth": 28.016200000000058,
-        "volumeUsd": 65501.16013999999
-      },
-      {
-        "timestamps": "Jan 3, 2024, 7:00:00 AM",
-        "floorEth": 0.095,
-        "floorUsd": 218.45345000000003,
-        "salesCount": 173,
-        "volumeEth": 23.785259999999997,
-        "volumeUsd": 54603.22791999999
-      },
-      {
-        "timestamps": "Jan 6, 2024, 7:00:00 AM",
-        "floorEth": 0.095,
-        "floorUsd": 209.76,
-        "salesCount": 141,
-        "volumeEth": 23.723939999999995,
-        "volumeUsd": 53603.68557999996
-      },
-      {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 0.1084,
-        "floorUsd": 244.22628400000002,
-        "salesCount": 78,
-        "volumeEth": 9.459099999999994,
-        "volumeUsd": 21458.744359999975
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 1.05,
+        "floorUsd": 2361.66,
+        "salesCount": 48,
+        "volumeEth": 50.659309999999984,
+        "volumeUsd": 114795.90951000003
       }
     ]
   },
@@ -37881,15 +37889,15 @@
         "floorUsd": 8734.12477,
         "salesCount": 28,
         "volumeEth": 139.785,
-        "volumeUsd": 314633.27609999996
+        "volumeUsd": 314633.2761
       },
       {
-        "timestamps": "Jan 7, 2024, 1:59:58 AM",
-        "floorEth": 4.0,
-        "floorUsd": 9012.04,
-        "salesCount": 2,
-        "volumeEth": 10.65,
-        "volumeUsd": 24221.59232
+        "timestamps": "Jan 7, 2024, 8:29:58 PM",
+        "floorEth": 4.05,
+        "floorUsd": 9109.259999999998,
+        "salesCount": 5,
+        "volumeEth": 22.825,
+        "volumeUsd": 51823.37697
       }
     ]
   }

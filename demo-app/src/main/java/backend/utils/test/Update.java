@@ -34,10 +34,10 @@ public class Update {
         System.out.println(today);
         Injector injector = Guice.createInjector(new ConfigModule());
         CrawlController crawlController = injector.getInstance(CrawlController.class);
-        while (since.compareTo(today) <= 0) {
-            String until = addDayToString(since, 1);
-            List<Tweet> tweetList = crawlController.crawlTweetDataByKeyword("boredapeyc", since, until);
-            since = until;
-        }
+//        while (since.compareTo(today) <= 0) {
+//            String until = addDayToString(since, 1);
+//            List<Tweet> tweetList = crawlController.crawlTweetDataByKeyword("boredapeyc", since, until);
+//            since = until;
+//        }
     }
 }
